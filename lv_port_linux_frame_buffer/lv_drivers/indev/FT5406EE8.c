@@ -33,7 +33,7 @@
 
 #define FT5406EE8_FINGER_MAX 10
 
-/*Register addresses*/
+/*Register adresses*/
 #define FT5406EE8_REG_DEVICE_MODE 0x00
 #define FT5406EE8_REG_GEST_ID     0x01
 #define FT5406EE8_REG_TD_STATUS   0x02

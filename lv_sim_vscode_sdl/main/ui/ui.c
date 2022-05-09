@@ -7,6 +7,36 @@ pthread_mutex_t cmd_mutex;
 pthread_cond_t  cmd_cond;
 char new_cmd_name[10];
 
+static lv_timer_t * lvgl_timer; 
+//date +%Y-%m-%d::%T
+
+static void sys_time_sync(lv_timer_t * timer)
+{
+    static int h=22, m=59, s=57 , sync_home, sync_tag;
+    s++;
+    if(s >= 60){
+        m++;
+        s = 0;
+        sync_home = 1;
+    }
+    if(m >= 60){
+        h++;
+        m = 0;
+    }
+    if(h >= 24){
+        h = 0;
+    }
+    if(sync_home == 1){
+        sync_home = 0;
+        struct cmd_data cmd;
+        strcpy(cmd.cmd_name.name, "time sync");
+        sprintf(cmd.cmd_info.info, "%d:%d", h, m);
+        home_cmd_write(cmd_head, cmd);
+    }
+    printf("%d  %d  %d\n", h, m, s);
+}
+
+
 void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void (*delete)(lv_obj_t* ))
 {
     if(head == NULL){
@@ -15,10 +45,11 @@ void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void 
     }
     struct page_list *node = malloc(sizeof(struct page_list));
     strcpy(node->name, name);
+    node->flag = 0;
     node->create = create;
     node->delete = delete;
     node->next = head->next;
-    head->next = node;    
+    head->next = node;   
 }
 
 void page_create(struct page_list *head, char* name)
@@ -27,6 +58,7 @@ void page_create(struct page_list *head, char* name)
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
             head->obj = head->create();
+            head->flag = 1;
             break;
         }
         head = head->next;
@@ -39,10 +71,23 @@ void page_delete(struct page_list *head, char* name)
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
             head->delete(head->obj);
+            head->flag = 0;
             break;
         }
         head = head->next;
     }
+}
+
+int page_check(struct page_list *head, char* name)
+{
+    head = head->next;
+    while(head != NULL){
+        if(strcmp(head->name, name) == 0){
+            return head->flag;
+        }
+        head = head->next;
+    }
+    return 0;
 }
 
 void cmd_mutex_init(void)
@@ -66,15 +111,15 @@ void cmd_add(struct cmd_list *head, char *name)
     pthread_mutex_unlock(&cmd_mutex);   
 }
 
-void cmd_read(struct cmd_list *head, char *name, union cmd *data,int flag)
+void cmd_read(struct cmd_list *head, char *name, struct cmd_data *cmd,int flag)
 {
     pthread_mutex_lock(&cmd_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
-            *data = head->data;
+            *cmd = head->cmd;
             if(flag == 1){
-                memset(&head->data, '/0', 20);
+                memset(&head->cmd.cmd_info, '0', 50);
             }
             break;
         }
@@ -83,13 +128,13 @@ void cmd_read(struct cmd_list *head, char *name, union cmd *data,int flag)
     pthread_mutex_unlock(&cmd_mutex);
 }
 
-void cmd_write(struct cmd_list *head, char *name, union cmd data)
+void cmd_write(struct cmd_list *head, char *name, struct cmd_data cmd)
 {
     pthread_mutex_lock(&cmd_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
-            head->data = data;
+            head->cmd = cmd;
             strcpy(new_cmd_name, name);
             break;
         }
@@ -125,8 +170,10 @@ void ui_init(void)
 
     home_cmd_add(cmd_head);
     menu_cmd_add(cmd_head);
+    
+    page_create(page_head, "home"); 
 
-    page_create(page_head, "home");   
+    lvgl_timer = lv_timer_create(sys_time_sync, 1000,  NULL);
 }
 
 
@@ -189,28 +236,24 @@ void *lvgl_start(void *arg)
 
 void *cmd_handle(void *arg)
 {
-    union cmd data;
+    struct cmd_data cmd;
     while(1){
         pthread_mutex_lock(&cmd_mutex);
         pthread_cond_wait(&cmd_cond, &cmd_mutex);
         pthread_mutex_unlock(&cmd_mutex);
         printf("%s\n", new_cmd_name);
         if(strcmp(new_cmd_name, "home") == 0){
-            home_cmd_read(cmd_head, &data);
-            if(strcmp(data.cmdbuf,"menu create") == 0){
-                page_create(page_head, "menu");
-                page_create(page_head, "tag");
-            }
+            home_cmd_handle();
         }else if(strcmp(new_cmd_name, "switch") == 0){
-            switch_cmd_read(cmd_head, &data);
-            if(strcmp(data.cmdbuf,"home create") == 0){
+            switch_cmd_read(cmd_head, &cmd);
+            if(strcmp(cmd.cmd_name.name,"home create") == 0){
                 page_delete(page_head, "menu");
                 page_create(page_head, "home");
                 
             }
         }else if(strcmp(new_cmd_name, "time") == 0){
-            time_cmd_read(cmd_head, &data);
-            if(strcmp(data.cmdbuf,"time create") == 0){
+            time_cmd_read(cmd_head, &cmd);
+            if(strcmp(cmd.cmd_name.name,"time create") == 0){
                 page_create(page_head, "time"); 
             }
         }

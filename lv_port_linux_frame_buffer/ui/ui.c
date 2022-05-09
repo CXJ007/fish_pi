@@ -7,6 +7,28 @@ pthread_mutex_t cmd_mutex;
 pthread_cond_t  cmd_cond;
 char new_cmd_name[10];
 
+static lv_timer_t * lvgl_timer; 
+//date +%Y-%m-%d::%T
+
+static void sys_time_sync(lv_timer_t * timer)
+{
+    static int h, m, s;
+    s++;
+    if(s >= 60){
+        m++;
+        s = 0;
+    }
+    if(m >= 60){
+        h++;
+        m = 0;
+    }
+    if(h >= 24){
+        h = 0;
+    }
+    printf("%d  %d  %d\n", h, m, s);
+}
+
+
 void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void (*delete)(lv_obj_t* ))
 {
     if(head == NULL){
@@ -126,7 +148,9 @@ void ui_init(void)
     home_cmd_add(cmd_head);
     menu_cmd_add(cmd_head);
 
-    page_create(page_head, "home");   
+    page_create(page_head, "home"); 
+
+    lvgl_timer = lv_timer_create(sys_time_sync, 1000,  NULL);  
 }
 
 

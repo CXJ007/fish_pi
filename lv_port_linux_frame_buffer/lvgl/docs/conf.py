@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.7
 # -*- coding: utf-8 -*-
 #
 # LVGL documentation build configuration file, created by
@@ -49,7 +49,7 @@ extensions = ['sphinx.ext.autodoc',
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-# The default language to highlight source code in. The default is 'python'.
+# The default language to highlight source code in. The default is 'python'. 
 # The value should be a valid Pygments lexer name, see Showing code examples for more details.
 
 
@@ -66,7 +66,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'LVGL'
-copyright = '2021, LVGL Kft'
+copyright = '2020, LVGL LLC'
 author = 'LVGL community'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -88,7 +88,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'doxygen_html', 'Thumbs.db', '.DS_Store',
+exclude_patterns = ['_build', 'doxygen_html', 'Thumbs.db', '.DS_Store', 
                     'README.md', 'lv_examples', 'out_html' ]
 
 # The name of the Pygments (syntax highlighting) style to use.
@@ -114,7 +114,7 @@ html_theme_options = {
     'logo_only': True,
 }
 # For site map generation
-html_baseurl = 'https://docs.lvgl.io/master/en/html/'
+html_baseurl = 'https://docs.lvgl.io/' + version + "/"
 sitemap_url_scheme = "{link}"
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -164,7 +164,7 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
-
+    
     'inputenc': '',
     'utf8extra': '',
     'classoptions': ',openany,oneside',

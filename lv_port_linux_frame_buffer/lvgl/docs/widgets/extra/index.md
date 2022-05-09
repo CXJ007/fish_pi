@@ -1,5 +1,5 @@
 ```eval_rst
-.. include:: /header.rst
+.. include:: /header.rst 
 :github_url: |github_link_base|/object-types/index.md
 ```
 # Extra widgets
@@ -8,8 +8,7 @@
 
 .. toctree::
    :maxdepth: 1
-
-   animimg
+   
    calendar
    chart
    colorwheel
@@ -17,7 +16,6 @@
    keyboard
    led
    list
-   menu
    meter
    msgbox
    span

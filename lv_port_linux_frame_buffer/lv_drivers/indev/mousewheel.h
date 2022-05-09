@@ -23,19 +23,17 @@ extern "C" {
 
 #if USE_MOUSEWHEEL
 
-#warning "Deprecated, use the SDL driver instead. See lv_drivers/sdl/sdl.c"
-
 #ifdef LV_LVGL_H_INCLUDE_SIMPLE
 #include "lvgl.h"
 #else
 #include "lvgl/lvgl.h"
 #endif
 
-#if USE_SDL_GPU
-#include "../sdl/sdl_gpu.h"
-#else
-#include "../sdl/sdl.h"
+#ifndef MONITOR_SDL_INCLUDE_PATH
+#define MONITOR_SDL_INCLUDE_PATH <SDL2/SDL.h>
 #endif
+
+#include MONITOR_SDL_INCLUDE_PATH
 
 /*********************
  *      DEFINES
@@ -52,20 +50,20 @@ extern "C" {
 /**
  * Initialize the encoder
  */
-static inline void mousewheel_init(void)
-{
-    /*Nothing to do*/
-}
+void mousewheel_init(void);
 
 /**
  * Get encoder (i.e. mouse wheel) ticks difference and pressed state
  * @param indev_drv pointer to the related input device driver
  * @param data store the read data here
  */
-static inline void mousewheel_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
-{
-    sdl_mousewheel_read(indev_drv, data);
-}
+void mousewheel_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data);
+
+/**
+ * It is called periodically from the SDL thread to check a key is pressed/released
+ * @param event describes the event
+ */
+void mousewheel_handler(SDL_Event *event);
 
 /**********************
  *      MACROS

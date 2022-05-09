@@ -1,0 +1,2622 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon May  9 19:18:13 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+SNAP_COMMON = /var/snap/code/common
+ 
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/cxj/Desktop/fish_pi/lv_sim_vscode_sdl
+# makefile
+SHELL = /bin/sh
+# environment
+SNAP_DATA = /var/snap/code/95
+# environment
+VTE_VERSION = 5202
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"a78078f10f99ab7adc9063c14c25e7ae.zh-cn","_translationsConfigFile":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn/tcf.json","_cacheRoot":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn","_resolvedLanguagePackCoreLocation":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn/57fd6d0195bb9b9d1b49f6da5db789060795de47","_corruptedFile":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn/corrupted.info","_languagePackSupport":true}
+# makefile (from 'Makefile', line 26)
+CFLAGS := -O0 -g -Wall -Wextra -Wshadow -Wundef -Wmaybe-uninitialized -Wmissing-prototypes -Wno-discarded-qualifiers -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith -fno-strict-aliasing -Wno-error=cpp -Wuninitialized -Wno-unused-parameter -Wno-missing-field-initializers -Wno-format-nonliteral -Wno-cast-qual -Wunreachable-code -Wno-switch-default -Wreturn-type -Wmultichar -Wformat-security -Wno-ignored-qualifiers -Wno-error=pedantic -Wno-sign-compare -Wno-error=missing-prototypes -Wdouble-promotion -Wclobbered -Wdeprecated -Wempty-body -Wshift-negative-value -Wstack-usage=2048 -Wtype-limits -Wsizeof-pointer-memaccess -Wpointer-arith
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+IM_CONFIG_PHASE = 2
+# environment
+USERNAME = cxj
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+CLUTTER_IM_MODULE = xim
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = zh_CN.UTF-8
+# environment
+VSCODE_CWD = /home/cxj/Desktop/fish_pi
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/95/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/cxj/.script/repo:/opt/H3/gcc-linaro-11.2.1-2022.02-x86_64_arm-linux-gnueabihf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/cxj-virtual-machine:@/tmp/.ICE-unix/1562,unix/cxj-virtual-machine:/tmp/.ICE-unix/1562
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/cxj/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+TEXTDOMAIN = im-config
+# makefile (from 'Makefile', line 6)
+PROJECT = lvgl-sdl
+# environment
+SNAP = /snap/code/95
+# environment
+SNAP_VERSION = 57fd6d01
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/95/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# makefile (from 'Makefile', line 16)
+UI_DIR := ui
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :1
+# makefile (from 'Makefile', line 13)
+WORKING_DIR := ./build
+# environment
+GTK_IM_MODULE = ibus
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/cxj/Desktop/fish_pi/lv_sim_vscode_sdl
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 1657
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# makefile (from 'Makefile', line 12)
+SRC_DIR := ./
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/cxj
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# makefile (from 'Makefile', line 29)
+DEFINES := -D SIMULATOR=1 -D LV_BUILD_TEST=0
+# environment
+VSCODE_CODE_CACHE_PATH = /home/cxj/.config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+LOGNAME = cxj
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = xM9KkHB-wdWsT7UzKvmCslGkgPP92UesNdI45Fdn9M83iTtFSgab
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 36)
+COMPILE = $(CC) $(CFLAGS) $(INC) $(DEFINES)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/cxj/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+MAKE_VERSION := 4.1
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 1
+# environment
+LC_TIME = zh_CN.UTF-8
+# environment
+SNAP_REAL_HOME = /home/cxj
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = xim
+# makefile (from 'Makefile', line 39)
+SRCS := ./lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c ./lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.c ./lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.c ./lv_examples/src/lv_demo_stress/lv_demo_stress.c ./lv_examples/src/lv_demo_music/lv_demo_music_list.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.c ./lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.c ./lv_examples/src/lv_demo_music/lv_demo_music.c ./lv_examples/src/lv_demo_music/lv_demo_music_main.c ./lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.c ./lv_examples/src/lv_demo_widgets/lv_demo_widgets.c ./lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c ./lv_examples/src/lv_demo_widgets/assets/img_clothes.c ./lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.c ./lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.c ./lv_drivers/win_drv.c ./lv_drivers/win32drv/win32drv.c ./lv_drivers/display/R61581.c ./lv_drivers/display/drm.c ./lv_drivers/display/SSD1963.c ./lv_drivers/display/ST7565.c ./lv_drivers/display/SHARP_MIP.c ./lv_drivers/display/monitor.c ./lv_drivers/display/fbdev.c ./lv_drivers/display/GC9A01.c ./lv_drivers/display/ILI9341.c ./lv_drivers/display/UC1610.c ./lv_drivers/gtkdrv/gtkdrv.c ./lv_drivers/wayland/wayland.c ./lv_drivers/indev/XPT2046.c ./lv_drivers/indev/libinput.c ./lv_drivers/indev/mousewheel.c ./lv_drivers/indev/AD_touch.c ./lv_drivers/indev/keyboard.c ./lv_drivers/indev/evdev.c ./lv_drivers/indev/FT5406EE8.c ./lv_drivers/indev/mouse.c ./lvgl/tests/lv_test_widgets/lv_test_label.c ./lvgl/tests/lv_test_fonts/font_1.c ./lvgl/tests/lv_test_fonts/font_2.c ./lvgl/tests/lv_test_fonts/font_3.c ./lvgl/tests/lv_test_assert.c ./lvgl/tests/lv_test_main.c ./lvgl/tests/lv_test_core/lv_test_obj.c ./lvgl/tests/lv_test_core/lv_test_font_loader.c ./lvgl/tests/lv_test_core/lv_test_style.c ./lvgl/tests/lv_test_core/lv_test_core.c ./lvgl/src/misc/lv_timer.c ./lvgl/src/misc/lv_async.c ./lvgl/src/misc/lv_style.c ./lvgl/src/misc/lv_gc.c ./lvgl/src/misc/lv_templ.c ./lvgl/src/misc/lv_utils.c ./lvgl/src/misc/lv_tlsf.c ./lvgl/src/misc/lv_color.c ./lvgl/src/misc/lv_area.c ./lvgl/src/misc/lv_fs.c ./lvgl/src/misc/lv_anim.c ./lvgl/src/misc/lv_printf.c ./lvgl/src/misc/lv_log.c ./lvgl/src/misc/lv_txt.c ./lvgl/src/misc/lv_ll.c ./lvgl/src/misc/lv_mem.c ./lvgl/src/misc/lv_math.c ./lvgl/src/misc/lv_bidi.c ./lvgl/src/misc/lv_txt_ap.c ./lvgl/src/misc/lv_style_gen.c ./lvgl/src/gpu/lv_gpu_stm32_dma2d.c ./lvgl/src/gpu/lv_gpu_nxp_vglite.c ./lvgl/src/gpu/lv_gpu_nxp_pxp.c ./lvgl/src/gpu/lv_gpu_nxp_pxp_osa.c ./lvgl/src/hal/lv_hal_disp.c ./lvgl/src/hal/lv_hal_tick.c ./lvgl/src/hal/lv_hal_indev.c ./lvgl/src/core/lv_obj_tree.c ./lvgl/src/core/lv_indev.c ./lvgl/src/core/lv_obj_scroll.c ./lvgl/src/core/lv_disp.c ./lvgl/src/core/lv_theme.c ./lvgl/src/core/lv_obj_draw.c ./lvgl/src/core/lv_obj_pos.c ./lvgl/src/core/lv_obj.c ./lvgl/src/core/lv_obj_style_gen.c ./lvgl/src/core/lv_group.c ./lvgl/src/core/lv_obj_style.c ./lvgl/src/core/lv_refr.c ./lvgl/src/core/lv_indev_scroll.c ./lvgl/src/core/lv_obj_class.c ./lvgl/src/core/lv_event.c ./lvgl/src/widgets/lv_dropdown.c ./lvgl/src/widgets/lv_line.c ./lvgl/src/widgets/lv_table.c ./lvgl/src/widgets/lv_btn.c ./lvgl/src/widgets/lv_checkbox.c ./lvgl/src/widgets/lv_img.c ./lvgl/src/widgets/lv_canvas.c ./lvgl/src/widgets/lv_bar.c ./lvgl/src/widgets/lv_roller.c ./lvgl/src/widgets/lv_label.c ./lvgl/src/widgets/lv_slider.c ./lvgl/src/widgets/lv_textarea.c ./lvgl/src/widgets/lv_switch.c ./lvgl/src/widgets/lv_btnmatrix.c ./lvgl/src/widgets/lv_objx_templ.c ./lvgl/src/widgets/lv_arc.c ./lvgl/src/extra/lv_extra.c ./lvgl/src/extra/layouts/grid/lv_grid.c ./lvgl/src/extra/layouts/flex/lv_flex.c ./lvgl/src/extra/widgets/win/lv_win.c ./lvgl/src/extra/widgets/spinner/lv_spinner.c ./lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c ./lvgl/src/extra/widgets/tabview/lv_tabview.c ./lvgl/src/extra/widgets/keyboard/lv_keyboard.c ./lvgl/src/extra/widgets/animimg/lv_animimg.c ./lvgl/src/extra/widgets/chart/lv_chart.c ./lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c ./lvgl/src/extra/widgets/span/lv_span.c ./lvgl/src/extra/widgets/msgbox/lv_msgbox.c ./lvgl/src/extra/widgets/spinbox/lv_spinbox.c ./lvgl/src/extra/widgets/meter/lv_meter.c ./lvgl/src/extra/widgets/led/lv_led.c ./lvgl/src/extra/widgets/list/lv_list.c ./lvgl/src/extra/widgets/tileview/lv_tileview.c ./lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c ./lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c ./lvgl/src/extra/widgets/calendar/lv_calendar.c ./lvgl/src/extra/themes/mono/lv_theme_mono.c ./lvgl/src/extra/themes/basic/lv_theme_basic.c ./lvgl/src/extra/themes/default/lv_theme_default.c ./lvgl/src/font/lv_font_montserrat_28_compressed.c ./lvgl/src/font/lv_font_montserrat_14.c ./lvgl/src/font/lv_font_unscii_16.c ./lvgl/src/font/lv_font_loader.c ./lvgl/src/font/lv_font_montserrat_44.c ./lvgl/src/font/lv_font_montserrat_12.c ./lvgl/src/font/lv_font_fmt_txt.c ./lvgl/src/font/lv_font_montserrat_22.c ./lvgl/src/font/lv_font_montserrat_42.c ./lvgl/src/font/lv_font.c ./lvgl/src/font/lv_font_montserrat_18.c ./lvgl/src/font/lv_font_dejavu_ 
+16_persian_hebrew.c ./lvgl/src/font/lv_font_unscii_8.c ./lvgl/src/font/lv_font_montserrat_32.c ./lvgl/src/font/lv_font_montserrat_24.c ./lvgl/src/font/lv_font_montserrat_8.c ./lvgl/src/font/lv_font_simsun_16_cjk.c ./lvgl/src/font/lv_font_montserrat_28.c ./lvgl/src/font/lv_font_montserrat_10.c ./lvgl/src/font/lv_font_montserrat_36.c ./lvgl/src/font/lv_font_montserrat_12_subpx.c ./lvgl/src/font/lv_font_montserrat_38.c ./lvgl/src/font/lv_font_montserrat_46.c ./lvgl/src/font/lv_font_montserrat_34.c ./lvgl/src/font/lv_font_montserrat_40.c ./lvgl/src/font/lv_font_montserrat_20.c ./lvgl/src/font/lv_font_montserrat_26.c ./lvgl/src/font/lv_font_montserrat_16.c ./lvgl/src/font/lv_font_montserrat_30.c ./lvgl/src/font/lv_font_montserrat_48.c ./lvgl/src/draw/lv_draw_rect.c ./lvgl/src/draw/lv_draw_mask.c ./lvgl/src/draw/lv_draw_blend.c ./lvgl/src/draw/lv_img_buf.c ./lvgl/src/draw/lv_draw_img.c ./lvgl/src/draw/lv_img_cache.c ./lvgl/src/draw/lv_draw_label.c ./lvgl/src/draw/lv_draw_triangle.c ./lvgl/src/draw/lv_draw_line.c ./lvgl/src/draw/lv_draw_arc.c ./lvgl/src/draw/lv_img_decoder.c ./lvgl/examples/layouts/grid/lv_example_grid_3.c ./lvgl/examples/layouts/grid/lv_example_grid_6.c ./lvgl/examples/layouts/grid/lv_example_grid_2.c ./lvgl/examples/layouts/grid/lv_example_grid_4.c ./lvgl/examples/layouts/grid/lv_example_grid_1.c ./lvgl/examples/layouts/grid/lv_example_grid_5.c ./lvgl/examples/layouts/flex/lv_example_flex_2.c ./lvgl/examples/layouts/flex/lv_example_flex_4.c ./lvgl/examples/layouts/flex/lv_example_flex_5.c ./lvgl/examples/layouts/flex/lv_example_flex_6.c ./lvgl/examples/layouts/flex/lv_example_flex_3.c ./lvgl/examples/layouts/flex/lv_example_flex_1.c ./lvgl/examples/widgets/table/lv_example_table_2.c ./lvgl/examples/widgets/table/lv_example_table_1.c ./lvgl/examples/widgets/slider/lv_example_slider_3.c ./lvgl/examples/widgets/slider/lv_example_slider_2.c ./lvgl/examples/widgets/slider/lv_example_slider_1.c ./lvgl/examples/widgets/win/lv_example_win_1.c ./lvgl/examples/widgets/spinner/lv_example_spinner_1.c ./lvgl/examples/widgets/canvas/lv_example_canvas_2.c ./lvgl/examples/widgets/canvas/lv_example_canvas_1.c ./lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.c ./lvgl/examples/widgets/dropdown/lv_example_dropdown_2.c ./lvgl/examples/widgets/dropdown/lv_example_dropdown_1.c ./lvgl/examples/widgets/dropdown/lv_example_dropdown_3.c ./lvgl/examples/widgets/tabview/lv_example_tabview_2.c ./lvgl/examples/widgets/tabview/lv_example_tabview_1.c ./lvgl/examples/widgets/keyboard/lv_example_keyboard_1.c ./lvgl/examples/widgets/animimg/lv_example_animimg_1.c ./lvgl/examples/widgets/obj/lv_example_obj_2.c ./lvgl/examples/widgets/obj/lv_example_obj_1.c ./lvgl/examples/widgets/chart/lv_example_chart_3.c ./lvgl/examples/widgets/chart/lv_example_chart_5.c ./lvgl/examples/widgets/chart/lv_example_chart_1.c ./lvgl/examples/widgets/chart/lv_example_chart_6.c ./lvgl/examples/widgets/chart/lv_example_chart_7.c ./lvgl/examples/widgets/chart/lv_example_chart_2.c ./lvgl/examples/widgets/chart/lv_example_chart_4.c ./lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.c ./lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.c ./lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.c ./lvgl/examples/widgets/arc/lv_example_arc_1.c ./lvgl/examples/widgets/arc/lv_example_arc_2.c ./lvgl/examples/widgets/bar/lv_example_bar_4.c ./lvgl/examples/widgets/bar/lv_example_bar_3.c ./lvgl/examples/widgets/bar/lv_example_bar_2.c ./lvgl/examples/widgets/bar/lv_example_bar_5.c ./lvgl/examples/widgets/bar/lv_example_bar_6.c ./lvgl/examples/widgets/bar/lv_example_bar_1.c ./lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.c ./lvgl/examples/widgets/span/lv_example_span_1.c ./lvgl/examples/widgets/msgbox/lv_example_msgbox_1.c ./lvgl/examples/widgets/switch/lv_example_switch_1.c ./lvgl/examples/widgets/spinbox/lv_example_spinbox_1.c ./lvgl/examples/widgets/label/lv_example_label_1.c ./lvgl/examples/widgets/label/lv_example_label_3.c ./lvgl/examples/widgets/label/lv_example_label_2.c ./lvgl/examples/widgets/meter/lv_example_meter_1.c ./lvgl/examples/widgets/meter/lv_example_meter_3.c ./lvgl/examples/widgets/meter/lv_example_meter_2.c ./lvgl/examples/widgets/meter/lv_example_meter_4.c ./lvgl/examples/widgets/line/lv_example_line_1.c ./lvgl/examples/widgets/led/lv_example_led_1.c ./lvgl/examples/widgets/textarea/lv_example_textarea_3.c ./lvgl/examples/widgets/textarea/lv_example_textarea_2.c ./lvgl/examples/widgets/textarea/lv_example_textarea_1.c ./lvgl/examples/widgets/img/lv_example_img_3.c ./lvgl/examples/widgets/img/lv_example_img_1.c ./lvgl/examples/widgets/img/lv_example_img_2.c ./lvgl/examples/widgets/img/lv_example_img_4.c ./lvgl/examples/widgets/list/lv_example_list_1.c ./lvgl/examples/widgets/roller/lv_example_roller_1.c ./lvgl/examples/widgets/roller/lv_example_roller_3.c ./lvgl/examples/widgets/roller/lv_example_roller_2.c ./lvgl/examples/widgets/tileview/lv_example_tileview_1.c ./lvgl/examples/widgets/checkbox/lv_example_checkbox_1.c ./lvgl/examples/widgets/calendar/lv_example_calendar_1.c ./lvgl/examples/widgets/btn/lv_example_btn_1.c ./lvgl/examples/widgets/btn/lv_example_btn_3.c ./lvgl/examples/widgets/btn/lv_example_btn_2.c ./lvgl/examples/assets/imgbtn_right.c ./lvgl/examples/assets/img_skew_strip.c ./lvgl/examples/assets/img_cogwheel_indexed16.c ./lvgl/examples/assets/animimg001.c ./lvgl/examples/assets/imgbtn_mid.c ./lvgl/examples/assets/img_caret_down.c ./lvgl/examples/assets/animimg003.c ./lvgl/examples/assets/animimg002.c ./lvgl/examples/assets/img_star.c ./lvgl/examples/assets/imgbtn_left.c ./lvgl/examples/assets/img_cogwheel_alpha16.c ./lvgl/examples/assets/img_cogwheel_argb.c ./lvgl/examples/assets/img_hand.c ./lvgl/examples/assets/img_cogwheel_rgb.c ./lvgl/examples/assets/img_cogwheel_chroma_keyed.c ./lvgl/examples/anim/lv_example_anim_1.c ./lvgl/examples/anim/lv_example_anim_2.c ./lvgl/examples/get_started/lv_example_get_started_1.c ./lvgl/examples/get_started/lv_example_get_started_3.c ./lvgl/examples/get_started/lv_example_get_started_2.c ./lvgl/examples/porting/lv_port_fs_template.c ./lvgl/examples/porting/lv_port_indev_template.c ./lvgl/examples/porting/lv_port_disp_template.c ./lvgl/examples/styles/lv_example_style_12.c ./lvgl/examples/styles/lv_example_style_5.c ./lvgl/examples/styles/lv_example_style_14.c ./lvgl/examples/styles/lv_example_style_11.c ./lvgl/examples/styles/lv_example_style_1.c ./lvgl/examples/styles/lv_example_style_7.c ./lvgl/examples/styles/lv_example_style_9.c ./lvgl/examples/styles/lv_example_style_6.c ./lvgl/examples/styles/lv_example_style_13.c ./lvgl/examples/styles/lv_example_style_3.c ./lvgl/examples/styles/lv_example_style_2.c ./lvgl/examples/styles/lv_example_style_10.c ./lvgl/examples/styles/lv_example_style_8.c ./lvgl/examples/styles/lv_example_style_4.c ./lvgl/examples/event/lv_example_event_3.c ./lvgl/examples/event/lv_example_event_1.c ./lvgl/examples/event/lv_example_event_2.c ./lvgl/examples/scroll/lv_example_scroll_4.c ./lvgl/examples/scroll/lv_example_scroll_6.c ./lvgl/examples/scroll/lv_example_scroll_5.c ./lvgl/examples/scroll/lv_example_scroll_1.c ./lvgl/examples/scroll/lv_example_scroll_3.c ./lvgl/examples/scroll/lv_example_scroll_2.c ./main/src/mouse_cursor_icon.c ./main/src/main.c ./main/ui/menu.c ./main/ui/image/image12.c ./main/ui/image/image11.c ./main/ui/image/image4.c ./main/ui/image/image10.c ./main/ui/image/image7.c ./main/ui/image/image8.c ./main/ui/image/image5.c ./main/ui/image/image1.c ./main/ui/image/image0.c ./main/ui/image/image13.c ./main/ui/image/image3.c ./main/ui/image/image14.c ./main/ui/image/image2.c ./main/ui/image/image9.c ./main/ui/image/image6.c ./main/ui/tag.c ./main/ui/time.c ./main/ui/ui.c ./main/ui/anim_num/anim_num.c ./main/ui/home.c
+# environment
+SNAP_USER_DATA = /home/cxj/snap/code/95
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 10)
+CC = gcc
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# makefile (from 'Makefile', line 14)
+BUILD_DIR := ./build/obj
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-65c6b5df-7d86-4f0b-bbf6-74096e45ae9f.sock
+# environment
+XDG_SESSION_ID = 4
+# environment
+USER = cxj
+# environment
+SNAP_REVISION = 95
+# environment
+LC_MONETARY = zh_CN.UTF-8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from 'Makefile', line 33)
+LDLIBS := -lSDL2 -lm -lpthread
+# makefile (from 'Makefile', line 8)
+SRC_EXT := c
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = zh_CN.UTF-8
+# default
+MAKE_COMMAND := make
+# makefile (from 'Makefile', line 32)
+INC := -I./ui/simulator/inc/ -I./ -I./lvgl/
+# environment
+OLDPWD = /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-186b1019-1.67.0-main.sock
+# makefile
+MAKEFLAGS = pqrR -j --jobserver-fds=3,4
+# environment
+MFLAGS = -pqrR -j --jobserver-fds=3,4
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = zh_CN.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DESKTOP_AUTOSTART_ID = 105ed829d266ca5cc1165202251927051300000015620007
+# environment
+TEXTDOMAINDIR = /usr/share/locale/
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = xM9KkHB-wdWsT7UzKvmCslGkgPP92UesNdI45Fdn9M83iTtFSgab
+# makefile (from 'Makefile', line 18)
+WARNINGS := -Wall -Wextra -Wshadow -Wundef -Wmaybe-uninitialized -Wmissing-prototypes -Wno-discarded-qualifiers -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith -fno-strict-aliasing -Wno-error=cpp -Wuninitialized -Wno-unused-parameter -Wno-missing-field-initializers -Wno-format-nonliteral -Wno-cast-qual -Wunreachable-code -Wno-switch-default -Wreturn-type -Wmultichar -Wformat-security -Wno-ignored-qualifiers -Wno-error=pedantic -Wno-sign-compare -Wno-error=missing-prototypes -Wdouble-promotion -Wclobbered -Wdeprecated -Wempty-body -Wshift-negative-value -Wstack-usage=2048 -Wtype-limits -Wsizeof-pointer-memaccess -Wpointer-arith
+# environment
+LC_NUMERIC = zh_CN.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+LC_MEASUREMENT = zh_CN.UTF-8
+# environment
+SNAP_NAME = code
+# makefile (from 'Makefile', line 34)
+BIN := ./build/bin/demo
+# makefile (from 'Makefile', line 15)
+BIN_DIR := ./build/bin
+# environment
+LC_ALL = C
+# environment
+QT4_IM_MODULE = xim
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/a448768c_de61_4fd9_9c75_5ad0448db4fa
+# automatic
+^F = $(notdir $^)
+# environment
+GNOME_TERMINAL_SERVICE = :1.71
+# default
+SUFFIXES := 
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 1
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = zh_CN.UTF-8
+# default
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 40)
+OBJECTS := ./build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.o ./build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.o ./build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.o ./build/obj/lv_examples/src/lv_demo_stress/lv_demo_stress.o ./build/obj/lv_examples/src/lv_demo_music/lv_demo_music_list.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.o ./build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.o ./build/obj/lv_examples/src/lv_demo_music/lv_demo_music.o ./build/obj/lv_examples/src/lv_demo_music/lv_demo_music_main.o ./build/obj/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.o ./build/obj/lv_examples/src/lv_demo_widgets/lv_demo_widgets.o ./build/obj/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.o ./build/obj/lv_examples/src/lv_demo_widgets/assets/img_clothes.o ./build/obj/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.o ./build/obj/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o ./build/obj/lv_drivers/win_drv.o ./build/obj/lv_drivers/win32drv/win32drv.o ./build/obj/lv_drivers/display/R61581.o ./build/obj/lv_drivers/display/drm.o ./build/obj/lv_drivers/display/SSD1963.o ./build/obj/lv_drivers/display/ST7565.o ./build/obj/lv_drivers/display/SHARP_MIP.o ./build/obj/lv_drivers/display/monitor.o ./build/obj/lv_drivers/display/fbdev.o ./build/obj/lv_drivers/display/GC9A01.o ./build/obj/lv_drivers/display/ILI9341.o ./build/obj/lv_drivers/display/UC1610.o ./build/obj/lv_drivers/gtkdrv/gtkdrv.o ./build/obj/lv_drivers/wayland/wayland.o ./build/obj/lv_drivers/indev/XPT2046.o ./build/obj/lv_drivers/indev/libinput.o ./build/obj/lv_drivers/indev/mousewheel.o ./build/obj/lv_drivers/indev/AD_touch.o ./build/obj/lv_drivers/indev/keyboard.o ./build/obj/lv_drivers/indev/evdev.o ./build/obj/lv_drivers/indev/FT5406EE8.o ./build/obj/lv_drivers/indev/mouse.o ./build/obj/lvgl/tests/lv_test_widgets/lv_test_label.o ./build/obj/lvgl/tests/lv_test_fonts/font_1.o ./build/obj/lvgl/tests/lv_test_fonts/font_2.o ./build/obj/lvgl/tests/lv_test_fonts/font_3.o ./build/obj/lvgl/tests/lv_test_assert.o ./build/obj/lvgl/tests/lv_test_main.o ./build/obj/lvgl/tests/lv_test_core/lv_test_obj.o ./build/obj/lvgl/tests/lv_test_core/lv_test_font_loader.o ./build/obj/lvgl/tests/lv_test_core/lv_test_style.o ./build/obj/lvgl/tests/lv_test_core/lv_test_core.o ./build/obj/lvgl/src/misc/lv_timer.o ./build/obj/lvgl/src/misc/lv_async.o ./build/obj/lvgl/src/misc/lv_style.o ./build/obj/lvgl/src/misc/lv_gc.o ./build/obj/lvgl/src/misc/lv_templ.o ./build/obj/lvgl/src/misc/lv_utils.o ./build/obj/lvgl/src/misc/lv_tlsf.o ./build/obj/lvgl/src/misc/lv_color.o ./build/obj/lvgl/src/misc/lv_area.o ./build/obj/lvgl/src/misc/lv_fs.o ./build/obj/lvgl/src/misc/lv_anim.o ./build/obj/lvgl/src/misc/lv_printf.o ./build/obj/lvgl/src/misc/lv_log.o ./build/obj/lvgl/src/misc/lv_txt.o ./build/obj/lvgl/src/misc/lv_ll.o ./build/obj/lvgl/src/misc/lv_mem.o ./build/obj/lvgl/src/misc/lv_math.o ./build/obj/lvgl/src/misc/lv_bidi.o ./build/obj/lvgl/src/misc/lv_txt_ap.o ./build/obj/lvgl/src/misc/lv_style_gen.o ./build/obj/lvgl/src/gpu/lv_gpu_stm32_dma2d.o ./build/obj/lvgl/src/gpu/lv_gpu_nxp_vglite.o ./build/obj/lvgl/src/gpu/lv_gpu_nxp_pxp.o ./build/obj/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.o ./build/obj/lvgl/src/hal/lv_hal_disp.o ./build/obj/lvgl/src/hal/lv_hal_tick.o ./build/obj/lvgl/src/hal/lv_hal_indev.o ./build/obj/lvgl/src/core/lv_obj_tree.o ./build/obj/lvgl/src/core/lv_indev.o ./build/obj/lvgl/src/core/lv_obj_scroll.o ./build/obj/lvgl/src/core/lv_disp.o ./build/obj/lvgl/src/core/lv_theme.o ./build/obj/lvgl/src/core/lv_obj_draw.o ./build/obj/lvgl/src/core/lv_obj_pos.o ./build/obj/lvgl/src/core/lv_obj.o ./build/obj/lvgl/src/core/lv_obj_style_gen.o ./build/obj/lvgl/src/core/lv_group.o ./build/obj/lvgl/src/core/lv_obj_style.o ./build/obj/lvgl/src/core/lv_refr.o ./build/obj/lvgl/src/core/lv_indev_scroll.o ./build/obj/lvgl/src/core/lv_obj_class.o ./build/obj/lvgl/src/core/lv_event.o ./build/obj/lvgl/src/widgets/lv_dropdown.o ./build/obj/lvgl/src/widgets/lv_line.o ./build/obj/lvgl/src/widgets/lv_table.o ./build/obj/lvgl/src/widgets/lv_btn.o ./build/obj/lvgl/src/widgets/lv_checkbox.o ./build/obj/lvgl/src/widgets/lv_img.o ./build/obj/lvgl/src/widgets/lv_canvas.o ./build/obj/lvgl/src/widgets/lv_bar.o ./build/obj/lvgl/src/widgets/lv_roller.o ./build/obj/lvgl/src/widgets/lv_label.o ./build/obj/lvgl/src/widgets/lv_slider.o ./build/obj/lvgl/src/widgets/lv_textarea.o ./build/obj/lvgl/src/widgets/lv_switch.o ./build/obj/lvgl/src/widgets/lv_btnmatrix.o ./build/obj/lvgl/src/widgets/lv_objx_templ.o ./build/obj/lvgl/src/widgets/lv_arc.o ./build/obj/lvgl/src/extra/lv_extra.o ./build/obj/lvgl/src/extra/layouts/grid/lv_grid.o ./build/obj/lvgl/src/extra/layouts/flex/lv_flex.o ./build/obj/lvgl/src/extra/widgets/win/lv_win.o ./build/obj/lvgl/src/extra/widgets/spinner/lv_spinner.o ./build/obj/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o ./build/obj/lvgl/src/extra/widgets/tabview/lv_tabview.o ./build/obj/lvgl/src/extra/widgets/keyboard/lv_keyboard.o ./build/obj/lvgl/src/extra/widgets/animimg/lv_animimg.o ./build/obj/lvgl/src/extra/widgets/chart/lv_chart.o ./build/obj/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o ./build/obj/lvgl/src/extra/widgets/span/lv_span.o ./build/obj/lvgl/src/extra/widgets/msgbox/lv_msgbox.o ./build/obj/lvgl/src/extra/widgets/spinbox/lv_spinbox.o ./build/obj/lvgl/src/extra/widgets/meter/lv_meter.o ./build/obj/lvgl/src/extra/widgets/led/lv_led.o ./build/obj/lvgl/src/extra/widgets/list/lv_list.o ./build/obj/lvgl/src/extra/widgets/tileview/lv_tileview.o ./build/obj/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o ./build/obj/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o ./build/obj/lvgl/src/extra/widgets/calendar/lv_calendar.o ./build/obj/lvgl/src/extra/themes/mono/lv_theme_mono.o ./build/obj/lvgl/src/extra/themes/basic/lv_theme_basic.o ./build/obj/lvgl/src/extra/themes/default/lv_theme_default.o ./build/obj/lvgl/src/font/lv_font_montserrat_28_compressed.o ./build/obj/lvgl/src/font/lv_font_montserrat_14.o ./build/obj/lvgl/src/font/lv_font_unscii_16.o ./build/obj/lvgl/src/font/lv_font_loader.o ./build/obj/lvgl/src/font/lv_font_montserrat_44.o ./build/obj/lvgl/src/font/lv_font_montserrat_12.o ./build/obj/lvgl/src/font/lv_font_fmt_txt.o ./build/obj/lvgl/src/font/lv_font_montserrat_22.o ./build/obj/lvgl/src/font/lv_font_montserrat_42.o ./build/obj/lvgl/src/font/lv_font.o ./build/obj/lvgl/src/font/lv_font_montserrat_18.o ./build/obj/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.o ./build/obj/lvgl/src/font/lv_font_unscii_8.o ./build/obj/lvgl/src/font/lv_font_montserrat_32.o ./build/obj/lvgl/src/font/lv_font_montserrat_24.o ./build/obj/lvgl/src/font/lv_font_montserrat_8.o ./build/obj/lvgl/src/font/lv_font_simsun_16_cjk.o ./build/obj/lvgl/src/font/lv_font_montserrat_28.o ./build/obj/lvgl/src/font/lv_font_montserrat_10.o ./build/obj/lvgl/src/font/lv_font_montserrat_36.o ./build/obj/lvgl/src/font/lv_font_montserrat_12_subpx.o ./build/obj/lvgl/src/font/lv_font_montserrat_38.o ./build/obj/lvgl/src/font/lv_font_montserrat_46.o ./build/obj/lvgl/src/font/lv_font_montserrat_34.o ./build/obj/lvgl/src/font/lv_font_montserrat_40.o ./build/obj/lvgl/src/font/lv_font_montserrat_20.o ./build/obj/lvgl/src/font/lv_font_montserrat_26.o ./build/obj/lvgl/src/font/lv_font_montserrat_16.o ./build/obj/lvgl/src/font/lv_font_montserrat_30.o ./build/obj/lvgl/src/font/lv_font_montserrat_48.o ./build/obj/lvgl/src/draw/lv_draw_rect.o ./build/obj/lvgl/src/draw/lv_draw_mask.o ./build/obj/lvgl/src/draw/lv_draw_blend.o ./build/obj/lvgl/src/draw/lv_img_buf.o ./build/obj/lvgl/src/draw/lv_draw_img.o ./build/obj/lvgl/src/draw/lv_img_cache.o ./build/obj/lvgl/src/draw/lv_draw_label.o ./build/obj/lvgl/src/draw/lv_draw_triangle.o ./build/obj/lvgl/src/draw/lv_draw_line.o ./build/obj/lvgl/src/draw/lv_draw_arc.o ./build/obj/lvgl/src/draw/lv_img_decoder.o ./build/obj/lvgl/examples/layouts/grid/lv_example_grid_3.o ./build/obj/lvgl/examples/layouts/grid/lv_example_grid_6.o ./build/obj/lvgl/examples/layouts/grid/lv_example_grid_2.o ./build/obj/lvgl/examples/layouts/grid/lv_example_grid_4.o ./build/obj/lvgl/examples/layouts/grid/lv_example_grid_1.o ./build/obj/lvgl/examples/layouts/grid/lv_example_grid_5.o ./build/obj/lvgl/examples/layouts/flex/lv_example_flex_2.o ./build/obj/lvgl/examples/layouts/flex/lv_example_flex_4.o ./build/obj/lvgl/examples/layouts/flex/lv_example_flex_5.o ./build/obj/lvgl/examples/layouts/flex/lv_example_flex_6.o ./build/obj/lvgl/examples/layouts/flex/lv_example_flex_3.o ./build/obj/lvgl/examples/layouts/flex/lv_example_flex_1.o ./build/obj/lvgl/examples/widgets/table/lv_example_table_2.o ./build/obj/lvgl/examples/widgets/table/lv_example_table_1.o ./build/obj/lvgl/examples/widgets/slider/lv_example_slider_3.o ./build/obj/lvgl/examples/widgets/slider/lv_example_slider_2.o ./build/obj/lvgl/examples/widgets/slider/lv_example_slider_1.o ./build/obj/lvgl/examples/widgets/win/lv_example_win_1.o ./build/obj/lvgl/examples/widgets/spinner/lv_example_spinner_1.o ./build/obj/lvgl/examples/widgets/canvas/lv_example_canvas_2.o ./build/obj/lvgl/examples/widgets/canvas/lv_example_canvas_1.o ./build/obj/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.o ./build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.o ./build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.o ./build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.o ./build/obj/lvgl/examples/widgets/tabview/lv_example_tabview_2.o ./build/obj/lvgl/examples/widgets/tabview/lv_example_tabview_1.o ./build/obj/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.o ./build/obj/lvgl/examples/widgets/animimg/lv_example_animimg_1.o ./build/obj/lvgl/examples/widgets/obj/lv_example_obj_2.o ./build/obj/lvgl/examples/widgets/obj/lv_example_obj_1.o ./build/obj/lvgl/examples/widgets/chart/lv_example_chart_3.o ./build/obj/lvgl/examples/widgets/chart/lv_example_chart_5.o ./build/obj/lvgl/examples/widgets/chart/lv_example_chart_1.o ./build/obj/lvgl/examples/widgets/chart/lv_example_chart_6.o ./build/obj/lvgl/examples/widgets/chart/lv_example_chart_7.o ./build/obj/lvgl/examples/widgets/chart/lv_example_chart_2.o ./build/obj/lvgl/examples/widgets/chart/lv_example_chart_4.o ./build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.o ./build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.o ./build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.o ./build/obj/lvgl/examples/widgets/arc/lv_example_arc_1.o ./build/obj/lvgl/examples/widgets/arc/lv_example_arc_2.o ./build/obj/lvgl/examples/widgets/bar/lv_example_bar_4.o ./build/obj/lvgl/examples/widgets/bar/lv_example_bar_3.o ./build/obj/lvgl/examples/widgets/bar/lv_example_bar_2.o ./build/obj/lvgl/examples/widgets/bar/lv_example_bar_5.o ./build/obj/lvgl/examples/widgets/bar/lv_example_bar_6.o ./build/obj/lvgl/examples/widgets/bar/lv_example_bar_1.o ./build/obj/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.o ./build/obj/lvgl/examples/widgets/span/lv_example_span_1.o ./build/obj/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.o ./build/obj/lvgl/examples/widgets/switch/lv_example_switch_1.o ./build/obj/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o ./build/obj/lvgl/examples/widgets/label/lv_example_label_1.o ./build/obj/lvgl/examples/widgets/label/lv_example_label_3.o ./build/obj/lvgl/examples/widgets/label/lv_example_label_2.o ./build/obj/lvgl/examples/widgets/meter/lv_example_meter_1.o ./build/obj/lvgl/examples/widgets/meter/lv_example_meter_3.o ./build/obj/lvgl/examples/widgets/meter/lv_example_meter_2.o ./build/obj/lvgl/examples/widgets/meter/lv_example_meter_4.o ./build/obj/lvgl/examples/widgets/line/lv_example_line_1.o ./build/obj/lvgl/examples/widgets/led/lv_example_led_1.o ./build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_3.o ./build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_2.o ./build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_1.o ./build/obj/lvgl/examples/widgets/img/lv_example_img_3.o ./build/obj/lvgl/examples/widgets/img/lv_example_img_1.o ./build/obj/lvgl/examples/widgets/img/lv_example_img_2.o ./build/obj/lvgl/examples/widgets/img/lv_example_img_4.o ./build/obj/lvgl/examples/widgets/list/lv_example_list_1.o ./build/obj/lvgl/examples/widgets/roller/lv_example_roller_1.o ./build/obj/lvgl/examples/widgets/roller/lv_example_roller_3.o ./build/obj/lvgl/examples/widgets/roller/lv_example_roller_2.o ./build/obj/lvgl/examples/widgets/tileview/lv_example_tileview_1.o ./build/obj/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o ./build/obj/lvgl/examples/widgets/calendar/lv_example_calendar_1.o ./build/obj/lvgl/examples/widgets/btn/lv_example_btn_1.o ./build/obj/lvgl/examples/widgets/btn/lv_example_btn_3.o ./build/obj/lvgl/examples/widgets/btn/lv_example_btn_2.o ./build/obj/lvgl/examples/assets/imgbtn_right.o ./build/obj/lvgl/examples/assets/img_skew_strip.o ./build/obj/lvgl/examples/assets/img_cogwheel_indexed16.o ./build/obj/lvgl/examples/assets/animimg001.o ./build/obj/lvgl/examples/assets/imgbtn_mid.o ./build/obj/lvgl/examples/assets/img_caret_down.o ./build/obj/lvgl/examples/assets/animimg003.o ./build/obj/lvgl/examples/assets/animimg002.o ./build/obj/lvgl/examples/assets/img_star.o ./build/obj/lvgl/examples/assets/imgbtn_left.o ./build/obj/lvgl/examples/assets/img_cogwheel_alpha16.o ./build/obj/lvgl/examples/assets/img_cogwheel_argb.o ./build/obj/lvgl/examples/assets/img_hand.o ./build/obj/lvgl/examples/assets/img_cogwheel_rgb.o ./build/obj/lvgl/examples/assets/img_cogwheel_chroma_keyed.o ./build/obj/lvgl/examples/anim/lv_example_anim_1.o ./build/obj/lvgl/examples/anim/lv_example_anim_2.o ./build/obj/lvgl/examples/get_started/lv_example_get_started_1.o ./build/obj/lvgl/examples/get_started/lv_example_get_started_3.o ./build/obj/lvgl/examples/get_started/lv_example_get_started_2.o ./build/obj/lvgl/examples/porting/lv_port_fs_template.o ./build/obj/lvgl/examples/porting/lv_port_indev_template.o ./build/obj/lvgl/examples/porting/lv_port_disp_template.o ./build/obj/lvgl/examples/styles/lv_example_style_12.o ./build/obj/lvgl/examples/styles/lv_example_style_5.o ./build/obj/lvgl/examples/styles/lv_example_style_14.o ./build/obj/lvgl/examples/styles/lv_example_style_11.o ./build/obj/lvgl/examples/styles/lv_example_style_1.o ./build/obj/lvgl/examples/styles/lv_example_style_7.o ./build/obj/lvgl/examples/styles/lv_example_style_9.o ./build/obj/lvgl/examples/styles/lv_example_style_6.o ./build/obj/lvgl/examples/styles/lv_example_style_13.o ./build/obj/lvgl/examples/styles/lv_example_style_3.o ./build/obj/lvgl/examples/styles/lv_example_style_2.o ./build/obj/lvgl/examples/styles/lv_example_style_10.o ./build/obj/lvgl/examples/styles/lv_example_style_8.o ./build/obj/lvgl/examples/styles/lv_example_style_4.o ./build/obj/lvgl/examples/event/lv_example_event_3.o ./build/obj/lvgl/examples/event/lv_example_event_1.o ./build/obj/lvgl/examples/event/lv_example_event_2.o ./build/obj/lvgl/examples/scroll/lv_example_scroll_4.o ./build/obj/lvgl/examples/scroll/lv_example_scroll_6.o ./build/obj/lvgl/examples/scroll/lv_example_scroll_5.o ./build/obj/lvgl/examples/scroll/lv_example_scroll_1.o ./build/obj/lvgl/examples/scroll/lv_example_scroll_3.o ./build/obj/lvgl/examples/scroll/lv_example_scroll_2.o ./build/obj/main/src/mouse_cursor_icon.o ./build/obj/main/src/main.o ./build/obj/main/ui/menu.o ./build/obj/main/ui/image/image12.o ./build/obj/main/ui/image/image11.o ./build/obj/main/ui/image/image4.o ./build/obj/main/ui/image/image10.o ./build/obj/main/ui/image/image7.o ./build/obj/main/ui/image/image8.o ./build/obj/main/ui/image/image5.o ./build/obj/main/ui/image/image1.o ./build/obj/main/ui/image/image0.o ./build/obj/main/ui/image/image13.o ./build/obj/main/ui/image/image3.o ./build/obj/main/ui/image/image14.o ./build/obj/main/ui/image/image2.o ./build/obj/main/ui/image/image9.o ./build/obj/main/ui/image/image6.o ./build/obj/main/ui/tag.o ./build/obj/main/ui/time.o ./build/obj/main/ui/ui.o ./build/obj/main/ui/anim_num/anim_num.o ./build/obj/main/ui/home.o
+# environment
+LC_ADDRESS = zh_CN.UTF-8
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 14203
+# makefile (from 'Makefile', line 9)
+OBJ_EXT := o
+# variable set hash-table stats:
+# Load=151/1024=15%, Rehash=0, Collisions=33/209=16%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2049, inode 5776323): 15 files, no impossibilities.
+# lv_examples/src/lv_demo_stress/assets (device 2049, inode 6476977): 2 files, no impossibilities so far.
+
+# 17 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+build/obj/%.o: %.c
+#  recipe to execute (from 'Makefile', line 45):
+	@echo 'Building project file: $<'
+	@mkdir -p $(dir $@)
+	@$(COMPILE) -c -o "$@" "$<"
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/span/lv_span.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_24.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/canvas/lv_example_canvas_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_widgets/assets/img_clothes.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/wayland/wayland.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/slider/lv_example_slider_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_unscii_16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_img_cache.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/bar/lv_example_bar_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/layouts/flex/lv_flex.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_fmt_txt.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/scroll/lv_example_scroll_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/scroll/lv_example_scroll_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/calendar/lv_calendar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/XPT2046.o:
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_mem.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_group.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/animimg003.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/bar/lv_example_bar_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image9.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_10.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/label/lv_example_label_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: default
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_img_buf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_roller.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_objx_templ.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_32.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_18.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_12_subpx.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/led/lv_example_led_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/chart/lv_example_chart_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_widgets/lv_demo_widgets.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/animimg/lv_example_animimg_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/grid/lv_example_grid_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_hand.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_color.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/gpu/lv_gpu_stm32_dma2d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_anim.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_obj_class.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/switch/lv_example_switch_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image13.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/led/lv_led.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/meter/lv_example_meter_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image14.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/get_started/lv_example_get_started_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_stress/lv_demo_stress.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/flex/lv_example_flex_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_fonts/font_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/menu.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_templ.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_36.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image0.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_assert.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_obj_tree.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_core/lv_test_obj.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/flex/lv_example_flex_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image7.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/slider/lv_example_slider_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/themes/basic/lv_theme_basic.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/btn/lv_example_btn_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/imgbtn_right.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/spinner/lv_spinner.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/FT5406EE8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/chart/lv_example_chart_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/meter/lv_meter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/scroll/lv_example_scroll_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_timer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/roller/lv_example_roller_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/themes/default/lv_theme_default.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_async.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/SSD1963.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/chart/lv_example_chart_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_20.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-04-25 22:39:32.078595686
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_switch.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/tabview/lv_example_tabview_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/scroll/lv_example_scroll_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/tabview/lv_example_tabview_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_area.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_cogwheel_indexed16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/gtkdrv/gtkdrv.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/gpu/lv_gpu_nxp_vglite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/bar/lv_example_bar_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/keyboard.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/hal/lv_hal_indev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+ 
+# Not a target:
+build/obj/lvgl/src/core/lv_obj_draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_loader.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_7.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_26.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/grid/lv_example_grid_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.o: lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.o
+# automatic
+# % := 
+# automatic
+# * := lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az
+# automatic
+# + := lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c
+# automatic
+# | := 
+# automatic
+# < := lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c
+# automatic
+# ^ := lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c
+# automatic
+# ? := lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/20=5%
+#  recipe to execute (from 'Makefile', line 45):
+	@echo 'Building project file: $<'
+	@mkdir -p $(dir $@)
+	@$(COMPILE) -c -o "$@" "$<"
+
+# Not a target:
+build/obj/lv_drivers/win_drv.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_cogwheel_argb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/AD_touch.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/themes/mono/lv_theme_mono.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_48.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_38.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/scroll/lv_example_scroll_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/mousewheel.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/span/lv_example_span_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/chart/lv_example_chart_7.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_40.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_34.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_14.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/monitor.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/btn/lv_example_btn_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/img/lv_example_img_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/win32drv/win32drv.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_mask.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/label/lv_example_label_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/arc/lv_example_arc_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_cogwheel_alpha16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_22.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/grid/lv_example_grid_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/flex/lv_example_flex_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/calendar/lv_example_calendar_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_28_compressed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/src/mouse_cursor_icon.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/ui.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/event/lv_example_event_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_42.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/libinput.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/drm.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_11.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_obj_style.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/layouts/grid/lv_grid.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/label/lv_example_label_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_printf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+default: build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.o build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_12_compr_az.o build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.o build/obj/lv_examples/src/lv_demo_stress/lv_demo_stress.o build/obj/lv_examples/src/lv_demo_music/lv_demo_music_list.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_2_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_next.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_pause.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_slider_knob.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_prev.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_top_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_left.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.o build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_list_play_large.o build/obj/lv_examples/src/lv_demo_music/lv_demo_music.o build/obj/lv_examples/src/lv_demo_music/lv_demo_music_main.o build/obj/lv_examples/src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.o build/obj/lv_examples/src/lv_demo_widgets/lv_demo_widgets.o build/obj/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.o build/obj/lv_examples/src/lv_demo_widgets/assets/img_clothes.o build/obj/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.o build/obj/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o build/obj/lv_drivers/win_drv.o build/obj/lv_drivers/win32drv/win32drv.o build/obj/lv_drivers/display/R61581.o build/obj/lv_drivers/display/drm.o build/obj/lv_drivers/display/SSD1963.o build/obj/lv_drivers/display/ST7565.o build/obj/lv_drivers/display/SHARP_MIP.o build/obj/lv_drivers/display/monitor.o build/obj/lv_drivers/display/fbdev.o build/obj/lv_drivers/display/GC9A01.o build/obj/lv_drivers/display/ILI9341.o build/obj/lv_drivers/display/UC1610.o build/obj/lv_drivers/gtkdrv/gtkdrv.o build/obj/lv_drivers/wayland/wayland.o build/obj/lv_drivers/indev/XPT2046.o build/obj/lv_drivers/indev/libinput.o build/obj/lv_drivers/indev/mousewheel.o build/obj/lv_drivers/indev/AD_touch.o build/obj/lv_drivers/indev/keyboard.o build/obj/lv_drivers/indev/evdev.o build/obj/lv_drivers/indev/FT5406EE8.o build/obj/lv_drivers/indev/mouse.o build/obj/lvgl/tests/lv_test_widgets/lv_test_label.o build/obj/lvgl/tests/lv_test_fonts/font_1.o build/obj/lvgl/tests/lv_test_fonts/font_2.o build/obj/lvgl/tests/lv_test_fonts/font_3.o build/obj/lvgl/tests/lv_test_assert.o build/obj/lvgl/tests/lv_test_main.o build/obj/lvgl/tests/lv_test_core/lv_test_obj.o build/obj/lvgl/tests/lv_test_core/lv_test_font_loader.o build/obj/lvgl/tests/lv_test_core/lv_test_style.o build/obj/lvgl/tests/lv_test_core/lv_test_core.o build/obj/lvgl/src/misc/lv_timer.o build/obj/lvgl/src/misc/lv_async.o build/obj/lvgl/src/misc/lv_style.o build/obj/lvgl/src/misc/lv_gc.o build/obj/lvgl/src/misc/lv_templ.o build/obj/lvgl/src/misc/lv_utils.o build/obj/lvgl/src/misc/lv_tlsf.o build/obj/lvgl/src/misc/lv_color.o build/obj/lvgl/src/misc/lv_area.o build/obj/lvgl/src/misc/lv_fs.o build/obj/lvgl/src/misc/lv_anim.o build/obj/lvgl/src/misc/lv_printf.o build/obj/lvgl/src/misc/lv_log.o build/obj/lvgl/src/misc/lv_txt.o build/obj/lvgl/src/misc/lv_ll.o build/obj/lvgl/src/misc/lv_mem.o build/obj/lvgl/src/misc/lv_math.o build/obj/lvgl/src/misc/lv_bidi.o build/obj/lvgl/src/misc/lv_txt_ap.o build/obj/lvgl/src/misc/lv_style_gen.o build/obj/lvgl/src/gpu/lv_gpu_stm32_dma2d.o build/obj/lvgl/src/gpu/lv_gpu_nxp_vglite.o build/obj/lvgl/src/gpu/lv_gpu_nxp_pxp.o build/obj/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.o build/obj/lvgl/src/hal/lv_hal_disp.o build/obj/lvgl/src/hal/lv_hal_tick.o build/obj/lvgl/src/hal/lv_hal_indev.o build/obj/lvgl/src/core/lv_obj_tree.o build/obj/lvgl/src/core/lv_indev.o build/obj/lvgl/src/core/lv_obj_scroll.o build/obj/lvgl/src/core/lv_disp.o build/obj/lvgl/src/core/lv_theme.o build/obj/lvgl/src/core/lv_obj_draw.o build/obj/lvgl/src/core/lv_obj_pos.o build/obj/lvgl/src/core/lv_obj.o build/obj/lvgl/src/core/lv_obj_style_gen.o build/obj/lvgl/src/core/lv_group.o build/obj/lvgl/src/core/lv_obj_style.o build/obj/lvgl/src/core/lv_refr.o build/obj/lvgl/src/core/lv_indev_scroll.o build/obj/lvgl/src/core/lv_obj_class.o build/obj/lvgl/src/core/lv_event.o build/obj/lvgl/src/widgets/lv_dropdown.o build/obj/lvgl/src/widgets/lv_line.o build/obj/lvgl/src/widgets/lv_table.o build/obj/lvgl/src/widgets/lv_btn.o build/obj/lvgl/src/widgets/lv_checkbox.o build/obj/lvgl/src/widgets/lv_img.o build/obj/lvgl/src/widgets/lv_canvas.o build/obj/lvgl/src/widgets/lv_bar.o build/obj/lvgl/src/widgets/lv_roller.o build/obj/lvgl/src/widgets/lv_label.o build/obj/lvgl/src/widgets/lv_slider.o build/obj/lvgl/src/widgets/lv_textarea.o build/obj/lvgl/src/widgets/lv_switch.o build/obj/lvgl/src/widgets/lv_btnmatrix.o build/obj/lvgl/src/widgets/lv_objx_templ.o build/obj/lvgl/src/widgets/lv_arc.o build/obj/lvgl/src/extra/lv_extra.o build/obj/lvgl/src/extra/layouts/grid/lv_grid.o build/obj/lvgl/src/extra/layouts/flex/lv_flex.o build/obj/lvgl/src/extra/widgets/win/lv_win.o build/obj/lvgl/src/extra/widgets/spinner/lv_spinner.o build/obj/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o build/obj/lvgl/src/extra/widgets/tabview/lv_tabview.o build/obj/lv 
+gl/src/extra/widgets/keyboard/lv_keyboard.o build/obj/lvgl/src/extra/widgets/animimg/lv_animimg.o build/obj/lvgl/src/extra/widgets/chart/lv_chart.o build/obj/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o build/obj/lvgl/src/extra/widgets/span/lv_span.o build/obj/lvgl/src/extra/widgets/msgbox/lv_msgbox.o build/obj/lvgl/src/extra/widgets/spinbox/lv_spinbox.o build/obj/lvgl/src/extra/widgets/meter/lv_meter.o build/obj/lvgl/src/extra/widgets/led/lv_led.o build/obj/lvgl/src/extra/widgets/list/lv_list.o build/obj/lvgl/src/extra/widgets/tileview/lv_tileview.o build/obj/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o build/obj/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o build/obj/lvgl/src/extra/widgets/calendar/lv_calendar.o build/obj/lvgl/src/extra/themes/mono/lv_theme_mono.o build/obj/lvgl/src/extra/themes/basic/lv_theme_basic.o build/obj/lvgl/src/extra/themes/default/lv_theme_default.o build/obj/lvgl/src/font/lv_font_montserrat_28_compressed.o build/obj/lvgl/src/font/lv_font_montserrat_14.o build/obj/lvgl/src/font/lv_font_unscii_16.o build/obj/lvgl/src/font/lv_font_loader.o build/obj/lvgl/src/font/lv_font_montserrat_44.o build/obj/lvgl/src/font/lv_font_montserrat_12.o build/obj/lvgl/src/font/lv_font_fmt_txt.o build/obj/lvgl/src/font/lv_font_montserrat_22.o build/obj/lvgl/src/font/lv_font_montserrat_42.o build/obj/lvgl/src/font/lv_font.o build/obj/lvgl/src/font/lv_font_montserrat_18.o build/obj/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.o build/obj/lvgl/src/font/lv_font_unscii_8.o build/obj/lvgl/src/font/lv_font_montserrat_32.o build/obj/lvgl/src/font/lv_font_montserrat_24.o build/obj/lvgl/src/font/lv_font_montserrat_8.o build/obj/lvgl/src/font/lv_font_simsun_16_cjk.o build/obj/lvgl/src/font/lv_font_montserrat_28.o build/obj/lvgl/src/font/lv_font_montserrat_10.o build/obj/lvgl/src/font/lv_font_montserrat_36.o build/obj/lvgl/src/font/lv_font_montserrat_12_subpx.o build/obj/lvgl/src/font/lv_font_montserrat_38.o build/obj/lvgl/src/font/lv_font_montserrat_46.o build/obj/lvgl/src/font/lv_font_montserrat_34.o build/obj/lvgl/src/font/lv_font_montserrat_40.o build/obj/lvgl/src/font/lv_font_montserrat_20.o build/obj/lvgl/src/font/lv_font_montserrat_26.o build/obj/lvgl/src/font/lv_font_montserrat_16.o build/obj/lvgl/src/font/lv_font_montserrat_30.o build/obj/lvgl/src/font/lv_font_montserrat_48.o build/obj/lvgl/src/draw/lv_draw_rect.o build/obj/lvgl/src/draw/lv_draw_mask.o build/obj/lvgl/src/draw/lv_draw_blend.o build/obj/lvgl/src/draw/lv_img_buf.o build/obj/lvgl/src/draw/lv_draw_img.o build/obj/lvgl/src/draw/lv_img_cache.o build/obj/lvgl/src/draw/lv_draw_label.o build/obj/lvgl/src/draw/lv_draw_triangle.o build/obj/lvgl/src/draw/lv_draw_line.o build/obj/lvgl/src/draw/lv_draw_arc.o build/obj/lvgl/src/draw/lv_img_decoder.o build/obj/lvgl/examples/layouts/grid/lv_example_grid_3.o build/obj/lvgl/examples/layouts/grid/lv_example_grid_6.o build/obj/lvgl/examples/layouts/grid/lv_example_grid_2.o build/obj/lvgl/examples/layouts/grid/lv_example_grid_4.o build/obj/lvgl/examples/layouts/grid/lv_example_grid_1.o build/obj/lvgl/examples/layouts/grid/lv_example_grid_5.o build/obj/lvgl/examples/layouts/flex/lv_example_flex_2.o build/obj/lvgl/examples/layouts/flex/lv_example_flex_4.o build/obj/lvgl/examples/layouts/flex/lv_example_flex_5.o build/obj/lvgl/examples/layouts/flex/lv_example_flex_6.o build/obj/lvgl/examples/layouts/flex/lv_example_flex_3.o build/obj/lvgl/examples/layouts/flex/lv_example_flex_1.o build/obj/lvgl/examples/widgets/table/lv_example_table_2.o build/obj/lvgl/examples/widgets/table/lv_example_table_1.o build/obj/lvgl/examples/widgets/slider/lv_example_slider_3.o build/obj/lvgl/examples/widgets/slider/lv_example_slider_2.o build/obj/lvgl/examples/widgets/slider/lv_example_slider_1.o build/obj/lvgl/examples/widgets/win/lv_example_win_1.o build/obj/lvgl/examples/widgets/spinner/lv_example_spinner_1.o build/obj/lvgl/examples/widgets/canvas/lv_example_canvas_2.o build/obj/lvgl/examples/widgets/canvas/lv_example_canvas_1.o build/obj/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.o build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.o build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.o build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.o build/obj/lvgl/examples/widgets/tabview/lv_example_tabview_2.o build/obj/lvgl/examples/widgets/tabview/lv_example_tabview_1.o build/obj/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.o build/obj/lvgl/examples/widgets/animimg/lv_example_animimg_1.o build/obj/lvgl/examples/widgets/obj/lv_example_obj_2.o build/obj/lvgl/examples/widgets/obj/lv_example_obj_1.o build/obj/lvgl/examples/widgets/chart/lv_example_chart_3.o build/obj/lvgl/examples/widgets/chart/lv_example_chart_5.o build/obj/lvgl/examples/widgets/chart/lv_example_chart_1.o build/obj/lvgl/examples/widgets/chart/lv_example_chart_6.o build/obj/lvgl/examples/widgets/chart/lv_example_chart_7.o build/obj/lvgl/examples/widgets/chart/lv_example_chart_2.o build/obj/lvgl/examples/widgets/chart/lv_example_chart_4.o build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.o build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.o build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.o build/obj/lvgl/examples/widgets/arc/lv_example_arc_1.o build/obj/lvgl/examples/widgets/arc/lv_example_arc_2.o build/obj/lvgl/examples/widgets/bar/lv_example_bar_4.o build/obj/lvgl/examples/widgets/bar/lv_example_bar_3.o build/obj/lvgl/examples/widgets/bar/lv_example_bar_2.o build/obj/lvgl/examples/widgets/bar/lv_example_bar_5.o build/obj/lvgl/examples/widgets/bar/lv_example_bar_6.o build/obj/lvgl/examples/widgets/bar/lv_example_bar_1.o build/obj/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.o build/obj/lvgl/examples/widgets/span/lv_example_span_1.o build/obj/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.o build/obj/lvgl/examples/widgets/switch/lv_example_switch_1.o build/obj/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o build/obj/lvgl/examples/widgets/label/lv_example_label_1.o build/obj/lvgl/examples/widgets/label/lv_example_label_3.o build/obj/lvgl/examples/widgets/label/lv_example_label_2.o build/obj/lvgl/examples/widgets/meter/lv_example_meter_1.o build/obj/lvgl/examples/widgets/meter/lv_example_meter_3.o build/obj/lvgl/examples/widgets/meter/lv_example_meter_2.o build/obj/lvgl/examples/widgets/meter/lv_example_meter_4.o build/obj/lvgl/examples/widgets/line/lv_example_line_1.o build/obj/lvgl/examples/widgets/led/lv_example_led_1.o build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_3.o build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_2.o build/obj/lvgl/examples/widgets/textarea/lv_example_textarea_1.o build/obj/lvgl/examples/widgets/img/lv_example_img_3.o build/obj/lvgl/examples/widgets/img/lv_example_img_1.o build/obj/lvgl/examples/widgets/img/lv_example_img_2.o build/obj/lvgl/examples/widgets/img/lv_example_img_4.o build/obj/lvgl/examples/widgets/list/lv_example_list_1.o build/obj/lvgl/examples/widgets/roller/lv_example_roller_1.o build/obj/lvgl/examples/widgets/roller/lv_example_roller_3.o build/obj/lvgl/examples/widgets/roller/lv_example_roller_2.o build/obj/lvgl/examples/widgets/tileview/lv_example_tileview_1.o build/obj/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o build/obj/lvgl/examples/widgets/calendar/lv_example_calendar_1.o build/obj/lvgl/examples/widgets/btn/lv_example_btn_1.o build/obj/lvgl/examples/widgets/btn/lv_example_btn_3.o build/obj/lvgl/examples/widgets/btn/lv_example_btn_2.o build/obj/lvgl/examples/assets/imgbtn_right.o build/obj/lvgl/examples/assets/img_skew_strip.o build/obj/lvgl/examples/assets/img_cogwheel_indexed16.o build/obj/lvgl/examples/assets/animimg001.o build/obj/lvgl/examples/assets/imgbtn_mid.o build/obj/lvgl/examples/assets/img_caret_down.o build/obj/lvgl/examples/assets/animimg003.o build/obj/lvgl/examples/assets/animimg002.o build/obj/lvgl/examples/assets/img_star.o build/obj/lvgl/examples/assets/imgbtn_left.o build/obj/lvgl/examples/assets/img_cogwheel_alpha16.o build/obj/lvgl/examples/assets/img_cogwheel_argb.o build/obj/lvgl/examples/assets/img_hand.o build/obj/lvgl/examples/assets/img_cogwheel_rgb.o build/obj/lvgl/examples/assets/img_cogwheel_chroma_keyed.o build/obj/lvgl/examples/anim/lv_example_anim_1.o build/obj/lvgl/examples/anim/lv_example_anim_2.o build/obj/lvgl/examples/get_started/lv_example_get_started_1.o build/obj/lvgl/examples/get_started/lv_example_get_started_3.o build/obj/lvgl/examples/get_started/lv_example_get_started_2.o build/obj/lvgl/examples/porting/lv_port_fs_template.o build/obj/lvgl/examples/porting/lv_port_indev_template.o build/obj/lvgl/examples/porting/lv_port_disp_template.o build/obj/lvgl/examples/styles/lv_example_style_12.o build/obj/lvgl/examples/styles/lv_example_style_5.o build/obj/lvgl/examples/styles/lv_example_style_14.o build/obj/lvgl/examples/styles/lv_example_style_11.o build/obj/lvgl/examples/styles/lv_example_style_1.o build/obj/lvgl/examples/styles/lv_example_style_7.o build/obj/lvgl/examples/styles/lv_example_style_9.o build/obj/lvgl/examples/styles/lv_example_style_6.o build/obj/lvgl/examples/styles/lv_example_style_13.o build/obj/lvgl/examples/styles/lv_example_style_3.o build/obj/lvgl/examples/styles/lv_example_style_2.o build/obj/lvgl/examples/styles/lv_example_style_10.o build/obj/lvgl/examples/styles/lv_example_style_8.o build/obj/lvgl/examples/styles/lv_example_style_4.o build/obj/lvgl/examples/event/lv_example_event_3.o build/obj/lvgl/examples/event/lv_example_event_1.o build/obj/lvgl/examples/event/lv_example_event_2.o build/obj/lvgl/examples/scroll/lv_example_scroll_4.o build/obj/lvgl/examples/scroll/lv_example_scroll_6.o build/obj/lvgl/examples/scroll/lv_example_scroll_5.o build/obj/lvgl/examples/scroll/lv_example_scroll_1.o build/obj/lvgl/examples/scroll/lv_example_scroll_3.o build/obj/lvgl/examples/scroll/lv_example_scroll_2.o build/obj/main/src/mouse_cursor_icon.o build/obj/main/src/main.o build/obj/main/ui/menu.o build/obj/main/ui/image/image12.o build/obj/main/ui/image/image11.o build/obj/main/ui/image/image4.o build/obj/main/ui/image/image10.o build/obj/main/ui/image/image7.o build/obj/main/ui/image/image8.o build/obj/main/ui/image/image5.o build/obj/main/ui/image/image1.o build/obj/main/ui/image/image0.o build/obj/main/ui/image/image13.o build/obj/main/ui/image/image3.o build/obj/main/ui/image/image14.o build/obj/main/ui/image/image2.o build/obj/main/ui/image/image9.o build/obj/main/ui/image/image6.o build/obj/main/ui/tag.o build/obj/main/ui/time.o build/obj/main/ui/ui.o build/obj/main/ui/anim_num/anim_num.o build/obj/main/ui/home.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/8=0%
+#  recipe to execute (from 'Makefile', line 50):
+	@mkdir -p $(BIN_DIR)
+	$(CC) -o $(BIN) $(OBJECTS) $(LDFLAGS) ${LDLIBS}
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/list/lv_list.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/line/lv_example_line_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_txt.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_tlsf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/bar/lv_example_bar_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_3_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image10.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_1_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_blend.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/SHARP_MIP.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/chart/lv_example_chart_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/time.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+build/obj/lvgl/src/extra/widgets/chart/lv_chart.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_cogwheel_rgb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_obj_pos.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_core/lv_test_core.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/gpu/lv_gpu_nxp_pxp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/GC9A01.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_disp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/anim_num/anim_num.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_unscii_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/imgbtn_mid.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/get_started/lv_example_get_started_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_obj.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_16_compr_az.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-24 16:23:36.16262252
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_fonts/font_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_obj_style_gen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/tag.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/animimg001.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_textarea.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/porting/lv_port_disp_template.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_obj_scroll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_dropdown.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_14.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/mouse.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/lv_demo_music_list.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/slider/lv_example_slider_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_46.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/bar/lv_example_bar_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_13.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/spinner/lv_example_spinner_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/arc/lv_example_arc_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_txt_ap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/flex/lv_example_flex_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_star.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/meter/lv_example_meter_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/fbdev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/img/lv_example_img_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/gpu/lv_gpu_nxp_pxp_osa.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/scroll/lv_example_scroll_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/keyboard/lv_keyboard.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_fonts/font_1.o:
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/R61581.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_skew_strip.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/tileview/lv_tileview.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_gc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_30.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/obj/lv_example_obj_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/anim/lv_example_anim_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_checkbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/indev/evdev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_2_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_10.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 54):
+	rm -rf $(WORKING_DIR)
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_core/lv_test_font_loader.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/imgbtn_left.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/win/lv_example_win_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/lv_demo_music_main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_core/lv_test_style.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_play_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/grid/lv_example_grid_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_math.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/roller/lv_example_roller_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_fs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_list_border_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/ST7565.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_triangle.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_rect.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/flex/lv_example_flex_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/tabview/lv_tabview.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_pause_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_simsun_16_cjk.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_28.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/get_started/lv_example_get_started_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_refr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_wave_bottom_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/animimg/lv_animimg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_canvas.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+
+# Not a target:
+build/obj/lvgl/src/core/lv_indev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/btn/lv_example_btn_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/table/lv_example_table_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_4_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/lv_extra.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/home.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_indev_scroll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_44.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/meter/lv_example_meter_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_logo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_event.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_btnmatrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/porting/lv_port_indev_template.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/UC1610.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_slider.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/event/lv_example_event_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_12.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/canvas/lv_example_canvas_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/font/lv_font_montserrat_12.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/list/lv_example_list_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/hal/lv_hal_disp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_log.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/obj/lv_example_obj_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/anim/lv_example_anim_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/tileview/lv_example_tileview_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/img/lv_example_img_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/bar/lv_example_bar_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/chart/lv_example_chart_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_table.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_corner_right_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_btn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_widgets/assets/img_lvgl_logo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image11.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_style.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/roller/lv_example_roller_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_cogwheel_chroma_keyed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/porting/lv_port_fs_template.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/grid/lv_example_grid_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_corner_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/animimg002.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image12.o:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_drivers/display/ILI9341.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/tests/lv_test_widgets/lv_test_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/widgets/lv_bar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/meter/lv_example_meter_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_draw_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/core/lv_theme.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/grid/lv_example_grid_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/event/lv_example_event_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/src/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_cover_1_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/spinbox/lv_spinbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/chart/lv_example_chart_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/styles/lv_example_style_9.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_stress/assets/lv_font_montserrat_28_compr_az.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/bin/demo:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/hal/lv_hal_tick.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_benchmark/lv_demo_benchmark.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_ll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/img/lv_example_img_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/widgets/table/lv_example_table_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/lv_demo_music.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/assets/img_caret_down.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_rnd_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_style_gen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/misc/lv_bidi.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/examples/layouts/flex/lv_example_flex_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_icon_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/win/lv_win.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+install: build/bin/demo
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 57):
+	install -d ${DESTDIR}/usr/lib/${PROJECT}/bin
+	install $< ${DESTDIR}/usr/lib/${PROJECT}/bin/
+
+# Not a target:
+build/obj/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lv_examples/src/lv_demo_music/assets/img_lv_demo_music_btn_loop_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/extra/widgets/msgbox/lv_msgbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/main/ui/image/image6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+build/obj/lvgl/src/draw/lv_img_decoder.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=370/1024=36%, Rehash=0, Collisions=228/748=30%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 3 (2) / strings = 391 / storage = 19280 B / avg = 49 B
+# current buf: size = 8162 B / used = 3010 B / count = 69 / avg = 43 B
+# other used: total = 11118 B / count = 322 / avg = 34 B
+# other free: total = 54 B / max = 28 B / min = 26 B / avg = 27 B
+
+# strcache performance: lookups = 403 / hit rate = 2%
+# hash-table stats:
+# Load=391/8192=5%, Rehash=0, Collisions=14/403=3%
+# Finished Make data base on Mon May  9 19:18:13 2022
+
+ 

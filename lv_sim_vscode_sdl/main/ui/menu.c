@@ -39,13 +39,13 @@ static void menu_event_cb(lv_event_t *e)
         lv_anim_start(&a);
     }else if(code == LV_EVENT_SHORT_CLICKED){
         if(btn == btn0){
-            union cmd data;
-            strcpy(data.cmdbuf, "home create");
-            switch_cmd_write(cmd_head, data);
+            struct cmd_data cmd;
+            strcpy(cmd.cmd_name.name, "home create");
+            switch_cmd_write(cmd_head, cmd);
         }else if((btn==btn1) && (last_btn != btn)){
-            union cmd data;
-            strcpy(data.cmdbuf, "time create");
-            time_cmd_write(cmd_head, data);
+            struct cmd_data cmd;
+            strcpy(cmd.cmd_name.name, "time create");
+            time_cmd_write(cmd_head, cmd);
         }
         last_btn = btn;
     }
@@ -88,7 +88,6 @@ lv_obj_t* menu_creat(void)
     
 
     btn0 = lv_btn_create(cont_col);
-    printf("btn0 %p\n", btn0);
     lv_obj_set_size(btn0, 50, 50);
     lv_obj_t *img1 = lv_img_create(btn0);
     lv_img_set_src(img1, &image1);
@@ -98,7 +97,6 @@ lv_obj_t* menu_creat(void)
     lv_obj_add_style(btn0, &style_btn, 0);
 
     btn1 = lv_btn_create(cont_col);
-    printf("btn1 %p\n", btn1);
     lv_obj_set_size(btn1, 50, 50);
     lv_obj_t *img2 = lv_img_create(btn1);
     lv_img_set_src(img2, &image2);
@@ -206,12 +204,12 @@ void menu_cmd_add(struct cmd_list *head)
     time_cmd_add(head);
 }
 
-void switch_cmd_write(struct cmd_list *head, union cmd data)
+void switch_cmd_write(struct cmd_list *head, struct cmd_data cmd)
 {
-    cmd_write(head, "switch", data);
+    cmd_write(head, "switch", cmd);
 }
 
-void switch_cmd_read(struct cmd_list *head, union cmd *data)
+void switch_cmd_read(struct cmd_list *head, struct cmd_data *cmd)
 {
-    cmd_read(cmd_head, "switch", data, 1);
+    cmd_read(cmd_head, "switch", cmd, 1);
 }

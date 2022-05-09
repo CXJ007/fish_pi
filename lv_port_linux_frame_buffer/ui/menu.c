@@ -42,7 +42,7 @@ static void menu_event_cb(lv_event_t *e)
             union cmd data;
             strcpy(data.cmdbuf, "home create");
             switch_cmd_write(cmd_head, data);
-        }else if((btn==btn1) || (last_btn != btn)){
+        }else if((btn==btn1) && (last_btn != btn)){
             union cmd data;
             strcpy(data.cmdbuf, "time create");
             time_cmd_write(cmd_head, data);

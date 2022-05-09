@@ -163,12 +163,12 @@ void time_cmd_add(struct cmd_list *head)
     cmd_add(head, "time");
 }
 
-void time_cmd_write(struct cmd_list *head, union cmd data)
+void time_cmd_write(struct cmd_list *head, struct cmd_data cmd)
 {
-    cmd_write(head, "time", data);
+    cmd_write(head, "time", cmd);
 }
 
-void time_cmd_read(struct cmd_list *head, union cmd *data)
+void time_cmd_read(struct cmd_list *head, struct cmd_data *cmd)
 {
-    cmd_read(cmd_head, "time", data, 1);
+    cmd_read(cmd_head, "time", cmd, 1);
 }

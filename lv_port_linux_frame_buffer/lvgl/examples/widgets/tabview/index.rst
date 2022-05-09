@@ -1,5 +1,7 @@
+C
+^
 
-Simple Tabview
+Simple Tabview 
 """""""""""""""""""""""
 
 .. lv_example:: widgets/tabview/lv_example_tabview_1
@@ -12,3 +14,7 @@ Tabs on the left, styling and no scrolling
   :language: c
 
 
+MicroPython
+^^^^^^^^^^^
+
+No examples yet.

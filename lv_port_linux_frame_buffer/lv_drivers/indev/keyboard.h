@@ -23,19 +23,17 @@ extern "C" {
 
 #if USE_KEYBOARD
 
-#warning "Deprecated, use the SDL driver instead. See lv_drivers/sdl/sdl.c"
-
 #ifdef LV_LVGL_H_INCLUDE_SIMPLE
 #include "lvgl.h"
 #else
 #include "lvgl/lvgl.h"
 #endif
 
-#if USE_SDL_GPU
-#include "../sdl/sdl_gpu.h"
-#else
-#include "../sdl/sdl.h"
+#ifndef MONITOR_SDL_INCLUDE_PATH
+#define MONITOR_SDL_INCLUDE_PATH <SDL2/SDL.h>
 #endif
+
+#include MONITOR_SDL_INCLUDE_PATH
 
 /*********************
  *      DEFINES
@@ -48,25 +46,23 @@ extern "C" {
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
-
 /**
  * Initialize the keyboard
  */
-static inline void keyboard_init(void)
-{
-    /*Nothing to do*/
-}
+void keyboard_init(void);
 
 /**
  * Get the last pressed or released character from the PC's keyboard
  * @param indev_drv pointer to the related input device driver
  * @param data store the read data here
  */
-static inline void keyboard_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
-{
-    sdl_keyboard_read(indev_drv, data);
-}
+void keyboard_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data);
 
+/**
+ * It is called periodically from the SDL thread to check a key is pressed/released
+ * @param event describes the event
+ */
+void keyboard_handler(SDL_Event *event);
 
 /**********************
  *      MACROS

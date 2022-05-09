@@ -1,0 +1,3284 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Mon May  9 19:03:48 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# makefile (from 'Makefile', line 26)
+MAINOBJ = $(MAINSRC:.c=$(OBJEXT))
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from '/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/lv_drivers.mk', line 1)
+LV_DRIVERS_DIR_NAME = lv_drivers
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer
+# makefile
+SHELL = /bin/sh
+# environment
+SNAP_DATA = /var/snap/code/95
+# environment
+VTE_VERSION = 5202
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"a78078f10f99ab7adc9063c14c25e7ae.zh-cn","_translationsConfigFile":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn/tcf.json","_cacheRoot":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn","_resolvedLanguagePackCoreLocation":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn/57fd6d0195bb9b9d1b49f6da5db789060795de47","_corruptedFile":"/home/cxj/.config/Code/clp/a78078f10f99ab7adc9063c14c25e7ae.zh-cn/corrupted.info","_languagePackSupport":true}
+# makefile (from 'Makefile', line 19)
+CSRCS = $(shell find -L $(LVGL_DIR)/$(LVGL_DIR_NAME)/demos -name "*.c") $(shell find -L $(LVGL_DIR)/$(LVGL_DIR_NAME)/examples -name \*.c) lv_disp.c lv_group.c lv_indev.c lv_indev_scroll.c lv_obj.c lv_obj_class.c lv_obj_draw.c lv_obj_pos.c lv_obj_scroll.c lv_obj_style.c lv_obj_style_gen.c lv_obj_tree.c lv_event.c lv_refr.c lv_theme.c lv_draw_arc.c lv_draw.c lv_draw_img.c lv_draw_label.c lv_draw_line.c lv_draw_mask.c lv_draw_rect.c lv_draw_transform.c lv_draw_triangle.c lv_img_buf.c lv_img_cache.c lv_img_decoder.c lv_gpu_arm2d.c lv_gpu_nxp_pxp.c lv_gpu_nxp_pxp_osa.c lv_gpu_nxp_vglite.c lv_draw_sdl.c lv_draw_sdl_arc.c lv_draw_sdl_bg.c lv_draw_sdl_composite.c lv_draw_sdl_img.c lv_draw_sdl_label.c lv_draw_sdl_line.c lv_draw_sdl_mask.c lv_draw_sdl_polygon.c lv_draw_sdl_rect.c lv_draw_sdl_stack_blur.c lv_draw_sdl_texture_cache.c lv_draw_sdl_utils.c lv_gpu_stm32_dma2d.c lv_draw_sw.c lv_draw_sw_arc.c lv_draw_sw_blend.c lv_draw_sw_dither.c lv_draw_sw_gradient.c lv_draw_sw_img.c lv_draw_sw_letter.c lv_draw_sw_line.c lv_draw_sw_polygon.c lv_draw_sw_rect.c lv_draw_sw_transform.c lv_gpu_swm341_dma2d.c $(shell find -L $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/extra -name \*.c) lv_font.c lv_font_fmt_txt.c lv_font_loader.c lv_font_dejavu_16_persian_hebrew.c lv_font_montserrat_8.c lv_font_montserrat_10.c lv_font_montserrat_12.c lv_font_montserrat_12_subpx.c lv_font_montserrat_14.c lv_font_montserrat_16.c lv_font_montserrat_18.c lv_font_montserrat_20.c lv_font_montserrat_22.c lv_font_montserrat_24.c lv_font_montserrat_26.c lv_font_montserrat_28.c lv_font_montserrat_28_compressed.c lv_font_montserrat_30.c lv_font_montserrat_32.c lv_font_montserrat_34.c lv_font_montserrat_36.c lv_font_montserrat_38.c lv_font_montserrat_40.c lv_font_montserrat_42.c lv_font_montserrat_44.c lv_font_montserrat_46.c lv_font_montserrat_48.c lv_font_simsun_16_cjk.c lv_font_unscii_8.c lv_font_unscii_16.c lv_hal_disp.c lv_hal_indev.c lv_hal_tick.c lv_anim.c lv_anim_timeline.c lv_area.c lv_async.c lv_bidi.c lv_color.c lv_fs.c lv_gc.c lv_ll.c lv_log.c lv_lru.c lv_math.c lv_mem.c lv_printf.c lv_style.c lv_style_gen.c lv_timer.c lv_tlsf.c lv_txt.c lv_txt_ap.c lv_utils.c lv_arc.c lv_bar.c lv_btn.c lv_btnmatrix.c lv_canvas.c lv_checkbox.c lv_dropdown.c lv_img.c lv_label.c lv_line.c lv_roller.c lv_slider.c lv_switch.c lv_table.c lv_textarea.c $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/wayland/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/indev/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/gtkdrv/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/display/*.c) $(wildcard $(LVGL_DIR)/$(LV_DRIVERS_DIR_NAME)/sdl/*.c) $(shell find -L $(LVGL_DIR)/ui -name "*.c") $(LVGL_DIR)/mouse_cursor_icon.c 
+# 'override' directive (from '/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/lv_drivers.mk', line 3)
+CFLAGS := -I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer -O3 -g0 -I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifiers -Wall -Wextra -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith -fno-strict-aliasing -Wno-error=cpp -Wuninitialized -Wmaybe-uninitialized -Wno-unused-parameter -Wno-missing-field-initializers -Wtype-limits -Wsizeof-pointer-memaccess -Wno-format-nonliteral -Wno-cast-qual -Wunreachable-code -Wno-switch-default -Wreturn-type -Wmultichar -Wformat-security -Wno-ignored-qualifiers -Wno-error=pedantic -Wno-sign-compare -Wno-error=missing-prototypes -Wdouble-promotion -Wclobbered -Wdeprecated -Wempty-body -Wtype-limits -Wshift-negative-value -Wstack-usage=2048 -Wno-unused-value -Wno-unused-parameter -Wno-missing-field-initializers -Wuninitialized -Wmaybe-uninitialized -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wtype-limits -Wsizeof-pointer-memaccess -Wno-format-nonliteral -Wpointer-arith -Wno-cast-qual -Wmissing-prototypes -Wunreachable-code -Wno-switch-default -Wreturn-type -Wmultichar -Wno-discarded-qualifiers -Wformat-security -Wno-ignored-qualifiers -Wno-sign-compare "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/core" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/arm2d" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_pxp" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_vglite" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sdl" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/stm32_dma2d" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sw" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/swm341_dma2d" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/font" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/hal" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/misc" "-I/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/widgets"
+# makefile (from '/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/widgets/lv_widgets.mk', line 17)
+DEPPATH = --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/core --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/arm2d --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_pxp --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_vglite --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sdl --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/stm32_dma2d --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/swm341_dma2d --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/font --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/misc --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/widgets
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from '/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/ui.mk', line 1)
+MAKEFILE_LIST :=  Makefile /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/lvgl.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/lv_demos.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/lv_examples.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/core/lv_core.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/lv_draw.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/arm2d/lv_draw_arm2d.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_pxp/lv_draw_nxp_pxp.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_vglite/lv_draw_nxp_vglite.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sdl/lv_draw_sdl.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/stm32_dma2d/lv_draw_stm32_dma2d.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sw/lv_draw_sw.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/swm341_dma2d/lv_draw_swm341_dma2d.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/lv_extra.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/font/lv_font.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/hal/lv_hal.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/misc/lv_misc.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/widgets/lv_widgets.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/lv_drivers.mk /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/ui.mk
+# automatic
+@F = $(notdir $@)
+# environment
+IM_CONFIG_PHASE = 2
+# environment
+USERNAME = cxj
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 29)
+OBJS = $(AOBJS) $(COBJS)
+# environment
+CLUTTER_IM_MODULE = xim
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = zh_CN.UTF-8
+# environment
+VSCODE_CWD = /home/cxj/Desktop/fish_pi
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/95/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/cxj/.script/repo:/opt/H3/gcc-linaro-11.2.1-2022.02-x86_64_arm-linux-gnueabihf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/cxj-virtual-machine:@/tmp/.ICE-unix/1562,unix/cxj-virtual-machine:/tmp/.ICE-unix/1562
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/cxj/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+TEXTDOMAIN = im-config
+# makefile (from 'Makefile', line 13)
+MAINSRC = ./main.c
+# environment
+SNAP = /snap/code/95
+# makefile (from 'Makefile', line 23)
+AOBJS = $(ASRCS:.S=$(OBJEXT))
+# makefile (from '/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/widgets/lv_widgets.mk', line 18)
+VPATH = :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/core :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/arm2d :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_pxp :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/nxp_vglite :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sdl :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/stm32_dma2d :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/swm341_dma2d :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/font :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/misc :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/widgets
+# environment
+SNAP_VERSION = 57fd6d01
+# makefile (from 'Makefile', line 21)
+OBJEXT = .o
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'Makefile', line 8)
+LDFLAGS = -lm -lpthread
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/95/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# makefile (from 'Makefile', line 6)
+LVGL_DIR = ${shell pwd}
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :1
+# environment
+GTK_IM_MODULE = ibus
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer
+ 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 1657
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/cxj
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/cxj/.config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+LOGNAME = cxj
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = xM9KkHB-wdWsT7UzKvmCslGkgPP92UesNdI45Fdn9M83iTtFSgab
+# automatic
++F = $(notdir $+)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/cxj/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+MAKE_VERSION := 4.1
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 1
+# environment
+LC_TIME = zh_CN.UTF-8
+# environment
+SNAP_REAL_HOME = /home/cxj
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = xim
+# makefile (from 'Makefile', line 24)
+COBJS = $(CSRCS:.c=$(OBJEXT))
+# makefile (from 'Makefile', line 28)
+SRCS = $(ASRCS) $(CSRCS) $(MAINSRC)
+# environment
+SNAP_USER_DATA = /home/cxj/snap/code/95
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 4)
+CC = arm-linux-gnueabihf-gcc
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-4829ace4-97c2-485b-80f6-814156dbaec5.sock
+# environment
+XDG_SESSION_ID = 4
+# environment
+USER = cxj
+# environment
+SNAP_REVISION = 95
+# environment
+LC_MONETARY = zh_CN.UTF-8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = zh_CN.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+OLDPWD = /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-186b1019-1.67.0-main.sock
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = zh_CN.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DESKTOP_AUTOSTART_ID = 105ed829d266ca5cc1165202251927051300000015620007
+# environment
+TEXTDOMAINDIR = /usr/share/locale/
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = xM9KkHB-wdWsT7UzKvmCslGkgPP92UesNdI45Fdn9M83iTtFSgab
+# environment
+LC_NUMERIC = zh_CN.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+LC_MEASUREMENT = zh_CN.UTF-8
+# environment
+SNAP_NAME = code
+# makefile (from 'Makefile', line 9)
+BIN = demo
+# environment
+LC_ALL = C
+# environment
+QT4_IM_MODULE = xim
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/a448768c_de61_4fd9_9c75_5ad0448db4fa
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 5)
+LVGL_DIR_NAME = lvgl
+# environment
+GNOME_TERMINAL_SERVICE = :1.71
+# default
+SUFFIXES := 
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 1
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = zh_CN.UTF-8
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = zh_CN.UTF-8
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 8281
+# variable set hash-table stats:
+# Load=150/1024=15%, Rehash=0, Collisions=53/880=6%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sw (device 2049, inode 6170758): 18 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/wayland (device 2049, inode 6183975): 7 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw (device 2049, inode 6044762): 34 files, no impossibilities.
+# . (device 2049, inode 5771114): 18 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_vglite (device 2049, inode 6170725): 5 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/stm32_dma2d (device 2049, inode 6170754): 5 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_pxp (device 2049, inode 6170719): 7 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/swm341_dma2d (device 2049, inode 6170775): 5 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display (device 2049, inode 6183722): 21 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/core (device 2049, inode 5916316): 33 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/sdl (device 2049, inode 6183960): 8 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev (device 2049, inode 6183909): 17 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/misc (device 2049, inode 6178258): 49 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/gtkdrv (device 2049, inode 6183901): 6 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sdl (device 2049, inode 6170729): 26 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/arm2d (device 2049, inode 6044764): 5 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder (device 2049, inode 5916237): 3 files, no impossibilities so far.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/font (device 2049, inode 6170924): 38 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/widgets (device 2049, inode 6183182): 35 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/hal (device 2049, inode 6178249): 10 files, no impossibilities.
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers (device 2049, inode 5775859): 17 files, no impossibilities.
+
+# 367 files, no impossibilities in 21 directories.
+
+# Implicit Rules
+
+%.o: %.c
+#  recipe to execute (from 'Makefile', line 36):
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "CC $<"
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/qrcode/lv_example_qrcode_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/table/lv_example_table_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/msg/lv_example_msg_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_prev_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_1_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/lv_examples.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.376825033
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/get_started/lv_example_get_started_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_fmt_txt.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/msgbox/lv_msgbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_color.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_slider_knob_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/span/lv_span.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/tileview/lv_example_tileview_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/canvas/lv_example_canvas_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_46.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_chroma_keyed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/UC1610.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image10.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_mask.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/sdl/sdl_common.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/list/lv_example_list_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_swm341_dma2d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/slider/lv_example_slider_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/AD_touch.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/textarea/lv_example_textarea_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/font/lv_font.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.476842356
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_draw_sw_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_top.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/freetype/lv_example_freetype_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_nxp_pxp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_btnmatrix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: default
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_next.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_txt_ap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/animimg003.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_hal_tick.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_timeline_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_pxp/lv_draw_nxp_pxp.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.420832654
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/tabview/lv_example_tabview_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/snapshot/lv_example_snapshot_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/lv_drivers.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:31:04.518676537
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_timer.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_arm2d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_top_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_slider.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/animimg/lv_example_animimg_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_next_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/lv_font_bechmark_montserrat_16_compr_az.c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sdl/lv_draw_sdl.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.420832654
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_draw_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/GC9A01.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_28.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/themes/default/lv_theme_default.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/ui.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_15.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_texture_cache.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_13.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image11.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.164788307
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_3_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_style.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_1_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/fragment/lv_example_fragment_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_gradient.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/misc/lv_misc.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.556856215
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_txt.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/widgets/lv_widgets.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.584861065
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/table/lv_example_table_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_hal_disp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/png/lv_example_png_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_bg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/ST7565.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/gif/lv_gif.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/imgfont/lv_example_imgfont_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/slider/lv_example_slider_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_nxp_pxp_osa.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btn/lv_example_btn_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_14.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_mem.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/spinner/lv_spinner.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/FT5406EE8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/lv_demos.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.168789
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_disp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/meter/lv_meter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_triangle.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-09 19:03:29.255758876
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_9.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/anim_num/anim_num.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_roller.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_async.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/lv_font_bechmark_montserrat_12_compr_az.c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/imgbtn_right.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_skew_strip.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/lv_demo_music_list.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/sdl/sdl.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_caret_down.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/tabview/lv_example_tabview_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_scroll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/msg/lv_example_msg_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_indexed16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/gtkdrv/gtkdrv.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sw/lv_draw_sw.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.424833348
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/gif/lv_example_gif_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_stack_blur.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_play.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_7.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_rect.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_printf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_stdio.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/bmp/lv_example_bmp_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/spinner/lv_example_spinner_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_argb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_list_border.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_hal_indev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/qrcode/qrcodegen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/themes/mono/lv_theme_mono.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_anim_timeline.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/calendar/lv_example_calendar_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/monkey/lv_example_monkey_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/XPT2046.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/win/lv_example_win_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_log.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_2_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_simsun_16_cjk.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_pause.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/rlottie/lv_example_rlottie_approve.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/lv_demo_music_main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image9.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_play_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/span/lv_example_span_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_polygon.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_list_border_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_tlsf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/rlottie/lv_rlottie.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btn/lv_example_btn_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_win32.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_14.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/monkey/lv_example_monkey_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/arc/lv_example_arc_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_pause_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_textarea.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_chroma_keyed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_24.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/themes/basic/lv_theme_basic.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_rect.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+default: /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/lv_demo_widgets.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/assets/img_demo_widgets_avatar.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/assets/img_clothes.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/assets/img_lvgl_logo.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/stress/lv_demo_stress.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_chroma_keyed.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/lv_font_bechmark_montserrat_28_compr_az.c.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/lv_font_bechmark_montserrat_16_compr_az.c.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_alpha16.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_argb.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_indexed16.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_rgb.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/lv_font_bechmark_montserrat_12_compr_az.c.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/lv_demo_benchmark.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/lv_demo_music_list.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_slider_knob_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_2_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_top.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_next_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_loop.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_logo.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_pause_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_pause.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_2_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_next.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_3_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_pause.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_prev_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_play.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_list_border.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_3_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_4_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_slider_knob.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_1_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_prev.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_right.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_1_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_play_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_corner_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_right_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_top_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_left_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_list_border_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_left.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_loop_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play_large.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/lv_demo_music.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/lv_demo_music_main.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_6.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_6.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/table/lv_example_table_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/table/lv_example_table_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/slider/lv_example_slider_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/slider/lv_example_slider_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/slider/lv_example_slider_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/win/lv_example_win_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/spinner/lv_example_spinner_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/canvas/lv_example_canvas_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/canvas/lv_example_canvas_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/colorwheel/lv_example_colorwheel_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/dropdown/lv_example_dropdown_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/dropdown/lv_example_dropdown_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/tabview/lv_example_tabview_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/tabview/lv_example_tabview_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/keyboard/lv_example_keyboard_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/animimg/lv_example_animimg_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/obj/lv_example_obj_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/obj/lv_example_obj_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_6.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_7.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_9.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_8.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/arc/lv_example_arc_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/arc/lv_example_arc_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_6.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/span/lv_example_span_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/msgbox/lv_example_msgbox_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/switch/lv_example_switch_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/spinbox/lv_example_spinbox_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/line/lv_example_line_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/led/lv_example_led_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/textarea/lv_example_textarea_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/textarea/lv_example_textarea_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/textarea/lv_example_textarea_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/list/lv_example_list_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/list/lv_example_list_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/roller/lv_example_roller_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/roller/lv_example_roller_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/roller/lv_example_roller_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/tileview/lv_example_tileview_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/checkbox/lv_example_checkbox_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/checkbox/lv_example_checkbox_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/calendar/lv_example_calendar_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btn/lv_example_btn_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btn/lv_example_btn_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btn/lv_example_btn_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/imgbtn_right.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_skew_strip.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_indexed16.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/animimg001.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/imgbtn_mid.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_caret_down.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/animimg003.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/animimg002.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_star.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/imgbtn_left.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/emoji/img_emoji_F617.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_alpha16.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_argb.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_hand.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_rgb.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_chroma_keyed.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_timeline_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/msg/lv_example_msg_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/msg/lv_example_msg_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/msg/lv_example_msg_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/fragment/lv_example_fragment_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/fragment/lv_example_fragment_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/snapshot/lv_example_snapshot_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/monkey/lv_example_monkey_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/monkey/lv_example_monkey_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/monkey/lv_example_monkey_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/imgfont/lv_example_imgfont_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/gridnav/lv_example_gridnav_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/get_started/lv_example_get_started_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/get_started/lv_example_get_started_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/get_started/lv_example_get_started_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/porting/lv_port_fs_template.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/porting/lv_port_indev_template.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/porting/lv_port_disp_template.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_12.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_15.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_14.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_11.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_7.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_9.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_6.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_13.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_10.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_8.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/gif/lv_example_gif_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/gif/img_bulb_gif.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/freetype/lv_example_freetype_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/qrcode/lv_example_qrcode_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/sjpg/lv_example_sjpg_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/bmp/lv_example_bmp_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/ffmpeg/lv_example_ffmpeg_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/ffmpeg/lv_example_ffmpeg_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/png/lv_example_png_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/png/img_wink_png.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/rlottie/lv_example_rlottie_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/rlottie/lv_example_rlottie_approve.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/rlottie/lv_example_rlottie_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_6.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_2.o lv_disp.o lv_group.o lv_indev.o lv_indev_scroll.o lv_obj.o lv_obj_class.o lv_obj_draw.o lv_obj_pos.o lv_obj_scroll.o lv_obj_style.o lv_obj_style_gen.o lv_obj_tree.o lv_event.o lv_refr.o lv_theme.o lv_draw_arc.o lv_draw.o lv_draw_img.o lv_draw_label.o lv_draw_line.o lv_draw_mask.o lv_draw_rect.o lv_draw_transform.o lv_draw_triangle.o lv_img_buf.o lv_img_cache.o lv_img_decoder.o lv_gpu_arm2d.o lv_gpu_nxp_pxp.o lv_gpu_nxp_pxp_osa.o lv_gpu_nxp_vglite.o lv_draw_sdl.o lv_draw_sdl_arc.o lv_draw_sdl_bg.o lv_draw_sdl_composite.o lv_draw_sdl_img.o lv_draw_sdl_label.o lv_draw_sdl_line.o lv_draw_sdl_mask.o lv_draw_sdl_polygon.o lv_draw_sdl_rect.o lv_draw_sdl_stack_blur.o lv_draw_sdl_texture_cache.o lv_draw_sdl_utils.o lv_gpu_stm32_dma2d.o lv_draw_sw.o lv_draw_sw_arc.o lv_draw_sw_blend.o lv_draw_sw_dither.o lv_draw_sw_gradient.o lv_draw_sw_img.o lv_draw_sw_letter.o lv_draw_sw_line.o lv_draw_sw_polygon.o lv_draw_sw_rect.o lv_draw_sw_transform.o lv_gpu_swm341_dma2d.o /home/cxj/Desktop/fi 
+sh_pi/lv_port_linux_frame_buffer/lvgl/src/extra/lv_extra.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/layouts/grid/lv_grid.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/layouts/flex/lv_flex.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/win/lv_win.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/spinner/lv_spinner.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/tabview/lv_tabview.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/keyboard/lv_keyboard.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/animimg/lv_animimg.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/chart/lv_chart.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/span/lv_span.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/msgbox/lv_msgbox.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/spinbox/lv_spinbox.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/meter/lv_meter.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/led/lv_led.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/list/lv_list.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/tileview/lv_tileview.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/menu/lv_menu.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/calendar/lv_calendar.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/themes/mono/lv_theme_mono.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/themes/basic/lv_theme_basic.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/themes/default/lv_theme_default.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/msg/lv_msg.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/fragment/lv_fragment.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/fragment/lv_fragment_manager.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/snapshot/lv_snapshot.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/monkey/lv_monkey.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/imgfont/lv_imgfont.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/gridnav/lv_gridnav.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/gif/lv_gif.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/gif/gifdec.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/freetype/lv_freetype.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_win32.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_fatfs.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_stdio.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_posix.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/qrcode/lv_qrcode.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/qrcode/qrcodegen.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/sjpg/tjpgd.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/sjpg/lv_sjpg.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/bmp/lv_bmp.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/png/lodepng.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/png/lv_png.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/rlottie/lv_rlottie.o lv_font.o lv_font_fmt_txt.o lv_font_loader.o lv_font_dejavu_16_persian_hebrew.o lv_font_montserrat_8.o lv_font_montserrat_10.o lv_font_montserrat_12.o lv_font_montserrat_12_subpx.o lv_font_montserrat_14.o lv_font_montserrat_16.o lv_font_montserrat_18.o lv_font_montserrat_20.o lv_font_montserrat_22.o lv_font_montserrat_24.o lv_font_montserrat_26.o lv_font_montserrat_28.o lv_font_montserrat_28_compressed.o lv_font_montserrat_30.o lv_font_montserrat_32.o lv_font_montserrat_34.o lv_font_montserrat_36.o lv_font_montserrat_38.o lv_font_montserrat_40.o lv_font_montserrat_42.o lv_font_montserrat_44.o lv_font_montserrat_46.o lv_font_montserrat_48.o lv_font_simsun_16_cjk.o lv_font_unscii_8.o lv_font_unscii_16.o lv_hal_disp.o lv_hal_indev.o lv_hal_tick.o lv_anim.o lv_anim_timeline.o lv_area.o lv_async.o lv_bidi.o lv_color.o lv_fs.o lv_gc.o lv_ll.o lv_log.o lv_lru.o lv_math.o lv_mem.o lv_printf.o lv_style.o lv_style_gen.o lv_timer.o lv_tlsf.o lv_txt.o lv_txt_ap.o lv_utils.o lv_arc.o lv_bar.o lv_btn.o lv_btnmatrix.o lv_canvas.o lv_checkbox.o lv_dropdown.o lv_img.o lv_label.o lv_line.o lv_roller.o lv_slider.o lv_switch.o lv_table.o lv_textarea.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/win_drv.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/wayland/wayland.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/xkb.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/AD_touch.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/libinput.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/evdev.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/XPT2046.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/FT5406EE8.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/gtkdrv/gtkdrv.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/drm.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/UC1610.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/R61581.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/fbdev.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/ILI9341.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/GC9A01.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/SSD1963.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/ST7565.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/SHARP_MIP.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/sdl/sdl_common.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/sdl/sdl_gpu.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/sdl/sdl.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/menu.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image12.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image11.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image4.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image10.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image7.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image8.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image5.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image1.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image0.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image13.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image3.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image14.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image2.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image9.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image6.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/tag.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/time.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/ui.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/anim_num/anim_num.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/home.o /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/mouse_cursor_icon.o main.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 41):
+	$(CC) -o $(BIN) $(MAINOBJ) $(AOBJS) $(COBJS) $(LDFLAGS)
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/lv_draw.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.416831962
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_draw.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_wave_bottom_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/fbdev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_alpha16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/emoji/img_emoji_F617.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/libinput.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/drm.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_unscii_16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_hand.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/lv_demo_benchmark.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_dropdown.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_refr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/obj/lv_example_obj_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_4_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image0.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/line/lv_example_line_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_indev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_logo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/stress/lv_demo_stress.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_right.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_composite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/SHARP_MIP.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image7.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/calendar/lv_calendar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_indev_scroll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/led/lv_example_led_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_10.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+lv_event.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/swm341_dma2d/lv_draw_swm341_dma2d.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.428834041
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_checkbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/win/lv_win.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/monkey/lv_example_monkey_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/tag.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/imgbtn_mid.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/get_started/lv_example_get_started_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_12_subpx.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/gif/img_bulb_gif.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_right_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_loader.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_math.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_mask.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_fs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/assets/img_lvgl_logo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_22.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/porting/lv_port_disp_template.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/chart/lv_chart.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/SSD1963.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_44.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_corner_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_vglite/lv_draw_nxp_vglite.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.420832654
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/switch/lv_example_switch_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/slider/lv_example_slider_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_switch.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/led/lv_led.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image12.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_img_decoder.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/menu.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/textarea/lv_example_textarea_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/arc/lv_example_arc_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_32.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/fragment/lv_example_fragment_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_star.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/get_started/lv_example_get_started_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/assets/img_demo_widgets_avatar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_loop.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/scroll/lv_example_scroll_3.o:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/keyboard/lv_keyboard.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_canvas.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_table.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/dropdown/lv_example_dropdown_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_7.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_blend.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/R61581.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_34.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btnmatrix/lv_example_btnmatrix_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/tileview/lv_tileview.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_img_cache.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 44):
+	@echo $(CC)
+	rm -f $(BIN) $(AOBJS) $(COBJS) $(MAINOBJ)
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/flex/lv_example_flex_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/ffmpeg/lv_example_ffmpeg_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/hal/lv_hal.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.524850671
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/layouts/flex/lv_flex.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_12.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/obj/lv_example_obj_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/lv_demo_music.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_rnd_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/anim/lv_example_anim_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/others/msg/lv_example_msg_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_pos.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/evdev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/list/lv_list.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/display/ILI9341.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_fatfs.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_10.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/gridnav/lv_gridnav.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_loop_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/imgbtn_left.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/fsdrv/lv_fs_posix.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_group.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_transform.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/freetype/lv_freetype.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_img_buf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/roller/lv_example_roller_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_20.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_label.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/assets/img_clothes.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/mouse_cursor_icon.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/win_drv.o:
+ 
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_arc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_18.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/lv_extra.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/home.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/imgbtn/lv_example_imgbtn_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_rgb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/wayland/wayland.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/ui.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-08 22:07:16.338504659
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+lv_img.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_btn.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/tabview/lv_tabview.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_icon_3_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/snapshot/lv_snapshot.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_style.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/msg/lv_msg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_style_gen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_rgb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_stm32_dma2d.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/sdl/sdl_gpu.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/gif/gifdec.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/lv_font_bechmark_montserrat_28_compr_az.c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_48.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/animimg/lv_animimg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_bar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/layouts/grid/lv_grid.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/rlottie/lv_example_rlottie_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_38.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/rlottie/lv_example_rlottie_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_26.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lv_drivers/indev/xkb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/btn/lv_example_btn_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/sjpg/lv_sjpg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/lv_extra.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.436835427
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/lvgl.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.388827111
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/roller/lv_example_roller_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/animimg001.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/textarea/lv_example_textarea_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_cover_2_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_polygon.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_transform.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/porting/lv_port_indev_template.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_42.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_lru.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/checkbox/lv_example_checkbox_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_40.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/widgets/lv_demo_widgets.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/event/lv_example_event_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/sjpg/tjpgd.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_12.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_ll.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/canvas/lv_example_canvas_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/png/img_wink_png.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/png/lv_png.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_style_gen.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/ffmpeg/lv_example_ffmpeg_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image14.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_bidi.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/list/lv_example_list_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_anim.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_dejavu_16_persian_hebrew.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/core/lv_core.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.412831269
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/menu/lv_example_menu_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/imgfont/lv_imgfont.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/img/lv_example_img_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/bar/lv_example_bar_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sdl_rect.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_28_compressed.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/img_cogwheel_alpha16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_class.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_gpu_nxp_vglite.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image13.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/libs/sjpg/lv_example_sjpg_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_36.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_indexed16.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/roller/lv_example_roller_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/porting/lv_port_fs_template.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_11.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_6.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/arm2d/lv_draw_arm2d.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.416831962
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/assets/animimg002.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_montserrat_30.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_area.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/image/image1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_left.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/ui/time.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/fragment/lv_fragment.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/monkey/lv_monkey.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/meter/lv_example_meter_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_obj_tree.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/benchmark/assets/img_benchmark_cogwheel_argb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_prev.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/layouts/grid/lv_example_grid_5.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/menu/lv_menu.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_4.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/widgets/spinbox/lv_spinbox.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_btn_list_play.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.o: /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.o
+# automatic
+# % := 
+# automatic
+# * := /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder
+# automatic
+# + := /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.c
+# automatic
+# | := 
+# automatic
+# < := /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.c
+# automatic
+# ^ := /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.c
+# automatic
+# ? := /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/keypad_encoder/lv_demo_keypad_encoder.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  recipe to execute (from 'Makefile', line 36):
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "CC $<"
+
+# Not a target:
+lv_draw_sw_dither.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/label/lv_example_label_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/widgets/chart/lv_example_chart_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/examples/styles/lv_example_style_9.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_slider_knob.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/qrcode/lv_qrcode.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/png/lodepng.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_draw_sw_letter.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/others/fragment/lv_fragment_manager.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/demos/music/assets/img_lv_demo_music_corner_left_large.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_font_unscii_8.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/stm32_dma2d/lv_draw_stm32_dma2d.mk:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-04 19:30:20.424833348
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/extra/libs/bmp/lv_bmp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+lv_theme.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=475/1024=46%, Rehash=0, Collisions=367/987=37%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# General ('VPATH' variable) search path:
+# /home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/core:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/arm2d:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_pxp:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/nxp_vglite:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sdl:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/stm32_dma2d:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/sw:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/draw/swm341_dma2d:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/font:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/hal:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/misc:/home/cxj/Desktop/fish_pi/lv_port_linux_frame_buffer/lvgl/src/widgets
+
+# strcache buffers: 6 (5) / strings = 821 / storage = 41226 B / avg = 50 B
+# current buf: size = 8162 B / used = 690 B / count = 24 / avg = 28 B
+# other used: total = 33064 B / count = 797 / avg = 41 B
+# other free: total = 274 B / max = 66 B / min = 41 B / avg = 54 B
+
+# strcache performance: lookups = 909 / hit rate = 9%
+# hash-table stats:
+# Load=821/8192=10%, Rehash=0, Collisions=72/909=8%
+# Finished Make data base on Mon May  9 19:03:48 2022
+
+ 

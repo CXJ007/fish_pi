@@ -8,7 +8,7 @@ struct anim_num* num1;
 struct anim_num* num2;
 struct anim_num* num3;
 
-lv_timer_t * timer; 
+static lv_timer_t * delete_timer; 
 
 void delete_home_timer(lv_timer_t * timer)
 {
@@ -37,8 +37,8 @@ static void home_even_cb(lv_event_t *e)
         lv_anim_set_exec_cb(&a, anim_y_cb);
         lv_anim_set_path_cb(&a, lv_anim_path_ease_out);
         lv_anim_start(&a);
-        timer = lv_timer_create(delete_home_timer, 500,  home);
-        lv_timer_set_repeat_count(timer, 1);
+        delete_timer = lv_timer_create(delete_home_timer, 500,  home);
+        lv_timer_set_repeat_count(delete_timer, 1);
     }
 
 }
