@@ -4,43 +4,22 @@ struct page_list *page_head;
 struct cmd_list *cmd_head;
 pthread_mutex_t lvgl_mutex;
 pthread_mutex_t cmd_mutex;
+pthread_mutex_t page_mutex;
 pthread_cond_t  cmd_cond;
+uint32_t MY_EVENT_TIME;
 char new_cmd_name[10];
 
-static lv_timer_t * lvgl_timer; 
+static lv_timer_t * lvgl_timer;
+static int h=23, m=13, s=57;
+static int sync_home, sync_tag;
 //date +%Y-%m-%d::%T
-
-static void sys_time_sync(lv_timer_t * timer)
-{
-    static int h=22, m=59, s=57 , sync_home, sync_tag;
-    s++;
-    if(s >= 60){
-        m++;
-        s = 0;
-        sync_home = 1;
-    }
-    if(m >= 60){
-        h++;
-        m = 0;
-    }
-    if(h >= 24){
-        h = 0;
-    }
-    if(sync_home == 1){
-        sync_home = 0;
-        struct cmd_data cmd;
-        strcpy(cmd.cmd_name.name, "time sync");
-        sprintf(cmd.cmd_info.info, "%d:%d", h, m);
-        home_cmd_write(cmd_head, cmd);
-    }
-    printf("%d  %d  %d\n", h, m, s);
-}
-
 
 void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void (*delete)(lv_obj_t* ))
 {
+    pthread_mutex_lock(&page_mutex);
     if(head == NULL){
         printf("head err\n");
+        pthread_mutex_unlock(&page_mutex);
         return ;
     }
     struct page_list *node = malloc(sizeof(struct page_list));
@@ -49,11 +28,13 @@ void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void 
     node->create = create;
     node->delete = delete;
     node->next = head->next;
-    head->next = node;   
+    head->next = node;
+    pthread_mutex_unlock(&page_mutex);   
 }
 
 void page_create(struct page_list *head, char* name)
 {
+    pthread_mutex_lock(&page_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
@@ -63,36 +44,60 @@ void page_create(struct page_list *head, char* name)
         }
         head = head->next;
     }
+    pthread_mutex_unlock(&page_mutex);
 }
 
 void page_delete(struct page_list *head, char* name)
 {
+    pthread_mutex_lock(&page_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
-            head->delete(head->obj);
             head->flag = 0;
+            head->delete(head->obj);
             break;
         }
         head = head->next;
     }
+    pthread_mutex_unlock(&page_mutex);
 }
 
 int page_check(struct page_list *head, char* name)
 {
+    pthread_mutex_lock(&page_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
+            pthread_mutex_unlock(&page_mutex);
             return head->flag;
         }
         head = head->next;
     }
+    pthread_mutex_unlock(&page_mutex);
     return 0;
+}
+
+void page_flag_set(struct page_list *head, char* name, int flag)
+{
+    pthread_mutex_lock(&page_mutex);
+    head = head->next;
+    while(head != NULL){
+        if(strcmp(head->name, name) == 0){
+            head->flag = flag;
+            break;
+        }
+        head = head->next;
+    }
+    pthread_mutex_unlock(&page_mutex);
 }
 
 void cmd_mutex_init(void)
 {
+    pthread_mutexattr_t attr;
+    pthread_mutexattr_init(&attr);
+    pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
     pthread_mutex_init(&lvgl_mutex, NULL);
+    pthread_mutex_init(&page_mutex, &attr);
     pthread_mutex_init(&cmd_mutex, NULL);
     pthread_cond_init(&cmd_cond, NULL);
 }
@@ -156,6 +161,59 @@ lv_obj_t *obj_read(struct page_list *head, char* name)
     return (lv_obj_t *)NULL;
 }
 
+static void sys_event_cb(lv_event_t * e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+
+    if(code == MY_EVENT_TIME){
+        if(sync_tag == 1){
+            if(page_check(page_head, "tag") == 1){
+                sync_tag = 0;
+                struct cmd_data cmd;
+                strcpy(cmd.cmd_name.name, "time sync");
+                sprintf(cmd.cmd_info.info, "%d%d:%d%d:%d%d", h/10, h%10, m/10, m%10, s/10, s%10);
+                tag_cmd_write(cmd_head, cmd);
+            }
+        }
+        if(sync_home == 1){
+            if(page_check(page_head, "home") == 1){
+                sync_home = 0;
+                struct cmd_data cmd;
+                strcpy(cmd.cmd_name.name, "time sync");
+                sprintf(cmd.cmd_info.info, "%d:%d", h, m);
+                home_cmd_write(cmd_head, cmd);
+            }
+        }
+        //printf("%d  %d  %d\n", h, m, s);
+    }
+
+}
+
+static void sys_time_sync(lv_timer_t * timer)
+{
+    s++;
+    sync_tag = 1;
+    if(s >= 60){
+        m++;
+        s = 0;
+        sync_home = 1;
+    }
+    if(m >= 60){
+        h++;
+        m = 0;
+    }
+    if(h >= 24){
+        h = 0;
+    }
+    lv_event_send(lv_scr_act(), MY_EVENT_TIME, NULL);
+}
+
+void sys_time_init(void)
+{
+    lv_obj_add_event_cb(lv_scr_act(), sys_event_cb, MY_EVENT_TIME , NULL);
+    lvgl_timer = lv_timer_create(sys_time_sync, 500,  NULL);
+}
+
 void ui_init(void)
 {
     page_head = malloc(sizeof(struct page_list));
@@ -170,10 +228,16 @@ void ui_init(void)
 
     home_cmd_add(cmd_head);
     menu_cmd_add(cmd_head);
+    tag_cmd_add(cmd_head);
     
     page_create(page_head, "home"); 
 
-    lvgl_timer = lv_timer_create(sys_time_sync, 1000,  NULL);
+    MY_EVENT_TIME = lv_event_register_id();
+
+    sys_time_init();
+
+    // page_flag_set(page_head, "home", 0);
+    // printf("page  %d\n", page_check(page_head, "tag"));
 }
 
 
@@ -245,17 +309,11 @@ void *cmd_handle(void *arg)
         if(strcmp(new_cmd_name, "home") == 0){
             home_cmd_handle();
         }else if(strcmp(new_cmd_name, "switch") == 0){
-            switch_cmd_read(cmd_head, &cmd);
-            if(strcmp(cmd.cmd_name.name,"home create") == 0){
-                page_delete(page_head, "menu");
-                page_create(page_head, "home");
-                
-            }
+            switch_cmd_handle();
         }else if(strcmp(new_cmd_name, "time") == 0){
-            time_cmd_read(cmd_head, &cmd);
-            if(strcmp(cmd.cmd_name.name,"time create") == 0){
-                page_create(page_head, "time"); 
-            }
+            time_cmd_handle();
+        }else if(strcmp(new_cmd_name, "tag") == 0){
+            tag_cmd_handle();
         }
         //memset(data.cmdbuf, '/0', 20);
     }

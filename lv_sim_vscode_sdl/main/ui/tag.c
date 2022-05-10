@@ -2,6 +2,9 @@
 
 LV_IMG_DECLARE(image12);
 
+lv_obj_t *tag_clock;
+static char clockbuf[50];
+
 static lv_obj_t* tag_create(void)
 {
     pthread_mutex_lock(&lvgl_mutex);
@@ -19,10 +22,10 @@ static lv_obj_t* tag_create(void)
     lv_obj_add_style(tag, &style_tag, 0);
     
 
-    lv_obj_t * clock = lv_label_create(tag);
-    lv_label_set_text(clock,"12:13:12");
-    lv_obj_align(clock, LV_ALIGN_RIGHT_MID, -10, 0);
-    lv_obj_set_style_text_font(clock, &lv_font_montserrat_20, 0);
+    tag_clock = lv_label_create(tag);
+    lv_label_set_text(tag_clock,clockbuf);
+    lv_obj_align(tag_clock, LV_ALIGN_RIGHT_MID, -10, 0);
+    lv_obj_set_style_text_font(tag_clock, &lv_font_montserrat_20, 0);
 
     lv_obj_t *img11 = lv_img_create(tag);
     lv_img_set_src(img11, &image12);
@@ -48,4 +51,31 @@ static void tag_delete(lv_obj_t* tag)
 void tag_page_add(struct page_list *head)
 {
     page_add(head, "tag", tag_create, tag_delete);
+}
+
+void tag_cmd_write(struct cmd_list *head, struct cmd_data cmd)
+{
+    cmd_write(head, "tag", cmd);
+}
+
+void tag_cmd_read(struct cmd_list *head, struct cmd_data *cmd)
+{
+    cmd_read(cmd_head, "tag", cmd, 1);
+}
+
+void tag_cmd_add(struct cmd_list *head)
+{
+    cmd_add(head, "tag");
+}
+
+void tag_cmd_handle(void)
+{
+    struct cmd_data cmd;
+    tag_cmd_read(cmd_head, &cmd);
+    if(strcmp(cmd.cmd_name.name,"time sync") == 0){
+        strcpy(clockbuf, cmd.cmd_info.info);
+        pthread_mutex_lock(&lvgl_mutex);
+        lv_label_set_text(tag_clock, clockbuf);
+        pthread_mutex_unlock(&lvgl_mutex);
+    }
 }

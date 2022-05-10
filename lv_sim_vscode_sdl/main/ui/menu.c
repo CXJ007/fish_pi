@@ -188,8 +188,10 @@ lv_obj_t* menu_creat(void)
 
 static void menu_delete(lv_obj_t* menu)
 {
+    page_flag_set(page_head, "tag", 0);
+    page_flag_set(page_head, "time", 0);
     pthread_mutex_lock(&lvgl_mutex);
-    lv_obj_del_async(menu);
+    lv_obj_del(menu);
     pthread_mutex_unlock(&lvgl_mutex);
 }
 
@@ -212,4 +214,14 @@ void switch_cmd_write(struct cmd_list *head, struct cmd_data cmd)
 void switch_cmd_read(struct cmd_list *head, struct cmd_data *cmd)
 {
     cmd_read(cmd_head, "switch", cmd, 1);
+}
+
+void switch_cmd_handle(void)
+{
+    struct cmd_data cmd;
+    switch_cmd_read(cmd_head, &cmd);
+    if(strcmp(cmd.cmd_name.name,"home create") == 0){
+        page_delete(page_head, "menu");
+        page_create(page_head, "home");
+    }
 }

@@ -142,7 +142,7 @@ lv_obj_t* time_create(void)
     lv_obj_add_event_cb(btn1, time_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img1);
 
     pthread_mutex_unlock(&lvgl_mutex);
-
+    
     return time;
 }
 
@@ -171,4 +171,14 @@ void time_cmd_write(struct cmd_list *head, struct cmd_data cmd)
 void time_cmd_read(struct cmd_list *head, struct cmd_data *cmd)
 {
     cmd_read(cmd_head, "time", cmd, 1);
+}
+
+void time_cmd_handle(void)
+{
+    struct cmd_data cmd;
+    time_cmd_read(cmd_head, &cmd);
+    if(strcmp(cmd.cmd_name.name,"time create") == 0){
+        page_create(page_head, "time"); 
+    }
+
 }

@@ -6,6 +6,7 @@ LV_IMG_DECLARE(image14);
 static lv_obj_t *btn0;
 static lv_obj_t *btn1;
 
+
 static void set_zoom(void * img, int32_t v)
 {
     lv_img_set_zoom(img, v);
@@ -72,10 +73,10 @@ lv_obj_t* time_create(void)
     lv_style_set_width(&style_roller, 50);
 
 
-    const char *opts_h = "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23";
+    const char * opts_h = "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23";
     int i;
-    char buf[4];
-    char opts_ms[200];
+    char buf[5];
+    char opts_ms[256];
     memset(opts_ms, 0, sizeof(opts_ms));
     for(i=0;i<=58;i++){
         sprintf(buf, "%d\n", i);
@@ -141,7 +142,7 @@ lv_obj_t* time_create(void)
     lv_obj_add_event_cb(btn1, time_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img1);
 
     pthread_mutex_unlock(&lvgl_mutex);
-
+    
     return time;
 }
 
@@ -162,13 +163,22 @@ void time_cmd_add(struct cmd_list *head)
     cmd_add(head, "time");
 }
 
-void time_cmd_write(struct cmd_list *head, union cmd data)
+void time_cmd_write(struct cmd_list *head, struct cmd_data cmd)
 {
-    cmd_write(head, "time", data);
+    cmd_write(head, "time", cmd);
 }
 
-void time_cmd_read(struct cmd_list *head, union cmd *data)
+void time_cmd_read(struct cmd_list *head, struct cmd_data *cmd)
 {
-    cmd_read(cmd_head, "time", data, 1);
+    cmd_read(cmd_head, "time", cmd, 1);
 }
 
+void time_cmd_handle(void)
+{
+    struct cmd_data cmd;
+    time_cmd_read(cmd_head, &cmd);
+    if(strcmp(cmd.cmd_name.name,"time create") == 0){
+        page_create(page_head, "time"); 
+    }
+
+}

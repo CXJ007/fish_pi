@@ -13,6 +13,7 @@
 extern struct page_list *page_head;
 extern struct cmd_list *cmd_head;
 extern pthread_mutex_t lvgl_mutex;
+extern uint32_t MY_EVENT_TIME;
 
 
 struct page_list{
@@ -45,11 +46,13 @@ struct cmd_list{
 
 void *lvgl_start(void *arg);
 void *cmd_handle(void *arg);
+void sys_time_init(void);
 
 void ui_init(void);
 void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void (*delete)(lv_obj_t* ));
 void page_create(struct page_list *head, char* name);
 int page_check(struct page_list *head, char* name);
+void page_flag_set(struct page_list *head, char* name, int flag);
 
 void home_page_add(struct page_list *head);
 void tag_page_add(struct page_list *head);
@@ -70,9 +73,14 @@ void switch_cmd_read(struct cmd_list *head, struct cmd_data *cmd);
 void time_cmd_add(struct cmd_list *head);
 void time_cmd_write(struct cmd_list *head, struct cmd_data cmd);
 void time_cmd_read(struct cmd_list *head, struct cmd_data *cmd);
-
+void tag_cmd_add(struct cmd_list *head);
+void tag_cmd_write(struct cmd_list *head, struct cmd_data cmd);
+void tag_cmd_read(struct cmd_list *head, struct cmd_data *cmd);
 
 void home_cmd_handle(void);
+void switch_cmd_handle(void);
+void time_cmd_handle(void);
+void tag_cmd_handle(void);
 
 
 #endif

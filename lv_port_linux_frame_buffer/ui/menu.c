@@ -39,13 +39,13 @@ static void menu_event_cb(lv_event_t *e)
         lv_anim_start(&a);
     }else if(code == LV_EVENT_SHORT_CLICKED){
         if(btn == btn0){
-            union cmd data;
-            strcpy(data.cmdbuf, "home create");
-            switch_cmd_write(cmd_head, data);
+            struct cmd_data cmd;
+            strcpy(cmd.cmd_name.name, "home create");
+            switch_cmd_write(cmd_head, cmd);
         }else if((btn==btn1) && (last_btn != btn)){
-            union cmd data;
-            strcpy(data.cmdbuf, "time create");
-            time_cmd_write(cmd_head, data);
+            struct cmd_data cmd;
+            strcpy(cmd.cmd_name.name, "time create");
+            time_cmd_write(cmd_head, cmd);
         }
         last_btn = btn;
     }
@@ -188,8 +188,10 @@ lv_obj_t* menu_creat(void)
 
 static void menu_delete(lv_obj_t* menu)
 {
+    page_flag_set(page_head, "tag", 0);
+    page_flag_set(page_head, "time", 0);
     pthread_mutex_lock(&lvgl_mutex);
-    lv_obj_del_async(menu);
+    lv_obj_del(menu);
     pthread_mutex_unlock(&lvgl_mutex);
 }
 
@@ -204,12 +206,22 @@ void menu_cmd_add(struct cmd_list *head)
     time_cmd_add(head);
 }
 
-void switch_cmd_write(struct cmd_list *head, union cmd data)
+void switch_cmd_write(struct cmd_list *head, struct cmd_data cmd)
 {
-    cmd_write(head, "switch", data);
+    cmd_write(head, "switch", cmd);
 }
 
-void switch_cmd_read(struct cmd_list *head, union cmd *data)
+void switch_cmd_read(struct cmd_list *head, struct cmd_data *cmd)
 {
-    cmd_read(cmd_head, "switch", data, 1);
+    cmd_read(cmd_head, "switch", cmd, 1);
+}
+
+void switch_cmd_handle(void)
+{
+    struct cmd_data cmd;
+    switch_cmd_read(cmd_head, &cmd);
+    if(strcmp(cmd.cmd_name.name,"home create") == 0){
+        page_delete(page_head, "menu");
+        page_create(page_head, "home");
+    }
 }
