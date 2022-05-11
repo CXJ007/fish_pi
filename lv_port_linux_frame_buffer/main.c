@@ -16,15 +16,19 @@ int main(void)
     pthread_t lvgl_id;
     pthread_t cmd_id;
 
-    cmd_mutex_init();
+    mutex_init();
     pthread_create(&lvgl_id, NULL, lvgl_start, NULL);
-    pthread_detach(lvgl_id);
+    //pthread_detach(lvgl_id);
     pthread_create(&cmd_id, NULL, cmd_handle, NULL);
-    pthread_detach(cmd_id);
+    //pthread_detach(cmd_id);
     
-    
-
-    pthread_exit((void *)0);
+    pthread_join(lvgl_id, NULL);
+    pthread_join(cmd_id, NULL);
+    return 0;
+    // while(1){
+    //     sleep(1);
+    // }
+    // pthread_exit((void *)0);
 }
 
 /*Set in lv_conf.h as `LV_TICK_CUSTOM_SYS_TIME_EXPR`*/

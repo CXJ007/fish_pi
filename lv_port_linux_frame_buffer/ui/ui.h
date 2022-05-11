@@ -50,6 +50,7 @@ struct cmd_list{
 void *lvgl_start(void *arg);
 void *cmd_handle(void *arg);
 void sys_time_init(void);
+void mutex_init(void);
 
 void ui_init(void);
 void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void (*delete)(lv_obj_t* ));
@@ -84,7 +85,6 @@ void home_cmd_handle(void);
 void switch_cmd_handle(void);
 void time_cmd_handle(void);
 void tag_cmd_handle(void);
-
 
 
 #endif

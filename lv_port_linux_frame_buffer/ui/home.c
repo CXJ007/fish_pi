@@ -7,9 +7,11 @@ static struct anim_num* num0;
 static struct anim_num* num1;
 static struct anim_num* num2;
 static struct anim_num* num3;
+static lv_obj_t *date;
 
 static lv_timer_t * timer;
 static int h,m;
+static char datebuf[20];
 
 void delete_home_timer(lv_timer_t * timer)
 {   
@@ -28,7 +30,7 @@ static void home_even_cb(lv_event_t *e)
     lv_obj_t *home = lv_event_get_target(e);
     lv_event_code_t code = lv_event_get_code(e);
     lv_anim_t a;
-    if(code == LV_EVENT_RELEASED){
+    if(code == LV_EVENT_SHORT_CLICKED){
         page_flag_set(page_head, "home", 0);
         lv_anim_init(&a);
         lv_anim_set_var(&a, home);
@@ -56,10 +58,11 @@ static lv_obj_t* home_create(void)
     lv_style_set_bg_color(&style_obj, lv_color_hex(0xc0c0c0));
     lv_style_set_radius(&style_obj, 0);
     lv_style_set_border_width(&style_obj, 0);
+    lv_style_set_pad_all(&style_obj, 0);
     lv_obj_t *home = lv_obj_create(lv_scr_act());
     lv_obj_set_size(home, 240, 240);
     lv_obj_add_style(home, &style_obj, LV_STATE_DEFAULT); 
-    lv_obj_add_event_cb(home, home_even_cb, LV_EVENT_RELEASED  , NULL);
+    lv_obj_add_event_cb(home, home_even_cb, LV_EVENT_SHORT_CLICKED  , NULL);
     lv_obj_add_event_cb(home, home_even_cb, MY_EVENT_TIME , NULL);
 
     lv_anim_t a;
@@ -86,6 +89,11 @@ static lv_obj_t* home_create(void)
     anim_num_disp(num1, h%10, 0);
     anim_num_disp(num2, m/10, 0);
     anim_num_disp(num3, m%10, 0);
+
+    date = lv_label_create(home);
+    lv_label_set_text(date,datebuf);
+    lv_obj_align(date,LV_ALIGN_BOTTOM_RIGHT, -20, -35);
+    lv_obj_set_style_text_font(date, &lv_font_montserrat_24, 0);
 
     pthread_mutex_unlock(&lvgl_mutex);
 
@@ -131,10 +139,11 @@ void home_cmd_handle(void)
     }else if(strcmp(cmd.cmd_name.name,"time sync") == 0){
         //printf("home %s\n", cmd.cmd_info.info);
         char *delim = ":";
-        h = atoi(strtok(cmd.cmd_info.info, delim));
+        strcpy(datebuf, strtok(cmd.cmd_info.info, delim));
+        h = atoi(strtok(NULL, delim));
         m = atoi(strtok(NULL, delim));
-        //printf("home %d  %d\n", h , m);
         pthread_mutex_lock(&lvgl_mutex);
+        lv_label_set_text(date,datebuf);
         anim_num_disp(num0, h/10, 1000);
         anim_num_disp(num1, h%10, 1000);
         anim_num_disp(num2, m/10, 1000);

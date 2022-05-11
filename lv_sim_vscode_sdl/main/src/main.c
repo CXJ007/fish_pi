@@ -102,7 +102,7 @@ int main(int argc, char **argv)
 //  lv_demo_benchmark();
 //  lv_demo_stress();
 //  lv_demo_music();
-cmd_mutex_init();
+mutex_init();
 ui_init();
  
   pthread_t cmd_id;

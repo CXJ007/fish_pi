@@ -9,9 +9,6 @@ pthread_cond_t  cmd_cond;
 uint32_t MY_EVENT_TIME;
 char new_cmd_name[10];
 
-static lv_timer_t * lvgl_timer;
-static int h=23, m=13, s=57;
-static int sync_home, sync_tag;
 //date +%Y-%m-%d::%T
 
 void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void (*delete)(lv_obj_t* ))
@@ -91,12 +88,12 @@ void page_flag_set(struct page_list *head, char* name, int flag)
     pthread_mutex_unlock(&page_mutex);
 }
 
-void cmd_mutex_init(void)
+void mutex_init(void)
 {
     pthread_mutexattr_t attr;
     pthread_mutexattr_init(&attr);
     pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
-    pthread_mutex_init(&lvgl_mutex, NULL);
+    pthread_mutex_init(&lvgl_mutex, &attr);
     pthread_mutex_init(&page_mutex, &attr);
     pthread_mutex_init(&cmd_mutex, NULL);
     pthread_cond_init(&cmd_cond, NULL);
@@ -118,7 +115,7 @@ void cmd_add(struct cmd_list *head, char *name)
 
 void cmd_read(struct cmd_list *head, char *name, struct cmd_data *cmd,int flag)
 {
-    pthread_mutex_lock(&cmd_mutex);
+    //pthread_mutex_lock(&cmd_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
@@ -130,7 +127,7 @@ void cmd_read(struct cmd_list *head, char *name, struct cmd_data *cmd,int flag)
         }
         head = head->next;
     }
-    pthread_mutex_unlock(&cmd_mutex);
+    //pthread_mutex_unlock(&cmd_mutex);
 }
 
 void cmd_write(struct cmd_list *head, char *name, struct cmd_data cmd)
@@ -161,59 +158,6 @@ lv_obj_t *obj_read(struct page_list *head, char* name)
     return (lv_obj_t *)NULL;
 }
 
-static void sys_event_cb(lv_event_t * e)
-{
-    lv_event_code_t code = lv_event_get_code(e);
-
-    if(code == MY_EVENT_TIME){
-        if(sync_tag == 1){
-            if(page_check(page_head, "tag") == 1){
-                sync_tag = 0;
-                struct cmd_data cmd;
-                strcpy(cmd.cmd_name.name, "time sync");
-                sprintf(cmd.cmd_info.info, "%d%d:%d%d:%d%d", h/10, h%10, m/10, m%10, s/10, s%10);
-                tag_cmd_write(cmd_head, cmd);
-            }
-        }
-        if(sync_home == 1){
-            if(page_check(page_head, "home") == 1){
-                sync_home = 0;
-                struct cmd_data cmd;
-                strcpy(cmd.cmd_name.name, "time sync");
-                sprintf(cmd.cmd_info.info, "%d:%d", h, m);
-                home_cmd_write(cmd_head, cmd);
-            }
-        }
-        //printf("%d  %d  %d\n", h, m, s);
-    }
-
-}
-
-static void sys_time_sync(lv_timer_t * timer)
-{
-    s++;
-    sync_tag = 1;
-    if(s >= 60){
-        m++;
-        s = 0;
-        sync_home = 1;
-    }
-    if(m >= 60){
-        h++;
-        m = 0;
-    }
-    if(h >= 24){
-        h = 0;
-    }
-    lv_event_send(lv_scr_act(), MY_EVENT_TIME, NULL);
-}
-
-void sys_time_init(void)
-{
-    lv_obj_add_event_cb(lv_scr_act(), sys_event_cb, MY_EVENT_TIME , NULL);
-    lvgl_timer = lv_timer_create(sys_time_sync, 500,  NULL);
-}
-
 void ui_init(void)
 {
     page_head = malloc(sizeof(struct page_list));
@@ -236,8 +180,6 @@ void ui_init(void)
 
     sys_time_init();
 
-    // page_flag_set(page_head, "home", 0);
-    // printf("page  %d\n", page_check(page_head, "tag"));
 }
 
 
@@ -298,13 +240,15 @@ void *lvgl_start(void *arg)
     // pthread_exit((void *)0);
 }
 
+
+//cmd_handle建议只接收cmd不发送cmd
+//cmdread不需要mutex
 void *cmd_handle(void *arg)
 {
     struct cmd_data cmd;
     while(1){
         pthread_mutex_lock(&cmd_mutex);
         pthread_cond_wait(&cmd_cond, &cmd_mutex);
-        pthread_mutex_unlock(&cmd_mutex);
         printf("%s\n", new_cmd_name);
         if(strcmp(new_cmd_name, "home") == 0){
             home_cmd_handle();
@@ -315,6 +259,7 @@ void *cmd_handle(void *arg)
         }else if(strcmp(new_cmd_name, "tag") == 0){
             tag_cmd_handle();
         }
+        pthread_mutex_unlock(&cmd_mutex);
         //memset(data.cmdbuf, '/0', 20);
     }
 

@@ -2,8 +2,10 @@
 
 LV_IMG_DECLARE(image12);
 
-lv_obj_t *tag_clock;
+static lv_obj_t *tag_clock;
+static lv_obj_t *fan;
 static char clockbuf[50];
+static char fanbuf[50];
 
 static lv_obj_t* tag_create(void)
 {
@@ -31,8 +33,8 @@ static lv_obj_t* tag_create(void)
     lv_img_set_src(img11, &image12);
     lv_obj_align(img11, LV_ALIGN_LEFT_MID, 0, 0);
 
-    lv_obj_t * fan = lv_label_create(tag);
-    lv_label_set_text(fan,":956848");
+    fan = lv_label_create(tag);
+    lv_label_set_text(fan,fanbuf);
     lv_obj_align(fan,LV_ALIGN_LEFT_MID, 30, 0);
     lv_obj_set_style_text_font(fan, &lv_font_montserrat_20, 0);
 
@@ -76,6 +78,11 @@ void tag_cmd_handle(void)
         strcpy(clockbuf, cmd.cmd_info.info);
         pthread_mutex_lock(&lvgl_mutex);
         lv_label_set_text(tag_clock, clockbuf);
+        pthread_mutex_unlock(&lvgl_mutex);
+    }else if(strcmp(cmd.cmd_name.name,"fan sync") == 0){
+        strcpy(fanbuf, cmd.cmd_info.info);
+        pthread_mutex_lock(&lvgl_mutex);
+        lv_label_set_text(fan, fanbuf);
         pthread_mutex_unlock(&lvgl_mutex);
     }
 }
