@@ -14,7 +14,7 @@ extern struct page_list *page_head;
 extern struct cmd_list *cmd_head;
 extern pthread_mutex_t lvgl_mutex;
 extern uint32_t MY_EVENT_TIME;
-
+extern char sys_date[50]; 
 
 struct page_list{
     char name[10];
@@ -46,7 +46,6 @@ struct cmd_list{
 
 void *lvgl_start(void *arg);
 void *cmd_handle(void *arg);
-void sys_time_init(void);
 void mutex_init(void);
 
 void ui_init(void);

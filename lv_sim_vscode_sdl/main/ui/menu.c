@@ -13,7 +13,9 @@ LV_IMG_DECLARE(image9);
 LV_IMG_DECLARE(image10);
 LV_IMG_DECLARE(image11);
 
-
+static lv_style_t style_menu;
+static lv_style_t style_cont;
+static lv_style_t style_btn;
 static lv_obj_t *btn0;
 static lv_obj_t *btn1;
 
@@ -43,6 +45,7 @@ static void menu_event_cb(lv_event_t *e)
             strcpy(cmd.cmd_name.name, "home create");
             switch_cmd_write(cmd_head, cmd);
         }else if((btn==btn1) && (last_btn != btn)){
+            printf("123\n");
             struct cmd_data cmd;
             strcpy(cmd.cmd_name.name, "time create");
             time_cmd_write(cmd_head, cmd);
@@ -53,18 +56,16 @@ static void menu_event_cb(lv_event_t *e)
 
 lv_obj_t* menu_creat(void)
 {
-    pthread_mutex_lock(&lvgl_mutex);
     lv_obj_t *menu = lv_obj_create(lv_scr_act());
     lv_obj_set_size(menu, 240, 240);
     lv_obj_align(menu, LV_ALIGN_CENTER, 0, 0);
-    static lv_style_t style_menu;
     lv_style_init(&style_menu);
     lv_style_set_border_width(&style_menu, 0);
     lv_style_set_radius(&style_menu, 0);
     lv_style_set_pad_all(&style_menu, 0);
     lv_obj_add_style(menu, &style_menu, 0);
 
-    static lv_style_t style_cont;
+    
     lv_style_init(&style_cont);
     lv_style_set_bg_color(&style_cont, lv_color_hex(0xc0c0c0));
     lv_style_set_border_width(&style_cont, 0);
@@ -80,7 +81,6 @@ lv_obj_t* menu_creat(void)
     lv_obj_set_scrollbar_mode(cont_col, LV_SCROLLBAR_MODE_OFF);
     
     
-    static lv_style_t style_btn;
     lv_style_init(&style_btn);
     lv_style_set_bg_opa(&style_btn, 0);
     lv_style_set_shadow_width(&style_btn, 0);
@@ -181,18 +181,18 @@ lv_obj_t* menu_creat(void)
     // data9->obj = img9;
     // lv_obj_add_event_cb(btn8, page1_event_cb, LV_EVENT_PRESSED, (void *)data9);
     lv_obj_add_style(btn8, &style_btn, 0);
-    pthread_mutex_unlock(&lvgl_mutex);
     
     return menu;
 }
 
 static void menu_delete(lv_obj_t* menu)
-{
-    page_flag_set(page_head, "tag", 0);
-    page_flag_set(page_head, "time", 0);
-    pthread_mutex_lock(&lvgl_mutex);
+{ 
+    page_delete(page_head, "tag");
+    if(page_check(page_head, "time") == 1) page_delete(page_head, "time");
     lv_obj_del(menu);
-    pthread_mutex_unlock(&lvgl_mutex);
+    lv_style_reset(&style_menu);
+    lv_style_reset(&style_cont);
+    lv_style_reset(&style_btn);
 }
 
 void menu_page_add(struct page_list *head)

@@ -4,19 +4,17 @@ struct page_list *page_head;
 struct cmd_list *cmd_head;
 pthread_mutex_t lvgl_mutex;
 pthread_mutex_t cmd_mutex;
-pthread_mutex_t page_mutex;
 pthread_cond_t  cmd_cond;
 uint32_t MY_EVENT_TIME;
 char new_cmd_name[10];
+char sys_date[50];
 
 //date +%Y-%m-%d::%T
 
 void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void (*delete)(lv_obj_t* ))
 {
-    pthread_mutex_lock(&page_mutex);
     if(head == NULL){
         printf("head err\n");
-        pthread_mutex_unlock(&page_mutex);
         return ;
     }
     struct page_list *node = malloc(sizeof(struct page_list));
@@ -25,13 +23,11 @@ void page_add(struct page_list *head,char *name,lv_obj_t* (*create)(void), void 
     node->create = create;
     node->delete = delete;
     node->next = head->next;
-    head->next = node;
-    pthread_mutex_unlock(&page_mutex);   
+    head->next = node;   
 }
 
 void page_create(struct page_list *head, char* name)
 {
-    pthread_mutex_lock(&page_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
@@ -41,12 +37,10 @@ void page_create(struct page_list *head, char* name)
         }
         head = head->next;
     }
-    pthread_mutex_unlock(&page_mutex);
 }
 
 void page_delete(struct page_list *head, char* name)
 {
-    pthread_mutex_lock(&page_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
@@ -56,27 +50,22 @@ void page_delete(struct page_list *head, char* name)
         }
         head = head->next;
     }
-    pthread_mutex_unlock(&page_mutex);
 }
 
 int page_check(struct page_list *head, char* name)
 {
-    pthread_mutex_lock(&page_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
-            pthread_mutex_unlock(&page_mutex);
             return head->flag;
         }
         head = head->next;
     }
-    pthread_mutex_unlock(&page_mutex);
     return 0;
 }
 
 void page_flag_set(struct page_list *head, char* name, int flag)
 {
-    pthread_mutex_lock(&page_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
@@ -85,7 +74,6 @@ void page_flag_set(struct page_list *head, char* name, int flag)
         }
         head = head->next;
     }
-    pthread_mutex_unlock(&page_mutex);
 }
 
 void mutex_init(void)
@@ -93,8 +81,7 @@ void mutex_init(void)
     pthread_mutexattr_t attr;
     pthread_mutexattr_init(&attr);
     pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
-    pthread_mutex_init(&lvgl_mutex, &attr);
-    pthread_mutex_init(&page_mutex, &attr);
+    pthread_mutex_init(&lvgl_mutex, NULL);
     pthread_mutex_init(&cmd_mutex, NULL);
     pthread_cond_init(&cmd_cond, NULL);
 }
@@ -113,6 +100,7 @@ void cmd_add(struct cmd_list *head, char *name)
     pthread_mutex_unlock(&cmd_mutex);   
 }
 
+//cmd读只在handle线程已经保护
 void cmd_read(struct cmd_list *head, char *name, struct cmd_data *cmd,int flag)
 {
     //pthread_mutex_lock(&cmd_mutex);
@@ -130,9 +118,10 @@ void cmd_read(struct cmd_list *head, char *name, struct cmd_data *cmd,int flag)
     //pthread_mutex_unlock(&cmd_mutex);
 }
 
+//在lvgl事件里调用cmd_mutex容易死锁
 void cmd_write(struct cmd_list *head, char *name, struct cmd_data cmd)
 {
-    pthread_mutex_lock(&cmd_mutex);
+    //pthread_mutex_lock(&cmd_mutex);
     head = head->next;
     while(head != NULL){
         if(strcmp(head->name, name) == 0){
@@ -142,7 +131,7 @@ void cmd_write(struct cmd_list *head, char *name, struct cmd_data cmd)
         }
         head = head->next;
     }
-    pthread_mutex_unlock(&cmd_mutex);
+    //pthread_mutex_unlock(&cmd_mutex);
     pthread_cond_signal(&cmd_cond);
 }
 
@@ -174,11 +163,18 @@ void ui_init(void)
     menu_cmd_add(cmd_head);
     tag_cmd_add(cmd_head);
     
+    FILE * fp;
+    char buf[50];
+    memset(buf, '\0', sizeof(50));
+    char *delim = ":";
+    fp = popen("date +%Y-%m-%d:%T:", "r");
+    fread(buf, sizeof(char),sizeof(buf) ,fp);
+    pclose(fp);
+    strcpy(sys_date, buf);
+
     page_create(page_head, "home"); 
 
     MY_EVENT_TIME = lv_event_register_id();
-
-    sys_time_init();
 
 }
 
@@ -238,19 +234,18 @@ void *lvgl_start(void *arg)
         pthread_mutex_unlock(&lvgl_mutex);
         usleep(5000);
     }
-
     pthread_exit((void *)0);
 }
 
 
 //cmd_handle建议只接收cmd不发送cmd
-//cmdread不需要mutex
 void *cmd_handle(void *arg)
 {
     struct cmd_data cmd;
     while(1){
         pthread_mutex_lock(&cmd_mutex);
         pthread_cond_wait(&cmd_cond, &cmd_mutex);
+        pthread_mutex_lock(&lvgl_mutex);//直接暂停了lvgl/让时间不准了/都是因为死锁
         printf("%s\n", new_cmd_name);
         if(strcmp(new_cmd_name, "home") == 0){
             home_cmd_handle();
@@ -261,6 +256,7 @@ void *cmd_handle(void *arg)
         }else if(strcmp(new_cmd_name, "tag") == 0){
             tag_cmd_handle();
         }
+        pthread_mutex_unlock(&lvgl_mutex);
         pthread_mutex_unlock(&cmd_mutex);
         //memset(data.cmdbuf, '/0', 20);
     }

@@ -36,7 +36,7 @@ void num_tran_cb(lv_obj_t *anim_obj,unsigned char step)
             pre_num=anim_list[i]->pre_num;
             now_num=anim_list[i]->now_num;
             time=anim_list[i]->time;
-
+        
             for(unsigned char i=0;i<DOT_NUM;i++)
             {
                 tmp_dot[i].x =(num_dot[pre_num][2*i]*255-num_dot[pre_num][2*i]*step+num_dot[now_num][2*i]*step)/255/time;

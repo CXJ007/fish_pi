@@ -1,24 +1,44 @@
 #include "ui.h"
 #include "anim_num/anim_num.h"
 
-extern unsigned int anim_list_cnt;//表长
-
 static struct anim_num* num0;
 static struct anim_num* num1;
 static struct anim_num* num2;
 static struct anim_num* num3;
 static lv_obj_t *date;
-
-static lv_timer_t * timer;
-static int h,m;
+static lv_style_t style_obj;
+static lv_timer_t * delete_time;
+static lv_timer_t * home_time;
+static int h,m,s;
 static char datebuf[20];
 
-void delete_home_timer(lv_timer_t * timer)
+static void delete_home_timer(lv_timer_t * timer)
 {   
     lv_obj_t *home = (lv_obj_t *)timer->user_data;
    
     lv_event_send(home, MY_EVENT_TIME, NULL);  
 }
+
+static void home_timer(lv_timer_t * timer)
+{  
+    s++;
+    if(s >= 60){
+        m++;
+        s = 0;
+        anim_num_disp(num2, m/10, 1000);
+        anim_num_disp(num3, m%10, 1000);
+    }
+    if(m >= 60){
+        h++;
+        m = 0;
+        anim_num_disp(num0, h/10, 1000);
+        anim_num_disp(num1, h%10, 1000);
+    }
+    if(h >= 24){
+        h = 0;
+    }
+}
+
 
 static void anim_y_cb(void * var, int32_t v)
 {
@@ -39,8 +59,8 @@ static void home_even_cb(lv_event_t *e)
         lv_anim_set_exec_cb(&a, anim_y_cb);
         lv_anim_set_path_cb(&a, lv_anim_path_ease_out);
         lv_anim_start(&a);
-        timer = lv_timer_create(delete_home_timer, 500,  home);
-        lv_timer_set_repeat_count(timer, 1);
+        delete_time = lv_timer_create(delete_home_timer, 500,  home);
+        lv_timer_set_repeat_count(delete_time, 1);
     }else if(code == MY_EVENT_TIME){
         struct cmd_data cmd;
         strcpy(cmd.cmd_name.name, "menu create");
@@ -51,9 +71,15 @@ static void home_even_cb(lv_event_t *e)
 
 static lv_obj_t* home_create(void)
 {
-    pthread_mutex_lock(&lvgl_mutex);
+    char *delim = ":";
+    char buf[50];
+    strcpy(buf, sys_date);
+    strcpy(datebuf, strtok(buf, delim));
+    h = atoi(strtok(NULL, delim));
+    m = atoi(strtok(NULL, delim));
+    s = atoi(strtok(NULL, delim));
+
     lv_obj_set_scrollbar_mode(lv_scr_act(), LV_SCROLLBAR_MODE_OFF);
-    static lv_style_t style_obj;
     lv_style_init(&style_obj);
     lv_style_set_bg_color(&style_obj, lv_color_hex(0xc0c0c0));
     lv_style_set_radius(&style_obj, 0);
@@ -74,8 +100,6 @@ static lv_obj_t* home_create(void)
     lv_anim_set_path_cb(&a, lv_anim_path_ease_out);
     lv_anim_start(&a);
 
-
-    
     num0 = anim_num_create(home,0,0,11,lv_color_hex(0x3e3d39),8);
     num1 = anim_num_create(home,0,0,11,lv_color_hex(0x3e3d39),8);
     num2 = anim_num_create(home,0,0,11,lv_color_hex(0x3e3d39),8);
@@ -85,27 +109,31 @@ static lv_obj_t* home_create(void)
     lv_obj_align(num2->obj, LV_ALIGN_CENTER, 35, 0);
     lv_obj_align(num3->obj, LV_ALIGN_CENTER, 85, 0);
 
-    anim_num_disp(num0, h/10, 0);
-    anim_num_disp(num1, h%10, 0);
-    anim_num_disp(num2, m/10, 0);
-    anim_num_disp(num3, m%10, 0);
+    anim_num_disp(num0, h/10, 1000);
+    anim_num_disp(num1, h%10, 1000);
+    anim_num_disp(num2, m/10, 1000);
+    anim_num_disp(num3, m%10, 1000);
 
     date = lv_label_create(home);
     lv_label_set_text(date,datebuf);
     lv_obj_align(date,LV_ALIGN_BOTTOM_RIGHT, -20, -35);
     lv_obj_set_style_text_font(date, &lv_font_montserrat_24, 0);
 
-    pthread_mutex_unlock(&lvgl_mutex);
+    home_time = lv_timer_create(home_timer, 1000,  NULL);
+
 
     return home;
 }
 
 static void home_delete(lv_obj_t* home)
 {
-    pthread_mutex_lock(&lvgl_mutex);
+    lv_timer_del(home_time);
+    anim_num_del(num0);
+    anim_num_del(num1);
+    anim_num_del(num2);
+    anim_num_del(num3);
     lv_obj_del(home);
-    anim_list_cnt = 0;
-    pthread_mutex_unlock(&lvgl_mutex);
+    lv_style_reset(&style_obj);
 }
 
 void home_page_add(struct page_list *head)
@@ -132,22 +160,22 @@ void home_cmd_handle(void)
 {
     struct cmd_data cmd;
     home_cmd_read(cmd_head, &cmd);
-    if(strcmp(cmd.cmd_name.name,"menu create") == 0){
+    if(strcmp(cmd.cmd_name.name, "menu create") == 0){
+        sprintf(sys_date, "%s:%d:%d:%d:", datebuf ,h ,m ,s);
         page_create(page_head, "menu");
         page_create(page_head, "tag");
         page_delete(page_head, "home");
-    }else if(strcmp(cmd.cmd_name.name,"time sync") == 0){
+    }else if(strcmp(cmd.cmd_name.name, "time sync") == 0){
         //printf("home %s\n", cmd.cmd_info.info);
         char *delim = ":";
         strcpy(datebuf, strtok(cmd.cmd_info.info, delim));
         h = atoi(strtok(NULL, delim));
         m = atoi(strtok(NULL, delim));
-        pthread_mutex_lock(&lvgl_mutex);
+
         lv_label_set_text(date,datebuf);
         anim_num_disp(num0, h/10, 1000);
         anim_num_disp(num1, h%10, 1000);
         anim_num_disp(num2, m/10, 1000);
         anim_num_disp(num3, m%10, 1000);
-        pthread_mutex_unlock(&lvgl_mutex);
     }
 }
