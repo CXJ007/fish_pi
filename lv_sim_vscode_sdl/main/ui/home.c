@@ -105,10 +105,10 @@ static lv_obj_t* home_create(void)
     num1 = anim_num_create(home,0,0,11,lv_color_hex(0x3e3d39),8);
     num2 = anim_num_create(home,0,0,11,lv_color_hex(0x3e3d39),8);
     num3 = anim_num_create(home,0,0,11,lv_color_hex(0x3e3d39),8);
-    lv_obj_align(num0->obj, LV_ALIGN_CENTER, -85, 0);
-    lv_obj_align(num1->obj, LV_ALIGN_CENTER, -35, 0);
-    lv_obj_align(num2->obj, LV_ALIGN_CENTER, 35, 0);
-    lv_obj_align(num3->obj, LV_ALIGN_CENTER, 85, 0);
+    lv_obj_align(num0->obj, LV_ALIGN_CENTER, -80, 0);
+    lv_obj_align(num1->obj, LV_ALIGN_CENTER, -30, 0);
+    lv_obj_align(num2->obj, LV_ALIGN_CENTER, 30, 0);
+    lv_obj_align(num3->obj, LV_ALIGN_CENTER, 80, 0);
 
     anim_num_disp(num0, h/10, 1000);
     anim_num_disp(num1, h%10, 1000);

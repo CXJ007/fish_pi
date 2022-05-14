@@ -115,7 +115,6 @@ ui_init();
     lv_timer_handler();
     pthread_mutex_unlock(&lvgl_mutex);
     usleep(5 * 1000);
-    
   }
 
   return 0;

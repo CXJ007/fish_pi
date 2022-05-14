@@ -18,6 +18,8 @@ static lv_style_t style_cont;
 static lv_style_t style_btn;
 static lv_obj_t *btn0;
 static lv_obj_t *btn1;
+static lv_obj_t *btn2;
+static lv_obj_t *btn3;
 
 static void set_zoom(void * img, int32_t v)
 {
@@ -30,6 +32,7 @@ static void menu_event_cb(lv_event_t *e)
     lv_obj_t *btn = lv_event_get_target(e);
     lv_obj_t *img = (lv_obj_t *)lv_event_get_user_data(e);
     static lv_obj_t *last_btn;
+    struct cmd_data cmd;
 
     if(code == LV_EVENT_PRESSED){
         lv_anim_t a;
@@ -40,21 +43,34 @@ static void menu_event_cb(lv_event_t *e)
         lv_anim_set_time(&a, 500);
         lv_anim_start(&a);
     }else if(code == LV_EVENT_SHORT_CLICKED){
+        //删除原来page
+        if((btn!=btn0) && (btn!=last_btn)){
+            if(last_btn == btn1){
+                strcpy(cmd.cmd_info.info, "time");
+            }else if(last_btn == btn2){
+
+            }else if(last_btn == btn3){
+                strcpy(cmd.cmd_info.info, "music");
+            }
+        }
+        //创建page
         if(btn == btn0){
-            struct cmd_data cmd;
             strcpy(cmd.cmd_name.name, "home create");
             switch_cmd_write(cmd_head, cmd);
         }else if((btn==btn1) && (last_btn != btn)){
-            printf("123\n");
-            struct cmd_data cmd;
             strcpy(cmd.cmd_name.name, "time create");
             time_cmd_write(cmd_head, cmd);
+        }else if((btn==btn2) && (last_btn != btn)){
+            printf("wifi\n");
+        }else if((btn==btn3) && (last_btn != btn)){
+            strcpy(cmd.cmd_name.name, "music create");
+            music_cmd_write(cmd_head, cmd);
         }
         last_btn = btn;
     }
 }
 
-lv_obj_t* menu_creat(void)
+static lv_obj_t* menu_creat(void)
 {
     lv_obj_t *menu = lv_obj_create(lv_scr_act());
     lv_obj_set_size(menu, 240, 240);
@@ -105,26 +121,22 @@ lv_obj_t* menu_creat(void)
     lv_obj_add_event_cb(btn1, menu_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img2);
     lv_obj_add_style(btn1, &style_btn, 0);
 
-    lv_obj_t *btn2 = lv_btn_create(cont_col);
+    btn2 = lv_btn_create(cont_col);
     lv_obj_set_size(btn2, 50, 50);
     lv_obj_t *img3 = lv_img_create(btn2);
     lv_img_set_src(img3, &image3);
     lv_obj_center(img3);
-    // struct usr_data *data3 = (struct usr_data *)malloc(sizeof(struct usr_data));
-    // data3->pagenum = page11;
-    // data3->obj = img3;
-    // lv_obj_add_event_cb(btn2, page1_event_cb, LV_EVENT_PRESSED, (void *)data3);
+    lv_obj_add_event_cb(btn2, menu_event_cb, LV_EVENT_PRESSED, (void *)img3);
+    lv_obj_add_event_cb(btn2, menu_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img3);
     lv_obj_add_style(btn2, &style_btn, 0);
 
-    lv_obj_t *btn3 = lv_btn_create(cont_col);
+    btn3 = lv_btn_create(cont_col);
     lv_obj_set_size(btn3, 50, 50);
     lv_obj_t *img4 = lv_img_create(btn3);
     lv_img_set_src(img4, &image4);
     lv_obj_center(img4);
-    // struct usr_data *data4 = (struct usr_data *)malloc(sizeof(struct usr_data));
-    // data4->pagenum = page12;
-    // data4->obj = img4;
-    // lv_obj_add_event_cb(btn3, page1_event_cb, LV_EVENT_PRESSED, (void *)data4);
+    lv_obj_add_event_cb(btn3, menu_event_cb, LV_EVENT_PRESSED, (void *)img4);
+    lv_obj_add_event_cb(btn3, menu_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img4);
     lv_obj_add_style(btn3, &style_btn, 0);
 
     lv_obj_t *btn4 = lv_btn_create(cont_col);
@@ -185,10 +197,12 @@ lv_obj_t* menu_creat(void)
     return menu;
 }
 
+//确保删除干净
 static void menu_delete(lv_obj_t* menu)
 { 
     page_delete(page_head, "tag");
     if(page_check(page_head, "time") == 1) page_delete(page_head, "time");
+    if(page_check(page_head, "music") == 1) page_delete(page_head, "music");
     lv_obj_del(menu);
     lv_style_reset(&style_menu);
     lv_style_reset(&style_cont);

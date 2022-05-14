@@ -15,8 +15,8 @@ void lv_example_bar_3(void)
 
     lv_style_init(&style_indic);
     lv_style_set_bg_opa(&style_indic, LV_OPA_COVER);
-    lv_style_set_bg_color(&style_indic, lv_palette_main(LV_PALETTE_RED));
-    lv_style_set_bg_grad_color(&style_indic, lv_palette_main(LV_PALETTE_BLUE));
+    // lv_style_set_bg_color(&style_indic, lv_palette_main(LV_PALETTE_RED));
+    // lv_style_set_bg_grad_color(&style_indic, lv_palette_main(LV_PALETTE_BLUE));
     lv_style_set_bg_grad_dir(&style_indic, LV_GRAD_DIR_VER);
 
     lv_obj_t * bar = lv_bar_create(lv_scr_act());

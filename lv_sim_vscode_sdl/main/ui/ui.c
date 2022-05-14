@@ -158,15 +158,16 @@ void ui_init(void)
     tag_page_add(page_head);
     menu_page_add(page_head);
     time_page_add(page_head);
+    music_page_add(page_head);
 
     home_cmd_add(cmd_head);
     menu_cmd_add(cmd_head);
     tag_cmd_add(cmd_head);
+    music_cmd_add(cmd_head);
     
     FILE * fp;
     char buf[50];
     memset(buf, '\0', sizeof(50));
-    char *delim = ":";
     fp = popen("date +%Y-%m-%d:%T:", "r");
     fread(buf, sizeof(char),sizeof(buf) ,fp);
     pclose(fp);
@@ -239,14 +240,13 @@ void *lvgl_start(void *arg)
 }
 
 
-//cmd_handle建议只接收cmd不发送cmd
+//cmd_handle只接收cmd不发送cmd
 void *cmd_handle(void *arg)
 {
-    struct cmd_data cmd;
     while(1){
         pthread_mutex_lock(&cmd_mutex);
         pthread_cond_wait(&cmd_cond, &cmd_mutex);
-        pthread_mutex_lock(&lvgl_mutex);//直接暂停了lvgl/让时间不准了/都是因为死锁
+        pthread_mutex_lock(&lvgl_mutex);
         printf("%s\n", new_cmd_name);
         if(strcmp(new_cmd_name, "home") == 0){
             home_cmd_handle();
@@ -256,6 +256,8 @@ void *cmd_handle(void *arg)
             time_cmd_handle();
         }else if(strcmp(new_cmd_name, "tag") == 0){
             tag_cmd_handle();
+        }else if(strcmp(new_cmd_name, "music") == 0){
+            music_cmd_handle();
         }
         pthread_mutex_unlock(&lvgl_mutex);
         pthread_mutex_unlock(&cmd_mutex);
