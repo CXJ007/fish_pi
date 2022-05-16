@@ -232,7 +232,6 @@ static void time_data_sync(void)
 
 void time_cmd_handle(void)
 {
-    static int i;
     struct cmd_data cmd;
     time_cmd_read(cmd_head, &cmd);
     if(strcmp(cmd.cmd_name.name,"time create") == 0){

@@ -10,7 +10,6 @@ static lv_obj_t *btn0;
 static lv_obj_t *btn1;
 static lv_style_t style_roller;
 static lv_style_t style_btn;
-static lv_timer_t * lvgl_timer;
 
 static int h, m, s;
 static int seth, setm, sets;
@@ -72,16 +71,16 @@ static void time_event_cb(lv_event_t * e)
     }
 }
 
-lv_obj_t* time_create(void)
+static lv_obj_t* time_create(void)
 {
     char *delim = ":";
     char buf[50];
     strcpy(buf, sys_date);
-    strcpy(datebuf, strtok(sys_date, delim));
+    strcpy(datebuf, strtok(buf, delim));
     h = atoi(strtok(NULL, delim));
     m = atoi(strtok(NULL, delim));
     s = atoi(strtok(NULL, delim));
-
+    
     lv_obj_t *menu = obj_read(page_head, "menu");
 
     lv_obj_t *time = lv_obj_create(menu);
@@ -236,6 +235,7 @@ void time_cmd_handle(void)
     struct cmd_data cmd;
     time_cmd_read(cmd_head, &cmd);
     if(strcmp(cmd.cmd_name.name,"time create") == 0){
+        page_delete(page_head, cmd.cmd_info.info);
         page_create(page_head, "time"); 
     }
 }

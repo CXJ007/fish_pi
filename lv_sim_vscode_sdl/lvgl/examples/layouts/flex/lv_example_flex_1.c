@@ -14,7 +14,7 @@ void lv_example_flex_1(void)
 
     /*Create a container with COLUMN flex direction*/
     lv_obj_t * cont_col = lv_obj_create(lv_scr_act());
-    lv_obj_set_size(cont_col, 200, 150);
+    lv_obj_set_size(cont_col, 600, 150);
     lv_obj_align_to(cont_col, cont_row, LV_ALIGN_OUT_BOTTOM_MID, 0, 5);
     lv_obj_set_flex_flow(cont_col, LV_FLEX_FLOW_COLUMN);
 

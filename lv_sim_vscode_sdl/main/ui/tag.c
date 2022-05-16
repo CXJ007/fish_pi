@@ -31,6 +31,7 @@ static void tag_timer(lv_timer_t * timer)
     }
     sprintf(clockbuf, "%d%d:%d%d:%d%d", h/10, h%10, m/10, m%10, s/10, s%10);
     sprintf(sys_date, "%s:%d:%d:%d:", datebuf ,h ,m ,s);
+    //printf("%s\n", sys_date);
     lv_label_set_text(tag_clock, clockbuf);
 }
 
@@ -58,7 +59,7 @@ static void fan_sync(void)
 static void tag_event_cb(lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
-    if(code == LV_EVENT_SHORT_CLICKED){
+    if(code == LV_EVENT_CLICKED){
         fan_sync();
     }
 }
@@ -104,7 +105,7 @@ static lv_obj_t* tag_create(void)
     lv_obj_center(img12);
     lv_obj_align(btn0, LV_ALIGN_LEFT_MID, 0, 0);
     lv_obj_add_style(btn0, &style_btn, 0);
-    lv_obj_add_event_cb(btn0, tag_event_cb, LV_EVENT_SHORT_CLICKED, NULL);
+    lv_obj_add_event_cb(btn0, tag_event_cb, LV_EVENT_CLICKED, NULL);
     
     fan = lv_label_create(tag);
     lv_label_set_text(fan,fanbuf);

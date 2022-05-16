@@ -17,7 +17,7 @@ static void draw_event_cb(lv_event_t * e)
         rect_dsc.radius = LV_RADIUS_CIRCLE;
 
         lv_area_t sw_area;
-        sw_area.x1 = dsc->draw_area->x2 - 50;
+        sw_area.x1 = dsc->draw_area->x2 - 150;
         sw_area.x2 = sw_area.x1 + 40;
         sw_area.y1 =  dsc->draw_area->y1 + lv_area_get_height(dsc->draw_area) / 2 - 10;
         sw_area.y2 = sw_area.y1 + 20;
@@ -65,7 +65,7 @@ void lv_example_table_2(void)
     /*Set a smaller height to the table. It'll make it scrollable*/
     lv_obj_set_size(table, LV_SIZE_CONTENT, 200);
 
-    lv_table_set_col_width(table, 0, 150);
+    lv_table_set_col_width(table, 0, 50);
     lv_table_set_row_cnt(table, ITEM_CNT); /*Not required but avoids a lot of memory reallocation lv_table_set_set_value*/
     lv_table_set_col_cnt(table, 1);
 

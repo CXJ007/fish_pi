@@ -91,7 +91,7 @@
 #  define MONITOR_VER_RES     240
 
 /* Scale window by this factor (useful when simulating small screens) */
-#  define MONITOR_ZOOM        0.6
+#  define MONITOR_ZOOM        1
 
 /* Used to test true double buffering with only address changing.
  * Use 2 draw buffers, bith with MONITOR_HOR_RES x MONITOR_VER_RES size*/

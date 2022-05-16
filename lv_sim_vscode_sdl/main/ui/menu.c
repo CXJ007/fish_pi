@@ -34,7 +34,7 @@ static void menu_event_cb(lv_event_t *e)
     static lv_obj_t *last_btn;
     struct cmd_data cmd;
 
-    if(code == LV_EVENT_PRESSED){
+    if(code == LV_EVENT_CLICKED){
         lv_anim_t a;
         lv_anim_init(&a);
         lv_anim_set_var(&a, img);
@@ -42,7 +42,6 @@ static void menu_event_cb(lv_event_t *e)
         lv_anim_set_values(&a, 300, 255);
         lv_anim_set_time(&a, 500);
         lv_anim_start(&a);
-    }else if(code == LV_EVENT_SHORT_CLICKED){
         //删除原来page
         if((btn!=btn0) && (btn!=last_btn)){
             if(last_btn == btn1){
@@ -108,8 +107,7 @@ static lv_obj_t* menu_creat(void)
     lv_obj_t *img1 = lv_img_create(btn0);
     lv_img_set_src(img1, &image1);
     lv_obj_center(img1);
-    lv_obj_add_event_cb(btn0, menu_event_cb, LV_EVENT_PRESSED, (void *)img1);
-    lv_obj_add_event_cb(btn0, menu_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img1);
+    lv_obj_add_event_cb(btn0, menu_event_cb, LV_EVENT_CLICKED, (void *)img1);
     lv_obj_add_style(btn0, &style_btn, 0);
 
     btn1 = lv_btn_create(cont_col);
@@ -117,8 +115,7 @@ static lv_obj_t* menu_creat(void)
     lv_obj_t *img2 = lv_img_create(btn1);
     lv_img_set_src(img2, &image2);
     lv_obj_center(img2);
-    lv_obj_add_event_cb(btn1, menu_event_cb, LV_EVENT_PRESSED, (void *)img2);
-    lv_obj_add_event_cb(btn1, menu_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img2);
+    lv_obj_add_event_cb(btn1, menu_event_cb, LV_EVENT_CLICKED, (void *)img2);
     lv_obj_add_style(btn1, &style_btn, 0);
 
     btn2 = lv_btn_create(cont_col);
@@ -126,8 +123,7 @@ static lv_obj_t* menu_creat(void)
     lv_obj_t *img3 = lv_img_create(btn2);
     lv_img_set_src(img3, &image3);
     lv_obj_center(img3);
-    lv_obj_add_event_cb(btn2, menu_event_cb, LV_EVENT_PRESSED, (void *)img3);
-    lv_obj_add_event_cb(btn2, menu_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img3);
+    lv_obj_add_event_cb(btn2, menu_event_cb, LV_EVENT_CLICKED, (void *)img3);
     lv_obj_add_style(btn2, &style_btn, 0);
 
     btn3 = lv_btn_create(cont_col);
@@ -135,8 +131,7 @@ static lv_obj_t* menu_creat(void)
     lv_obj_t *img4 = lv_img_create(btn3);
     lv_img_set_src(img4, &image4);
     lv_obj_center(img4);
-    lv_obj_add_event_cb(btn3, menu_event_cb, LV_EVENT_PRESSED, (void *)img4);
-    lv_obj_add_event_cb(btn3, menu_event_cb, LV_EVENT_SHORT_CLICKED, (void *)img4);
+    lv_obj_add_event_cb(btn3, menu_event_cb, LV_EVENT_CLICKED, (void *)img4);
     lv_obj_add_style(btn3, &style_btn, 0);
 
     lv_obj_t *btn4 = lv_btn_create(cont_col);
