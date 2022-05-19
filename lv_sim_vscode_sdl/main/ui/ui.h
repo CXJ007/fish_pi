@@ -9,6 +9,10 @@
 #include <pthread.h>
 #include <time.h>
 #include <sys/time.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <signal.h>
 
 extern struct page_list *page_head;
 extern struct cmd_list *cmd_head;

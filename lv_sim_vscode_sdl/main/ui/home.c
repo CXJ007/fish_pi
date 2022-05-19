@@ -46,7 +46,7 @@ static void anim_y_cb(void * var, int32_t v)
     lv_obj_set_y(var, v);
 }
 
-static void home_even_cb(lv_event_t *e)
+static void home_event_cb(lv_event_t *e)
 {
     lv_obj_t *home = lv_event_get_target(e);
     lv_event_code_t code = lv_event_get_code(e);
@@ -89,8 +89,8 @@ static lv_obj_t* home_create(void)
     lv_obj_t *home = lv_obj_create(lv_scr_act());
     lv_obj_set_size(home, 240, 240);
     lv_obj_add_style(home, &style_obj, LV_STATE_DEFAULT); 
-    lv_obj_add_event_cb(home, home_even_cb, LV_EVENT_CLICKED  , NULL);
-    lv_obj_add_event_cb(home, home_even_cb, MY_EVENT_TIME , NULL);
+    lv_obj_add_event_cb(home, home_event_cb, LV_EVENT_CLICKED  , NULL);
+    lv_obj_add_event_cb(home, home_event_cb, MY_EVENT_TIME , NULL);
 
     lv_anim_t a;
     lv_anim_init(&a);
