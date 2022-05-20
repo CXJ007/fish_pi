@@ -78,9 +78,9 @@ void page_flag_set(struct page_list *head, char* name, int flag)
 
 void mutex_init(void)
 {
-    pthread_mutexattr_t attr;
-    pthread_mutexattr_init(&attr);
-    pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+    // pthread_mutexattr_t attr;
+    // pthread_mutexattr_init(&attr);
+    // pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
     pthread_mutex_init(&lvgl_mutex, NULL);
     pthread_mutex_init(&cmd_mutex, NULL);
     pthread_cond_init(&cmd_cond, NULL);
@@ -246,20 +246,28 @@ void *cmd_handle(void *arg)
     while(1){
         pthread_mutex_lock(&cmd_mutex);
         pthread_cond_wait(&cmd_cond, &cmd_mutex);
-        pthread_mutex_lock(&lvgl_mutex);
         printf("%s\n", new_cmd_name);
         if(strcmp(new_cmd_name, "home") == 0){
+            pthread_mutex_lock(&lvgl_mutex);
             home_cmd_handle();
+            pthread_mutex_unlock(&lvgl_mutex);
         }else if(strcmp(new_cmd_name, "switch") == 0){
+            pthread_mutex_lock(&lvgl_mutex);
             switch_cmd_handle();
+            pthread_mutex_unlock(&lvgl_mutex);
         }else if(strcmp(new_cmd_name, "time") == 0){
+            pthread_mutex_lock(&lvgl_mutex);
             time_cmd_handle();
+            pthread_mutex_unlock(&lvgl_mutex);
         }else if(strcmp(new_cmd_name, "tag") == 0){
+            pthread_mutex_lock(&lvgl_mutex);
             tag_cmd_handle();
+            pthread_mutex_unlock(&lvgl_mutex);
         }else if(strcmp(new_cmd_name, "music") == 0){
+            //pthread_mutex_lock(&lvgl_mutex);
             music_cmd_handle();
+            //pthread_mutex_unlock(&lvgl_mutex);
         }
-        pthread_mutex_unlock(&lvgl_mutex);
         pthread_mutex_unlock(&cmd_mutex);
         //memset(data.cmdbuf, '/0', 20);
     }

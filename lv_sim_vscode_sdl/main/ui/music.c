@@ -36,7 +36,10 @@ static pthread_mutex_t mplayer_mutex;
 static pthread_cond_t  mplayer_cond;
 static int start; 
 static int ready;
-static int btn_exchange;           
+static int btn_exchange;
+#define MUSIC_PATH   "/home/cxj/Desktop/fish_pi/"
+
+
 
 static void music_hand(void);
 static void set_btn_state(lv_obj_t * parent, lv_obj_t * add_btn);
@@ -97,6 +100,7 @@ static void music_event_cb(lv_event_t * e)
             btn_music_id--;
             if(btn_music_id < 0) btn_music_id = music_num-1;
             set_btn_state(cont_col,lv_obj_get_child(cont_col,btn_music_id));
+            lv_obj_scroll_to_view(lv_obj_get_child(cont_col,btn_music_id), LV_ANIM_ON);
             lv_event_send(lv_obj_get_child(cont_col,btn_music_id), LV_EVENT_CLICKED, NULL);
         }else if(obj == btn1){
             if(btn_exchange == 0){
@@ -114,6 +118,7 @@ static void music_event_cb(lv_event_t * e)
             btn_music_id++;
             if(btn_music_id >= music_num) btn_music_id = 0;
             set_btn_state(cont_col,lv_obj_get_child(cont_col,btn_music_id));
+            lv_obj_scroll_to_view(lv_obj_get_child(cont_col,btn_music_id), LV_ANIM_ON);
             lv_event_send(lv_obj_get_child(cont_col,btn_music_id), LV_EVENT_CLICKED, NULL);
         }
     }else if(code == LV_EVENT_VALUE_CHANGED){
@@ -172,9 +177,8 @@ static void add_list_btn(lv_obj_t * parent)
 {
     char namebuf[256];
     FILE * fb;
-
-    system("ls /home/cxj/Desktop/fish_pi/music | grep -E \"mp3|wav\" > /home/cxj/Desktop/fish_pi/music/music.lst");
-    fb = fopen("/home/cxj/Desktop/fish_pi/music/music.lst", "r");
+    system("ls " MUSIC_PATH"music" "| grep -E \"mp3|wav\" > "MUSIC_PATH"music/music.lst");
+    fb = fopen(MUSIC_PATH"music/music.lst", "r");
     memset(namebuf, '\0', sizeof(namebuf));
     fread(namebuf,sizeof(namebuf),1,fb);
     fclose(fb);
@@ -199,7 +203,6 @@ static lv_obj_t* music_create(void)
 {    
     lv_timer_t * music_time;
     lv_obj_t *menu = obj_read(page_head, "menu");
-
     music = lv_obj_create(menu);
     lv_obj_set_size(music, 190, 210);
     lv_obj_set_style_pad_top(music, 0, 0);
@@ -425,7 +428,7 @@ static void send_cmd(char *buff)
 static void *write_pthread(void *arg)
 {   
     send_cmd("volume 0 1\n");
-    send_cmd("loadlist /home/cxj/Desktop/fish_pi/music/music.lst\n");
+    send_cmd("loadlist "MUSIC_PATH"music/music.lst\n");
 	while(start == 0);
 	send_cmd("get_time_length\n");
 	send_cmd("volume 100 1\n");
@@ -522,7 +525,7 @@ static void music_hand(void)
 		close(fd_pipe[0]);
 		dup2(fd_pipe[1],STDOUT_FILENO);					//将子进程的标准输出重定向到管道的写端
         //system("mplayer -slave -quiet -input file=/tmp/my_fifo /home/cxj/Desktop/fish_pi/music/稻香.mp3");
-		execlp("mplayer","mplayer","-slave","-quiet","-loop","0","-input","file=/tmp/my_fifo","/home/cxj/Desktop/fish_pi/music/稻香.mp3",NULL);
+		execlp("mplayer","mplayer","-slave","-quiet","-loop","0","-input","file=/tmp/my_fifo",MUSIC_PATH"music/稻香.mp3",NULL);
 	}
 	else
 	{
@@ -558,7 +561,7 @@ void music_cmd_handle(void)
             strcat(name_buf,"\\ ");
         }
         send_cmd("volume 0 1\n");
-        sprintf(cmd_buf, "loadfile /home/cxj/Desktop/fish_pi/music/%s\n", name_buf);
+        sprintf(cmd_buf, "loadfile %smusic/%s\n", MUSIC_PATH, name_buf);
         send_cmd(cmd_buf);
         send_cmd("get_time_length\n");
         sprintf(tmp, "volume %d 1\n", voice);

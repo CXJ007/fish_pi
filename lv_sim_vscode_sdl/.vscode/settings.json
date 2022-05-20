@@ -2,7 +2,8 @@
     "files.associations": {
         "typeinfo": "c",
         "string.h": "c",
-        "stat.h": "c"
+        "stat.h": "c",
+        "ui.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
