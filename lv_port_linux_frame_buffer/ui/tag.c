@@ -35,9 +35,7 @@ static void tag_timer(lv_timer_t * timer)
     lv_label_set_text(tag_clock, clockbuf);
 }
 
-
-
-static void fan_sync(void)
+static void* fan_sync(void *argc)
 {
     FILE * fp;
     char buf[50];
@@ -53,14 +51,19 @@ static void fan_sync(void)
     }else{
         strcpy(fanbuf, "no net");
     }
+    pthread_mutex_lock(&lvgl_mutex);
     lv_label_set_text(fan, fanbuf);
+    pthread_mutex_unlock(&lvgl_mutex);
+    pthread_exit((void *)0);
 }
 
 static void tag_event_cb(lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     if(code == LV_EVENT_CLICKED){
-        fan_sync();
+        pthread_t  fan_id;
+        pthread_create(&fan_id, NULL, fan_sync, NULL);
+        pthread_detach(fan_id);
     }
 }
 

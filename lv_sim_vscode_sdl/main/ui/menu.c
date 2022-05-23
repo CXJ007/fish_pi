@@ -47,7 +47,7 @@ static void menu_event_cb(lv_event_t *e)
             if(last_btn == btn1){
                 strcpy(cmd.cmd_info.info, "time");
             }else if(last_btn == btn2){
-
+                strcpy(cmd.cmd_info.info, "wifi");
             }else if(last_btn == btn3){
                 strcpy(cmd.cmd_info.info, "music");
             }
@@ -60,7 +60,8 @@ static void menu_event_cb(lv_event_t *e)
             strcpy(cmd.cmd_name.name, "time create");
             time_cmd_write(cmd_head, cmd);
         }else if((btn==btn2) && (last_btn != btn)){
-            printf("wifi\n");
+            strcpy(cmd.cmd_name.name, "wifi create");
+            wifi_cmd_write(cmd_head, cmd);
         }else if((btn==btn3) && (last_btn != btn)){
             strcpy(cmd.cmd_name.name, "music create");
             music_cmd_write(cmd_head, cmd);
@@ -197,6 +198,7 @@ static void menu_delete(lv_obj_t* menu)
 { 
     page_delete(page_head, "tag");
     if(page_check(page_head, "time") == 1) page_delete(page_head, "time");
+    if(page_check(page_head, "wifi") == 1) page_delete(page_head, "wifi");
     if(page_check(page_head, "music") == 1) page_delete(page_head, "music");
     lv_obj_del(menu);
     lv_style_reset(&style_menu);

@@ -1,0 +1,1 @@
+CSRCS += $(LVGL_DIR)/ui/wpa/common/wpa_ctrl.c

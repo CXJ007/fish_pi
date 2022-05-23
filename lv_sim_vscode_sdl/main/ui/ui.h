@@ -63,6 +63,7 @@ void home_page_add(struct page_list *head);
 void tag_page_add(struct page_list *head);
 void menu_page_add(struct page_list *head);
 void time_page_add(struct page_list *head);
+void wifi_page_add(struct page_list *head);
 void music_page_add(struct page_list *head);
 
 lv_obj_t *obj_read(struct page_list *head, char* name);
@@ -82,6 +83,9 @@ void time_cmd_read(struct cmd_list *head, struct cmd_data *cmd);
 void tag_cmd_add(struct cmd_list *head);
 void tag_cmd_write(struct cmd_list *head, struct cmd_data cmd);
 void tag_cmd_read(struct cmd_list *head, struct cmd_data *cmd);
+void wifi_cmd_add(struct cmd_list *head);
+void wifi_cmd_write(struct cmd_list *head, struct cmd_data cmd);
+void wifi_cmd_read(struct cmd_list *head, struct cmd_data *cmd);
 void music_cmd_add(struct cmd_list *head);
 void music_cmd_write(struct cmd_list *head, struct cmd_data cmd);
 void music_cmd_read(struct cmd_list *head, struct cmd_data *cmd);
@@ -90,6 +94,7 @@ void home_cmd_handle(void);
 void switch_cmd_handle(void);
 void time_cmd_handle(void);
 void tag_cmd_handle(void);
+void wifi_cmd_handle(void);
 void music_cmd_handle(void);
 
 

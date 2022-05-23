@@ -158,11 +158,13 @@ void ui_init(void)
     tag_page_add(page_head);
     menu_page_add(page_head);
     time_page_add(page_head);
+    wifi_page_add(page_head);
     music_page_add(page_head);
 
     home_cmd_add(cmd_head);
     menu_cmd_add(cmd_head);
     tag_cmd_add(cmd_head);
+    wifi_cmd_add(cmd_head);
     music_cmd_add(cmd_head);
     
     FILE * fp;
@@ -262,6 +264,10 @@ void *cmd_handle(void *arg)
         }else if(strcmp(new_cmd_name, "tag") == 0){
             pthread_mutex_lock(&lvgl_mutex);
             tag_cmd_handle();
+            pthread_mutex_unlock(&lvgl_mutex);
+        }else if(strcmp(new_cmd_name, "wifi") == 0){
+            pthread_mutex_lock(&lvgl_mutex);
+            wifi_cmd_handle();
             pthread_mutex_unlock(&lvgl_mutex);
         }else if(strcmp(new_cmd_name, "music") == 0){
             //pthread_mutex_lock(&lvgl_mutex);
