@@ -15,7 +15,7 @@ uboot和kernel 主要参考Orange Pi和Nano Pi进行修改
 模拟器lv_sim_vscode_sdl可以直接运行    
 简单过程：
 通过创建一个链表来控制ui页面切换一个cmd链表进行控制
-![](C:\Users\CXJ\Desktop\linux学习\捕获.PNG)
+![](https://raw.githubusercontent.com/CXJ007/fish_pi/master/image/%E6%8D%95%E8%8E%B7.PNG)
 
 1. UI选择用LVGL（主要是其他的不会）  
 2. time是用lvgl定时器加date命令实现  
