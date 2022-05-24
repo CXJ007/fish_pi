@@ -1,0 +1,32 @@
+(version 1)
+(rule "Track-Track"  
+    (constraint clearance (min 8mil))
+    (condition "A.Type =='Track' && B.Type =='Track'"))
+
+(rule "Hole-Hole"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='hole' && B.Type =='hole'"))
+(rule "zone-Pad"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='Zone' && B.Type =='Pad'"))
+(rule "Pad-Pad"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='Pad' && B.Type =='Pad'"))
+(rule "Via-Pad"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='Via' && B.Type =='Pad'"))
+(rule "Via-Via"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='Via' && B.Type =='Via'"))
+(rule "Track-Via"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='Track' && B.Type =='Via'"))
+(rule "Track-Pad"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='Track' && B.Type =='Pad'"))
+(rule "zone-Via"  
+    (constraint clearance (min 3.5mil))
+    (condition "A.Type =='Zone' && B.Type =='Via'"))
+(rule "zone-zone"  
+    (constraint clearance (min 5mil))
+    (condition "A.Type =='Zone' && B.Type =='Zone'"))
