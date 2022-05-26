@@ -190,10 +190,12 @@ static void add_list_btn(lv_obj_t * parent)
         lv_obj_set_style_bg_color(btn, lv_color_hex(0xc0c0c0), LV_STATE_CHECKED);
         lv_obj_set_scrollbar_mode(btn, LV_SCROLLBAR_MODE_OFF);
         lv_obj_add_event_cb(btn, btn_event_cb, LV_EVENT_CLICKED, NULL);
-        lv_obj_t * name_label = lv_label_create(btn);
-        lv_label_set_text(name_label, name);
-        lv_obj_set_style_text_font(name_label, &myFont, 0);
-        lv_obj_align(name_label, LV_ALIGN_LEFT_MID, 0, 0);
+        lv_obj_t * label_name = lv_label_create(btn);
+        lv_label_set_text(label_name, name);
+        lv_obj_set_width(label_name, 185);
+        lv_label_set_long_mode(label_name, LV_LABEL_LONG_SCROLL_CIRCULAR);
+        lv_obj_set_style_text_font(label_name, &myFont, 0);
+        lv_obj_align(label_name, LV_ALIGN_LEFT_MID, 0, 0);
         name = strtok(NULL, delim);
     }
 }
