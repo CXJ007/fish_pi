@@ -266,16 +266,15 @@ void *cmd_handle(void *arg)
             tag_cmd_handle();
             pthread_mutex_unlock(&lvgl_mutex);
         }else if(strcmp(new_cmd_name, "wifi") == 0){
-            pthread_mutex_lock(&lvgl_mutex);
+            //pthread_mutex_lock(&lvgl_mutex);
             wifi_cmd_handle();
-            pthread_mutex_unlock(&lvgl_mutex);
+            //pthread_mutex_unlock(&lvgl_mutex);
         }else if(strcmp(new_cmd_name, "music") == 0){
             //pthread_mutex_lock(&lvgl_mutex);
             music_cmd_handle();
             //pthread_mutex_unlock(&lvgl_mutex);
         }
         pthread_mutex_unlock(&cmd_mutex);
-        //memset(data.cmdbuf, '/0', 20);
     }
 
     pthread_exit((void *)0);

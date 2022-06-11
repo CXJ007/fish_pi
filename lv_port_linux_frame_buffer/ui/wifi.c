@@ -15,6 +15,7 @@ LV_FONT_DECLARE(myFont1);
 #define MY_SYMBOL_QUES "\xEE\x99\x85"
 
 #define WPA_PATH "/var/run/wpa_supplicant/wlan0"
+#define WIFI_LEN 20
 
 static struct wifi_mesg{
     char mesg[100];
@@ -22,7 +23,7 @@ static struct wifi_mesg{
     char ssid[20];
     int id;    //wpa里面的id
     int statu; //0连接 1知道密码未连接 2未知wifi 3wifi不存在
-}wifi_arr[20];
+}wifi_arr[WIFI_LEN];
 
 static char ip_address[20];
 
@@ -42,6 +43,7 @@ static char cmdbuf[50];              //传递wpa命令
 
 static void *wpa_handle(void *argc);
 static void send_cmd(char *buf);
+static int get_wifi_statu(char *name);
 
 static void anim_x_cb(void * var, int32_t v)
 {
@@ -64,52 +66,79 @@ static void kb_event_cb(lv_event_t * e)
     
 }
 
+static void make_kb(lv_obj_t *lable)
+{
+    lv_obj_add_flag(wifi, LV_OBJ_FLAG_HIDDEN);//对象隐藏
+    kb = lv_keyboard_create(lv_scr_act());
+    lv_obj_align(kb, LV_ALIGN_BOTTOM_RIGHT, 0, 0);
+    lv_obj_set_size(kb, 190, 100);
+    
+    ta = lv_textarea_create(lv_scr_act());
+    lv_obj_align(ta, LV_ALIGN_TOP_RIGHT, 0, 80);
+    lv_textarea_set_placeholder_text(ta, "PASS:");
+    lv_obj_set_size(ta, 190, 40);
+    lv_keyboard_set_textarea(kb, ta);
+
+    lv_obj_add_event_cb(kb, kb_event_cb, LV_EVENT_READY, ta);
+    lv_obj_add_event_cb(kb, kb_event_cb, LV_EVENT_CANCEL, ta);
+
+    lable_wifi = lv_label_create(lv_scr_act());
+    lv_label_set_text(lable_wifi, lv_label_get_text(lable));
+    lv_obj_align(lable_wifi,LV_ALIGN_TOP_RIGHT, 0, 35);
+    lv_obj_set_size(lable_wifi, 190, 40);
+    lv_obj_set_style_text_font(lable_wifi, &myFont, 0);
+    lv_obj_set_style_text_align(lable_wifi, LV_TEXT_ALIGN_CENTER, 0);
+    lv_obj_set_style_border_color(lable_wifi, lv_color_hex(0xe6e2e6), 0);
+    lv_obj_set_style_radius(lable_wifi, 10, 0);
+    lv_obj_set_style_border_width(lable_wifi, 2, 0);
+
+}
+
 static void btn_event_cb(lv_event_t * e)
 {
     lv_event_code_t code = lv_event_get_code(e);
-    lv_obj_t * btn = lv_event_get_target(e);
-    lv_obj_t * lable = lv_obj_get_child(btn, 0);
     if(code == LV_EVENT_CLICKED){
+        lv_obj_t * btn = lv_event_get_target(e);
+        lv_obj_t * lable = lv_obj_get_child(btn, 0);
         printf("%s\n",lv_label_get_text(lable));
-
-        lv_obj_add_flag(wifi, LV_OBJ_FLAG_HIDDEN);//对象隐藏
-        kb = lv_keyboard_create(lv_scr_act());
-        lv_obj_align(kb, LV_ALIGN_BOTTOM_RIGHT, 0, 0);
-        lv_obj_set_size(kb, 190, 100);
-        
-        ta = lv_textarea_create(lv_scr_act());
-        lv_obj_align(ta, LV_ALIGN_TOP_RIGHT, 0, 80);
-        lv_textarea_set_placeholder_text(ta, "PASS:");
-        lv_obj_set_size(ta, 190, 40);
-        lv_keyboard_set_textarea(kb, ta);
-
-        lv_obj_add_event_cb(kb, kb_event_cb, LV_EVENT_READY, ta);
-        lv_obj_add_event_cb(kb, kb_event_cb, LV_EVENT_CANCEL, ta);
-
-        lable_wifi = lv_label_create(lv_scr_act());
-        lv_label_set_text(lable_wifi, lv_label_get_text(lable));
-        lv_obj_align(lable_wifi,LV_ALIGN_TOP_RIGHT, 0, 35);
-        lv_obj_set_size(lable_wifi, 190, 40);
-        lv_obj_set_style_text_font(lable_wifi, &myFont, 0);
-        lv_obj_set_style_text_align(lable_wifi, LV_TEXT_ALIGN_CENTER, 0);
-        lv_obj_set_style_border_color(lable_wifi, lv_color_hex(0xe6e2e6), 0);
-        lv_obj_set_style_radius(lable_wifi, 10, 0);
-        lv_obj_set_style_border_width(lable_wifi, 2, 0);
-
+        if(get_wifi_statu(lv_label_get_text(lable)) == 0){
+            lv_obj_t * mbox = lv_msgbox_create(NULL, lv_label_get_text(lable), ip_address, NULL, true);
+            lv_obj_set_style_text_font(mbox, &lv_font_montserrat_20, 0);
+            lv_obj_set_style_bg_color(lv_msgbox_get_close_btn(mbox), lv_color_hex(0xc0c0c0), 0);
+            lv_obj_set_style_shadow_width(lv_msgbox_get_close_btn(mbox), 0, 0);
+            lv_obj_set_size(mbox, 230, 100);
+            lv_obj_center(mbox);
+        }else if(get_wifi_statu(lv_label_get_text(lable)) == 1){
+            static const char * btns[] ={LV_SYMBOL_KEYBOARD, LV_SYMBOL_OK, ""};
+            lv_obj_t * mbox = lv_msgbox_create(NULL, lv_label_get_text(lable), "password or connection", btns, true);
+            lv_obj_set_style_bg_color(lv_msgbox_get_close_btn(mbox), lv_color_hex(0xc0c0c0), 0);
+            lv_obj_set_style_shadow_width(lv_msgbox_get_close_btn(mbox), 0, 0);
+            lv_obj_set_size(mbox, 230, 120);
+            lv_obj_center(mbox);
+            lv_obj_add_event_cb(mbox, btn_event_cb, LV_EVENT_VALUE_CHANGED, NULL);
+        }else if(get_wifi_statu(lv_label_get_text(lable)) == 2){
+            make_kb(lable);
+        }
+    } else if(code == LV_EVENT_VALUE_CHANGED){
+        lv_obj_t *btn = lv_event_get_target(e);
+        lv_obj_t *obj = lv_event_get_current_target(e);
+        lv_obj_t *mbox = lv_obj_get_parent(btn);
+        if(lv_msgbox_get_active_btn_text(obj) == LV_SYMBOL_KEYBOARD){
+            printf("kb\n");
+            make_kb(lv_msgbox_get_title(mbox));
+        }else if(lv_msgbox_get_active_btn_text(obj) == LV_SYMBOL_OK){
+            printf("ok\n");
+        }
+        lv_msgbox_close(mbox);
     }
 }
 
 //层层过滤确定wifi状态
 static void add_list_btn(lv_obj_t * parent)
 {
-    send_cmd("SCAN");
-    send_cmd("SCAN_RESULTS");
-    send_cmd("LIST_NETWORKS");
-    send_cmd("STATUS");
-
     int i = 0;
     while(1){
-        if(i > 20) break;
+        if(i > WIFI_LEN) break;
         if(wifi_arr[i].statu == 3) break;
 
         lv_obj_t *btn= lv_obj_create(parent);
@@ -174,8 +203,6 @@ static lv_obj_t* wifi_create(void)
     pthread_create(&wifi_id, NULL, wpa_handle, NULL);
     pthread_detach(wifi_id);
 
-    add_list_btn(wifi);
-
     return wifi;
 }
 
@@ -186,6 +213,7 @@ static void wifi_delete(lv_obj_t* obj)
         lv_obj_del(ta);
         lv_obj_del(lable_wifi);
     }
+
     lv_obj_del(obj);
     lv_style_reset(&style_btn);
     lv_style_reset(&style_cont);
@@ -212,16 +240,33 @@ void wifi_cmd_add(struct cmd_list *head)
     cmd_add(head, "wifi");
 }
 
+static void wifi_statu_sync(void)
+{
+    send_cmd("SCAN");
+    send_cmd("SCAN_RESULTS");
+    send_cmd("LIST_NETWORKS");
+    send_cmd("STATUS");
+}
+
+static int get_wifi_statu(char *name)
+{
+    int num;
+    for(num=0;num<WIFI_LEN;num++){
+        if(strcmp(wifi_arr[num].ssid, name) == 0)
+            return wifi_arr[num].statu;
+    }
+    return 3;
+}
+
 //清空不存在wifi
 static void wifi_free(int num)
 {
-    for(;num<20;num++){
+    for(;num<WIFI_LEN;num++){
         memset(wifi_arr[num].mesg, '\0', sizeof(wifi_arr[num].mesg));
         memset(wifi_arr[num].bssid, '\0', sizeof(wifi_arr[num].bssid));
         memset(wifi_arr[num].ssid, '\0', sizeof(wifi_arr[num].ssid));
     }
 }
-
 
 // bssid=92:78:41:dc:6a:a4
 // freq=2412
@@ -253,7 +298,7 @@ static void wpa_status(char *retbuf)
     fread(buf, sizeof(char),sizeof(buf) ,fp);
     pclose(fp);
     while(1){
-        if(i>20) break;
+        if(i>WIFI_LEN) break;
         if(strstr(buf,wifi_arr[i].bssid) != NULL){ //多出\n
             wifi_arr[i].statu = 0;
             break;
@@ -287,7 +332,7 @@ static void wpa_list(char *retbuf)
     while(p != NULL){
         strcpy(wifi_arr[i].mesg, p);
         i++;
-        if(i > 20)break; //超出20 
+        if(i > WIFI_LEN)break; //超出WIFI_LEN
         p = strtok(NULL, delim0);
     }
     for(j=0;j<i;j++){
@@ -295,14 +340,12 @@ static void wpa_list(char *retbuf)
         p = strtok(wifi_arr[j].mesg, delim1);//id
         p = strtok(NULL, delim1);//ssid
         while(1){ //在scan出来的wifi中遍历
-            if(k >= 20)break;
+            if(k >= WIFI_LEN)break;
             if(wifi_arr[k].statu == 3)break;
             if(strcmp(wifi_arr[k].ssid, p) == 0){
                 wifi_arr[k].id = j;
                 wifi_arr[k].statu = 1;
                 break;
-            }else{
-               wifi_arr[j].statu = 2; 
             }
             k++;
         }
@@ -334,7 +377,7 @@ static void wpa_scan(char *retbuf)
         strcpy(wifi_arr[i].mesg, p);
         wifi_arr[i].statu = 2;
         i++;
-        if(i > 20)break; //超出20 
+        if(i > WIFI_LEN)break; //超出WIFI_LEN 
         wifi_arr[i].statu = 3;//末尾wifi不存在
         p = strtok(NULL, delim0);
     }
@@ -429,7 +472,13 @@ void wifi_cmd_handle(void)
     struct cmd_data cmd;
     wifi_cmd_read(cmd_head, &cmd);
     if(strcmp(cmd.cmd_name.name,"wifi create") == 0){
+        pthread_mutex_lock(&lvgl_mutex);
         page_delete(page_head, cmd.cmd_info.info);
         page_create(page_head, "wifi"); 
+        pthread_mutex_unlock(&lvgl_mutex);
+        wifi_statu_sync();
+        pthread_mutex_lock(&lvgl_mutex);
+        add_list_btn(wifi);
+        pthread_mutex_unlock(&lvgl_mutex);
     }
 }
