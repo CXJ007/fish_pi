@@ -19,10 +19,7 @@ uboot和kernel 主要参考Orange Pi和Nano Pi进行修改
 
 1. UI选择用LVGL（主要是其他的不会）  
 2. time是用lvgl定时器加date命令实现  
-3. wifi实现有三个方法：   
-     - popen这样速度会有点慢  
-     - 建立管道重定向标准输入输出 wpa_cli  
-     - 用wpa_supplicant的接口(想折腾下就用了这个)  
+3. wifi实现wpa_supplicant的接口(想折腾下就用了这个)  
 4. music直接选用地球上最强的播放器mplayer，利用slave模式重定向输入输出  
 5. video当然也选择mplayer  
 6. 语言识别计划用开源的ASRT跑不起来就用百度的api  
